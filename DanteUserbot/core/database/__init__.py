@@ -3,7 +3,7 @@ from pyrogram import filters
 from DanteUserbot.config import MONGO_URL
 
 mongo_client = AsyncIOMotorClient(MONGO_URL)
-mongodb = mongo_client.dante_userbot
+mongodb = mongo_client.tgcals_userbot
 db = mongodb.premium
 filtersdb = db.filters
 
