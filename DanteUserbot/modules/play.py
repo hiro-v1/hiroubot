@@ -15,7 +15,7 @@ from youtubesearchpython import VideosSearch
 from yt_dlp import YoutubeDL
 from functools import partial
 from DanteUserbot import *
-__MODULE__ = "Music"
+__MODULE__ = "ᴍᴜsɪᴄ"
 __HELP__ = """
 cmd : <code>{0}play</code>
     untuk memutar music
