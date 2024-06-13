@@ -1,7 +1,7 @@
 from asyncio import QueueEmpty
 from pytgcalls import PyTgCalls
 from pytgcalls.types import ChatUpdate, GroupCallParticipant, MediaStream, Update, StreamAudioEnded
-from PyroUbot import *
+from DanteUserbot import *
 
 @ubot.pytgcalls_decorator()
 async def clear_chat_queue(_, chat_id: int):
