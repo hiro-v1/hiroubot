@@ -112,14 +112,24 @@ async def _(client, message: Message):
             if chat_id not in list_blchat and chat_id not in BLACKLIST_CHAT:
                 try:
                     if message.reply_to_message:
-                        await send.copy(chat_id)
+                        try:
+                            await send.copy(chat_id)
+                        except FloodWait as e:
+                            await asyncio.sleep(e.value)
+                            await send.copy(chat_id)
+                            sent += 1
+                        except Exception:
+                            failed += 1
                     else:
-                        await client.send_message(chat_id, send)
-                    sent += 1
-                    await asyncio.sleep(1)
-                except Exception:
-                    failed += 1
-                    await asyncio.sleep(1)
+                        try:
+                            await client.send_message(chat_id, send)
+                        except FloodWait as e:
+                            await asyncio.sleep(e.value)
+                            await client.send_message(chat_id, send)
+                            sent += 1
+                        except Exception:
+                            failed += 1                    
+
     await msg.edit(f"**✅ Berhasil Terkirim: `{sent}` \n❌ Gagal Terkirim: `{failed}`**")
 
 
