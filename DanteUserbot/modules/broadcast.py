@@ -100,20 +100,23 @@ async def _(client, message: Message):
     user_id = client.me.id
     msg = await message.reply("<code>Processing global broadcast...</code>")
     list_blchat = await get_list_from_vars(client.me.id, "BL_ID")
+    
     async for dialog in client.get_dialogs():
-        if dialog.chat.type in [ChatType.GROUP, ChatType.SUPERGROUP]:
+        if dialog.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             if message.reply_to_message:
                 send = message.reply_to_message
             elif len(message.command) < 2:
                 return await msg.edit("<code>Berikan pesan atau balas pesan...</code>")
             else:
                 send = message.text.split(None, 1)[1]
+            
             chat_id = dialog.chat.id
             if chat_id not in list_blchat and chat_id not in BLACKLIST_CHAT:
                 try:
                     if message.reply_to_message:
                         try:
                             await send.copy(chat_id)
+                            sent += 1
                         except FloodWait as e:
                             await asyncio.sleep(e.value)
                             await send.copy(chat_id)
@@ -123,13 +126,16 @@ async def _(client, message: Message):
                     else:
                         try:
                             await client.send_message(chat_id, send)
+                            sent += 1
                         except FloodWait as e:
                             await asyncio.sleep(e.value)
                             await client.send_message(chat_id, send)
                             sent += 1
                         except Exception:
-                            failed += 1                    
-
+                            failed += 1
+                except Exception:
+                    failed += 1
+                    
     await msg.edit(f"**✅ Berhasil Terkirim: `{sent}` \n❌ Gagal Terkirim: `{failed}`**")
 
 
