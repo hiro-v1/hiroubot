@@ -10,7 +10,7 @@ git+https://github.com/Ev4ness/pyrogram-.git
 Pillow==9.5.0
 pymediainfo
 opencv-python-headless 
-pytgcalls==3.0.0.dev22
+py-tgcalls
 requests
 unidecode
 pytimeparse
