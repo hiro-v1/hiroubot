@@ -95,10 +95,13 @@ async def limit_cmd(client, message):
 
 @DANTE.UBOT("bgcast")
 async def _(client, message: Message):
+    ggl = await EMO.GAGAL(client)
+    brs = await EMO.BERHASIL(client)
+    prs = await EMO.PROSES(client)
     sent = 0
     failed = 0
     user_id = client.me.id
-    msg = await message.reply("<code>Processing global broadcast...</code>")
+    msg = await message.reply(f"<code>{prs}Processing global broadcast...</code>")
     list_blchat = await get_list_from_vars(client.me.id, "BL_ID")
     
     async for dialog in client.get_dialogs():
@@ -106,7 +109,7 @@ async def _(client, message: Message):
             if message.reply_to_message:
                 send = message.reply_to_message
             elif len(message.command) < 2:
-                return await msg.edit("<code>Berikan pesan atau balas pesan...</code>")
+                return await msg.edit(f"<code>{ggl}Berikan pesan atau balas pesan...</code>")
             else:
                 send = message.text.split(None, 1)[1]
             
@@ -136,7 +139,7 @@ async def _(client, message: Message):
                 except Exception:
                     failed += 1
                     
-    await msg.edit(f"**✅ Berhasil Terkirim: `{sent}` \n❌ Gagal Terkirim: `{failed}`**")
+    await msg.edit(f"**{brs}Berhasil Terkirim: `{sent}` \n{ggl} Gagal Terkirim: `{failed}`**")
 
 
 @DANTE.UBOT("gcast")
