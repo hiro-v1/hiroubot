@@ -7,7 +7,7 @@ API_ID = int(os.getenv("API_ID", "26724473"))
 
 API_HASH = os.getenv("API_HASH", "7bc7d1f9b2f3d3f1bfd272db56ac0ba1")
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "7259675983:AAFgqCXzGmHVLLrsGYv2DrdUmq0JMOMz5o8")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "7259675983:AAGaGdrZn6Jq18HrIbAcwUGWuUmlJKD1NDI")
 
 OWNER_ID = int(os.getenv("OWNER_ID", "940232666"))
 
