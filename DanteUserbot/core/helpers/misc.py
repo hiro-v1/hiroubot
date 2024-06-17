@@ -179,7 +179,7 @@ def paginate_modules(page_n, module_dict, prefix, chat=None):
                     callback_data="{}_prev({})".format(prefix, modulo_page),
                 ),
                 EqInlineKeyboardButton(
-                    "ᴍᴇɴᴜ",
+                    "⌂",
                     callback_data="cl_ad",
                 ),
                 EqInlineKeyboardButton(
