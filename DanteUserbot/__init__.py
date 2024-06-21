@@ -12,7 +12,6 @@ from pyrogram.handlers import CallbackQueryHandler, MessageHandler
 from pyrogram.types import Message
 from pyromod import listen
 from pytgcalls import filters as fl
-from pytgcalls import GroupCallFactory
 from pytgcalls import PyTgCalls
 from DanteUserbot.config import *
 from aiohttp import ClientSession
@@ -71,11 +70,6 @@ class Ubot(Client):
     def __init__(self, **kwargs):
         super().__init__(**kwargs, device_model="Dante UBot")
         self.call_py = PyTgCalls(self)  # Inisialisasi call_py di sini
-        self.device_model = "Dante UBot"
-        
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs, device_model="Dante UBot")
-        self.group_call = GroupCallFactory(self).get_group_call()
         self.device_model = "Dante UBot"
         
     def on_message(self, filters=None, group=-1):
