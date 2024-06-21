@@ -44,8 +44,9 @@ async def get_group_call(
     await eor(message, f"<emoji id =5929358014627713883>❌</emoji> **No group call Found** {err_msg}")
     return False
 
- @DANTE.UBOT("jvc")
- async def joinvc(client, message):
+
+@DANTE.UBOT("jvc")
+async def joinvc(client, message):
      if message.from_user.id != client.me.id:
          ky = await message.reply("<code>Processing....</code>")
      else:
@@ -65,8 +66,8 @@ async def get_group_call(
      await client.group_call.set_is_mute(True)
 
 
- @DANTE.UBOT("lvc")
- async def leavevc(client, message):
+@DANTE.UBOT("lvc")
+async def leavevc(client, message):
      chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
      with suppress(ValueError):
          chat_id = int(chat_id)
