@@ -19,7 +19,7 @@ from typing import Optional
 from pyrogram import Client, enums
 from pyrogram.raw.functions.channels import GetFullChannel
 from pyrogram.raw.functions.messages import GetFullChat
-from pyrogram.raw.functions.phone import CreateGroupCall, DiscardGroupCall
+from pyrogram.raw.functions.phone import CreateGroupCall, DiscardGroupCall, JoinGroupCall, LeaveGroupCall
 from pyrogram.raw.types import InputGroupCall, InputPeerChannel, InputPeerChat
 from pyrogram.types import Message
 from DanteUserbot import *
@@ -54,7 +54,7 @@ async def joinvc(client, message):
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
-        await client.get_group_call(chat_id)
+        await client.JoinGroupCall(chat_id)
 
     except Exception as e:
         return await ky.edit(f"ERROR: {e}")
@@ -62,7 +62,6 @@ async def joinvc(client, message):
         f"❏ <b>Berhasil Join Voice Chat</b>\n└ <b>Chat :</b><code>{message.chat.title}</code>"
     )
     await sleep(1)
-    await client.get_group_call(True)
 
 
 @DANTE.UBOT("lvc")
@@ -70,12 +69,12 @@ async def leavevc(client, message):
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
     with suppress(ValueError):
         chat_id = int(chat_id)
-    turun = await client.get_group_call()
+    turun = await client.LeaveGroupCall()
     if turun:
         await message.reply(f"<emoji id =5974045315391556490>📝</emoji> **anda sedang tidak berada di dalam obrolan suara manapun**.")
     else:
         try:
-            await client.get_group_call()
+            await client.LeaveGroupCall()
         except Exception as e:
             return await message.reply(f"ERROR: {e}")
         msg = f"**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**\n"
