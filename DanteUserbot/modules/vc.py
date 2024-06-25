@@ -13,7 +13,6 @@ __HELP__ = """
 
 from asyncio import sleep
 from pytgcalls import PyTgCalls
-from pytgcalls.types import MediaStream
 from contextlib import suppress
 from random import randint
 from typing import Optional
@@ -54,7 +53,7 @@ async def _(client, message):
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
-        await client.MediaStream(chat_id)
+        await client.call_py(chat_id)
 
     except Exception as e:
         return await ky.edit(f"ERROR: {e}")
