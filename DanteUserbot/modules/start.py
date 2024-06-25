@@ -16,7 +16,7 @@ from DanteUserbot import *
 START_TIME = datetime.utcnow()
 
 PONG = """
-<b>❏ PONG!!🏓</b>
+<b>❏ PING!!🏓</b>
 <b>╰•{pong} ms</b>
 """
 
@@ -119,8 +119,8 @@ async def ping_cmd(client, message):
         uptim = await EMO.UPTIME(client)
         menti = await EMO.MENTION(client)
         _ping = f"""
-❏ <b><u>PONG!!</b></u>🏓
-├• <b>{pong}Pong:</b> <code>{str(delta_ping).replace('.', ',')} ms</code>
+❏ <b><u>PING!!</b></u>🏓
+├• <b>{pong}Ping:</b> <code>{str(delta_ping).replace('.', ',')} ms</code>
 ├• <b>{uptim}Uptime: <code>{uptime}</code></b>
 ╰• <b>{menti}Owners:</b> <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a>
 """
