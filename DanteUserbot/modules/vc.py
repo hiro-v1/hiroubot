@@ -19,7 +19,7 @@ from typing import Optional
 from pyrogram import Client, enums
 from pyrogram.raw.functions.channels import GetFullChannel
 from pyrogram.raw.functions.messages import GetFullChat
-from pyrogram.raw.functions.phone import CreateGroupCall, DiscardGroupCall, JoinGroupCall, LeaveGroupCall
+from pyrogram.raw.functions.phone import CreateGroupCall, DiscardGroupCall
 from pyrogram.raw.types import InputGroupCall, InputPeerChannel, InputPeerChat
 from pyrogram.types import Message
 from DanteUserbot import *
