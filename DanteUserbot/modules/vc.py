@@ -12,6 +12,7 @@ __HELP__ = """
 
 
 from asyncio import sleep
+from pytgcalls import PyTgCalls
 from contextlib import suppress
 from random import randint
 from typing import Optional
