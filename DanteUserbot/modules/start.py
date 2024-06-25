@@ -40,7 +40,7 @@ async def _human_time_duration(seconds):
 async def pong(client, message):
    start = time()
    current_time = datetime.utcnow()
-   pong = await massage.edit("Proses...")
+   pong = await message.edit("Proses...")
    delta_ping = time() - start
    await pong.edit("❏◈===❏")
    await pong.edit("❏=◈==❏")
