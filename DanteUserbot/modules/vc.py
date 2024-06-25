@@ -73,7 +73,7 @@ async def joinvc(client, message):
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
-        await client.MediaStream(chat_id)
+        await client.call_py.start(chat_id)
 
     except Exception as e:
         return await ky.edit(f"ERROR: {e}")
@@ -93,7 +93,7 @@ async def leavevc(client, message):
         await message.reply(f"<emoji id =5974045315391556490>📝</emoji> **anda sedang tidak berada di dalam obrolan suara manapun**.")
     else:
         try:
-            await client.leave_call()
+            await client.call_py.leave_call()
         except Exception as e:
             return await message.reply(f"ERROR: {e}")
         msg = f"**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**\n"
