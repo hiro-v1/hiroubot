@@ -53,7 +53,7 @@ async def _(client, message):
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
-        await client.call_py(chat_id)
+        await client.GroupCallParticipant(chat_id)
 
     except Exception as e:
         return await ky.edit(f"ERROR: {e}")
