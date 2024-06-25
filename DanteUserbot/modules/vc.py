@@ -88,12 +88,12 @@ async def leavevc(client, message):
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
     with suppress(ValueError):
         chat_id = int(chat_id)
-    turun = await client.DiscardGroupCall()
+    turun = await client.leave_call()
     if turun:
         await message.reply(f"<emoji id =5974045315391556490>📝</emoji> **anda sedang tidak berada di dalam obrolan suara manapun**.")
     else:
         try:
-            await client.DiscardGroupCall()
+            await client.leave_call()
         except Exception as e:
             return await message.reply(f"ERROR: {e}")
         msg = f"**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**\n"
