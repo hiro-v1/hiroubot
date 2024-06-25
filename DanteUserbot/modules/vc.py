@@ -52,7 +52,7 @@ async def _(client, message):
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
-        await client.vc.start(chat_id)
+        await client.get_group_call(chat_id)
 
     except Exception as e:
         return await ky.edit(f"ERROR: {e}")
@@ -71,7 +71,7 @@ async def joinvc(client, message):
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
-        await client.JoinGroupCall(chat_id)
+        await client.CreateGroupCall(chat_id)
 
     except Exception as e:
         return await ky.edit(f"ERROR: {e}")
@@ -86,12 +86,12 @@ async def leavevc(client, message):
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
     with suppress(ValueError):
         chat_id = int(chat_id)
-    turun = await client.LeaveGroupCall()
+    turun = await client.DiscardGroupCall()
     if turun:
         await message.reply(f"<emoji id =5974045315391556490>📝</emoji> **anda sedang tidak berada di dalam obrolan suara manapun**.")
     else:
         try:
-            await client.LeaveGroupCall()
+            await client.DiscardGroupCall()
         except Exception as e:
             return await message.reply(f"ERROR: {e}")
         msg = f"**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**\n"
