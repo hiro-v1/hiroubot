@@ -93,7 +93,7 @@ async def joinvc(client, message):
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
-        await client.group_call.start(chat_id)
+        await client.call_py.start(chat_id)
 
     except Exception as e:
         return await ky.edit(f"ERROR: {e}")
