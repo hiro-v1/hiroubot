@@ -52,7 +52,7 @@ async def _(client, message):
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
-        await client.get_group_call(chat_id)
+        await client.call_py(chat_id)
 
     except Exception as e:
         return await ky.edit(f"ERROR: {e}")
@@ -71,7 +71,7 @@ async def joinvc(client, message):
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
-        await client.CreateGroupCall(chat_id)
+        await client.PyTgCalls(chat_id)
 
     except Exception as e:
         return await ky.edit(f"ERROR: {e}")
