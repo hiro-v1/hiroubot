@@ -40,7 +40,7 @@ async def _human_time_duration(seconds):
 async def pong(client, message):
    start = time()
    current_time = datetime.utcnow()
-   pong = await m.edit("slow jamet...")
+   pong = await massage.edit("Proses...")
    delta_ping = time() - start
    await pong.edit("❏◈===❏")
    await pong.edit("❏=◈==❏")
@@ -60,7 +60,7 @@ async def pong(client, message):
    await pong.edit("❏===◈❏")
    await pong.edit("❏===◈❏◈")
    await pong.edit("❏====❏◈◈")
-   await pong.edit("**◈CROOTTTT PINGGGG!**")
+   await pong.edit("**◈ Pong!**")
    end = datetime.now()
    uptime_sec = (current_time - START_TIME).total_seconds()
    uptime = await _human_time_duration(int(uptime_sec))
