@@ -1,6 +1,7 @@
 from .. import *
 import asyncio
 from datetime import datetime
+import sys
 from gc import get_objects
 from time import time
 from DanteUserbot import bot, ubot
@@ -12,11 +13,60 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from DanteUserbot import *
 
+START_TIME = datetime.utcnow()
+
 PONG = """
 <b>❏ PONG!!🏓</b>
 <b>╰•{pong} ms</b>
 """
 
+TIME_DURATION_UNITS = (
+    ("Minggu", 60 * 60 * 24 * 7),
+    ("Hari", 60 * 60 * 24),
+    ("Jam", 60 * 60),
+    ("Menit", 60),
+    ("Detik", 1),
+)
+async def _human_time_duration(seconds):
+    if seconds == 0:
+        return "inf"
+    parts = []
+    for unit, div in TIME_DURATION_UNITS:
+        amount, seconds = divmod(int(seconds), div)
+        if amount > 0:
+            parts.append("{} {}{}".format(amount, unit, "" if amount == 1 else ""))
+    return ", ".join(parts)
+
+async def pong(client, message):
+   start = time()
+   current_time = datetime.utcnow()
+   pong = await m.edit("slow jamet...")
+   delta_ping = time() - start
+   await pong.edit("❏◈===❏")
+   await pong.edit("❏=◈==❏")
+   await pong.edit("❏==◈=❏")
+   await pong.edit("❏===◈❏")
+   await pong.edit("❏==◈=❏")
+   await pong.edit("❏=◈==❏")
+   await pong.edit("❏◈===❏")
+   await pong.edit("❏=◈==❏")
+   await pong.edit("❏==◈=❏")
+   await pong.edit("❏===◈❏")
+   await pong.edit("❏==◈=❏")
+   await pong.edit("❏=◈==❏")
+   await pong.edit("❏◈===❏")
+   await pong.edit("❏=◈==❏")
+   await pong.edit("❏==◈=❏")
+   await pong.edit("❏===◈❏")
+   await pong.edit("❏===◈❏◈")
+   await pong.edit("❏====❏◈◈")
+   await pong.edit("**◈CROOTTTT PINGGGG!**")
+   end = datetime.now()
+   uptime_sec = (current_time - START_TIME).total_seconds()
+   uptime = await _human_time_duration(int(uptime_sec))
+   await pong.edit(
+       f"**❏Userbot**\n**❏Pong** : {delta_ping * 1000:.3f} ms\n**❏Bot Uptime** : {uptime}")
+    
 async def send_msg_to_owner(client, message):
     if message.from_user.id == OWNER_ID:
         return
@@ -112,6 +162,10 @@ async def start_cmd(client, message):
 @DANTE.UBOT("ping")
 async def _(client, message):
     await ping_cmd(client, message)
+
+@DANTE.UBOT("pong")
+async def _(client, message):
+    await pong(client, message)
 
 @DANTE.UBOT("dping")
 async def _(client, message: Message):
