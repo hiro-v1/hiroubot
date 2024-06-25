@@ -111,30 +111,6 @@ async def hearts(ubot: ubot, message: Message):
     await message.edit("❤️ I Love You <3")
 
 
-@ubot.on_message(filters.command(["pelangi"], PREFIX) & filters.me)
-async def pelangi(ubot: ubot, message: Message):
-    await phase1(message)
-    await asyncio.sleep(SLEEP * 3)
-    await message.edit("🌈hi🌈")
-    await asyncio.sleep(0.5)
-    await message.edit("🌈🌈aku🌈🌈")
-    await asyncio.sleep(0.5)
-    await message.edit("🌈🌈🌈sayang kamu🌈🌈🌈")
-    await asyncio.sleep(3)
-    await message.edit("🌈")
-    await asyncio.sleep(0.5)
-    await message.edit("🌈🌈")
-    await asyncio.sleep(0.5)
-    await message.edit("🌈🌈🌈")
-    await asyncio.sleep(0.5)
-    await message.edit("🌈🌈🌈🌈")
-    await asyncio.sleep(3)
-    await message.edit("🌈🌈🌈🌈🌈")
-    await asyncio.sleep(0.5)
-    await message.edit("🌈🌈🌈🌈🌈🌈")
-    await asyncio.sleep(5)
-    await message.edit("🌈")    
-
 @DANTE.UBOT("hujan")
 async def hujan(ubot: ubot, message: Message):
     e = await edit_or_reply(message, "☁️🌈===☁️")
