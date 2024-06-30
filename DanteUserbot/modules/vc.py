@@ -90,7 +90,7 @@ async def joinvc(client, message):
     ky = await eor(message, "<code>Processing....</code>")
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
     chat_id = int(chat_id)
-    calls = await user.call_py.calls
+    calls = await client.call_py.calls
     chat_call = calls.get(chat_id)
     if chat_call == None:
         try:
@@ -107,7 +107,7 @@ async def joinvc(client, message):
 async def leavevc(client, message):
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
     chat_id = int(chat_id)
-    calls = await user.call_py.calls
+    calls = await client.call_py.calls
     chat_call = calls.get(chat_id)
     if chat_call == None:
         return await message.reply("<b>Kamu Belum Bergabung Ke Voice Chat</b>")
