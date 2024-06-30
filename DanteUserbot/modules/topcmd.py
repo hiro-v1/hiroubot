@@ -1,8 +1,7 @@
 from DanteUserbot import *
 
 
-@DANTE.UBOT("top")
-@DANTE.BOT
+@DANTE.BOT("top")
 @DANTE.ADMIN
 async def _(client, message):
     vars = await all_vars(bot.me.id, "modules")
