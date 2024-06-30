@@ -24,6 +24,7 @@ from pyrogram.raw.functions.messages import GetFullChat
 from pyrogram.raw.functions.phone import CreateGroupCall, DiscardGroupCall
 from pyrogram.raw.types import InputGroupCall, InputPeerChannel, InputPeerChat
 from pyrogram.types import Message
+from pytgcalls.types.calls import Call
 from DanteUserbot import *
 
 async def get_group_call(
@@ -86,29 +87,33 @@ async def end_vc_(client: Client, message: Message):
 
 @DANTE.UBOT("jvc")
 async def joinvc(client, message):
-    if message.from_user.id != client.me.id:
-        ky = await message.reply("<code>Processing....</code>")
-    else:
-        ky = await eor(message, "<code>Processing....</code>")
+    ky = await eor(message, "<code>Processing....</code>")
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
-    with suppress(ValueError):
-        chat_id = int(chat_id)
-    try:
-        await client.call_py.play(chat_id)
-    except Exception as e:
-        return await ky.edit(f"ERROR: {e}")
-    await ky.edit(
-        f"❏ <b>Berhasil Join Voice Chat</b>\n└ <b>Chat :</b><code>{message.chat.title}</code>"
-    )
-    await sleep(1)
-    await ky.delete()
+    chat_id = int(chat_id)
+    calls = await user.call_py.calls
+    chat_call = calls.get(chat_id)
+    if chat_call == None:
+        try:
+            await client.call_py.play(chat_id)
+        except Exception as e:
+            return await ky.edit(f"ERROR: {e}")
+        await ky.edit(
+            f"❏ <b>Berhasil Join Voice Chat</b>\n└ <b>Chat :</b><code>{message.chat.title}</code>"
+        )
+    else:
+        return await ky.edit("<b>Akun Kamu Sudah Berada Di Atas</b>")
 
 @DANTE.UBOT("lvc")
 async def leavevc(client, message):
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
-    try:
-        await client.call_py.leave_call(chat_id)
-    except Exception as e:
-        return await message.reply_text("**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**")
-        await message.reply()
-        await message.delete()
+    chat_id = int(chat_id)
+    calls = await user.call_py.calls
+    chat_call = calls.get(chat_id)
+    if chat_call == None:
+        return await message.reply("<b>Kamu Belum Bergabung Ke Voice Chat</b>")
+    else:
+        try:
+            await client.call_py.leave_call(chat_id)
+            await message.reply(f"**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**\n")
+        except Exception as e:
+            return await message.reply_text(e)
