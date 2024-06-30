@@ -2,7 +2,6 @@ from DanteUserbot import *
 
 
 @DANTE.BOT("top")
-@DANTE.MECHA
 async def _(client, message):
     vars = await all_vars(bot.me.id, "modules")
     sorted_vars = sorted(vars.items(), key=lambda item: item[1], reverse=True)
