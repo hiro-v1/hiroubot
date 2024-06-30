@@ -110,7 +110,7 @@ async def joinvc(client, message):
         await bee.delete()        
     else:
         return await bee.edit("<b>Akun Kamu Sudah Berada Di Atas</b>")
-        return await client.call_py.mute_stream(True)
+        return await client.call_py.mute_stream(False)
 
 @DANTE.UBOT("lvc")
 async def leavevc(client, message):
