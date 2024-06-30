@@ -113,17 +113,18 @@ async def joinvc(client, message):
 
 @DANTE.UBOT("lvc")
 async def leavevc(client, message):
+    ky = await eor(message, "<code>Processing....</code>")
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
     chat_id = int(chat_id)
     calls = await client.call_py.calls
     chat_call = calls.get(chat_id)
     if chat_call == None:
-        return await message.reply("<b>Kamu Belum Bergabung Ke Voice Chat</b>")
+        return await ky.edit("<b>Kamu Belum Bergabung Ke Voice Chat</b>")
     else:
         try:
             await client.call_py.leave_call(chat_id)
-            await message.reply(f"**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**\n")
+            await ky.edit(f"**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**\n")
             await sleep(1)
-            await message.delete()
+            await ky.delete()
         except Exception as e:
             return await message.reply_text(e)
