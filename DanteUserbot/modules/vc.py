@@ -106,6 +106,8 @@ async def joinvc(client, message):
         await ky.edit(
             f"❏ <b>Berhasil Join Voice Chat</b>\n└ <b>Chat :</b><code>{message.chat.title}</code>"
         )
+        await sleep(1)
+        await ky.delete()        
     else:
         return await ky.edit("<b>Akun Kamu Sudah Berada Di Atas</b>")
 
