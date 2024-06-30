@@ -83,7 +83,18 @@ class DANTE:
             return wrapped_func
 
         return decorator
+        
+    @staticmethod
+    def ADMIN(func):
+        async def function(client, message):
+            user = message.from_user
+            admin_id = await get_list_from_vars(client.me.id, "ADMIN_USERS")
+            if user.id not in admin_id:
+                return
+            return await func(client, message)
 
+        return function
+        
     @staticmethod
     def NO_CMD_UBOT(result, ubot):
         query_mapping = {
