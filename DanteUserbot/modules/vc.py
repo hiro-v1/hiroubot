@@ -101,6 +101,7 @@ async def joinvc(client, message):
     if chat_call == None:
         try:
             await client.call_py.play(chat_id)
+            await client.call_py.mute_stream(True)
         except Exception as e:
             return await bee.edit(f"ERROR: {e}")
         await bee.edit(
@@ -108,7 +109,6 @@ async def joinvc(client, message):
         )
         await sleep(1)
         await bee.delete()
-        await client.call_py.mute_stream(True)
     else:
         return await bee.edit("<b>Akun Kamu Sudah Berada Di Atas</b>")
 
