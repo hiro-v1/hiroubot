@@ -169,7 +169,18 @@ class DANTE:
             return wrapped_func
 
         return wrapper
+        
+    @staticmethod
+    def TOP_CMD(func):
+        async def function(client, message):
+            cmd = message.command[0].lower()
+            top = await get_vars(bot.me.id, cmd, "modules")
+            get = int(top) + 1 if top else 1
+            await set_vars(bot.me.id, cmd, get, "modules")
+            return await func(client, message)
 
+        return function
+        
     @staticmethod
     def GROUP(func):
         async def function(client, message):
