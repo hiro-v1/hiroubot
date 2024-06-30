@@ -94,12 +94,7 @@ async def joinvc(client, message):
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
-        await client.call_py.play(
-            chat_id,
-            MediaStream(
-                "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp3"
-            )
-        )
+        await client.call_py.play(chat_id)
     except Exception as e:
         return await ky.edit(f"ERROR: {e}")
     await ky.edit(
@@ -114,7 +109,7 @@ async def leavevc(client, message):
     try:
         await client.call_py.leave_call(chat_id)
     except Exception as e:
-        return await message.reply_text(len(e))
+        return await message.reply_text(e)
         msg = f"**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**\n"
         if chat_id:
             msg += f"**╰ Chat**: {message.chat.title}"
