@@ -55,7 +55,7 @@ async def get_group_call(
 
 @DANTE.UBOT("startvc")
 async def opengc(client: Client, message: Message):
-    ky = await eor(message, "`Processing....`")
+    bee = await eor(message, "`Processing....`")
     vctitle = get_arg(message)
     if message.chat.type == "channel":
         chat_id = message.chat.title
@@ -79,21 +79,21 @@ async def opengc(client: Client, message: Message):
                     title=vctitle,
                 )
             )
-        await ky.edit(args)
+        await bee.edit(args)
     except Exception as e:
-        await ky.edit(f"<b>INFO:</b> `{e}`")
+        await bee.edit(f"<b>INFO:</b> `{e}`")
 
 @DANTE.UBOT("stopvc")
 async def end_vc_(client: Client, message: Message):
-    ky = await eor(message, f"<emoji id=6010111371251815589>⏳</emoji> `Processing....`")
+    bee = await eor(message, f"<emoji id=6010111371251815589>⏳</emoji> `Processing....`")
     if not (group_call := await get_group_call(client, message, err_msg=", Error...")):
         return
     await client.invoke(DiscardGroupCall(call=group_call))
-    await ky.edit(f"<b>Voice Chat Ended</b>\n • <b>Chat</b> : {message.chat.title}")
+    await bee.edit(f"<b>Voice Chat Ended</b>\n • <b>Chat</b> : {message.chat.title}")
 
 @DANTE.UBOT("jvc")
 async def joinvc(client, message):
-    ky = await eor(message, "<code>Processing....</code>")
+    bee = await eor(message, "<code>Processing....</code>")
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
     chat_id = int(chat_id)
     calls = await client.call_py.calls
@@ -102,29 +102,29 @@ async def joinvc(client, message):
         try:
             await client.call_py.play(chat_id)
         except Exception as e:
-            return await ky.edit(f"ERROR: {e}")
-        await ky.edit(
+            return await bee.edit(f"ERROR: {e}")
+        await bee.edit(
             f"❏ <b>Berhasil Join Voice Chat</b>\n└ <b>Chat :</b><code>{message.chat.title}</code>"
         )
         await sleep(1)
-        await ky.delete()        
+        await bee.delete()        
     else:
-        return await ky.edit("<b>Akun Kamu Sudah Berada Di Atas</b>")
+        return await bee.edit("<b>Akun Kamu Sudah Berada Di Atas</b>")
 
 @DANTE.UBOT("lvc")
 async def leavevc(client, message):
-    ky = await eor(message, "<code>Processing....</code>")
+    bee = await eor(message, "<code>Processing....</code>")
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
     chat_id = int(chat_id)
     calls = await client.call_py.calls
     chat_call = calls.get(chat_id)
     if chat_call == None:
-        return await ky.edit("<b>Kamu Belum Bergabung Ke Voice Chat</b>")
+        return await bee.edit("<b>Kamu Belum Bergabung Ke Voice Chat</b>")
     else:
         try:
             await client.call_py.leave_call(chat_id)
-            await ky.edit(f"**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**\n")
+            await bee.edit(f"**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**\n")
             await sleep(1)
-            await ky.delete()
+            await bee.delete()
         except Exception as e:
             return await message.reply_text(e)
