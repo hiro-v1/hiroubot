@@ -101,7 +101,6 @@ async def joinvc(client, message):
     if chat_call == None:
         try:
             await client.call_py.play(chat_id)
-            await client.call_py.mute_stream(True)
         except Exception as e:
             return await bee.edit(f"ERROR: {e}")
         await bee.edit(
