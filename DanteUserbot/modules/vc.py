@@ -123,6 +123,7 @@ async def leavevc(client, message):
         try:
             await client.call_py.leave_call(chat_id)
             await message.reply(f"**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**\n")
+            await sleep(1)
             await message.delete()
         except Exception as e:
             return await message.reply_text(e)
