@@ -18,6 +18,7 @@ from random import randint
 from typing import Optional
 
 from pyrogram import Client, enums
+from pytgcalls.types import MediaStream
 from pyrogram.raw.functions.channels import GetFullChannel
 from pyrogram.raw.functions.messages import GetFullChat
 from pyrogram.raw.functions.phone import CreateGroupCall, DiscardGroupCall
@@ -93,8 +94,12 @@ async def joinvc(client, message):
     with suppress(ValueError):
         chat_id = int(chat_id)
     try:
-        await client.call_py.start(chat_id)
-
+        await client.call_py.play(
+            chat_id,
+            MediaStream(
+                "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp3"
+            )
+        )
     except Exception as e:
         return await ky.edit(f"ERROR: {e}")
     await ky.edit(
