@@ -113,7 +113,7 @@ async def leavevc(client, message):
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
     with suppress(ValueError):
         chat_id = int(chat_id)
-    turun = await client.call_py.leave_call()
+    turun = await client.call_py.leave_call(chat_id)
     if turun:
         await message.reply(f"<emoji id =5974045315391556490>📝</emoji> **anda sedang tidak berada di dalam obrolan suara manapun**.")
     else:
