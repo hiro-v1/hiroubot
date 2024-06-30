@@ -113,8 +113,8 @@ async def leavevc(client, message):
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
     try:
         await client.call_py.leave_call(chat_id)
-        except Exception as e:
-            return await message.reply(f"ERROR: {e}")
+    except Exception as e:
+        return await message.reply(f"ERROR: {e}")
         msg = f"**❏ Berhasil Meninggalkan Voice Chat <emoji id=5798623990436074786>✅</emoji>**\n"
         if chat_id:
             msg += f"**╰ Chat**: {message.chat.title}"
