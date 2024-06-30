@@ -8,6 +8,12 @@ __HELP__ = """
 • Perintah: <code>{0}stopvc</code>
 • Penjelasan: Untuk mengakhiri voice chat grup.
 
+• Perintah: <code>{0}jvc</code>
+• Penjelasan: Untuk bergabunf voice chat grup.
+
+• Perintah: <code>{0}lvc</code>
+• Penjelasan: Untuk meninggalkan voice chat grup.
+
 """
 
 
