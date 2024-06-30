@@ -88,7 +88,7 @@ class DANTE:
     def ADMIN(func):
         async def function(client, message):
             user = message.from_user
-            admin_id = await get_list_from_vars(client.me.id, "ADMIN_USERS")
+            admin_id = await get_list_from_vars(client.me.id, "SUDO_USER", "ID_NYA")
             if user.id not in admin_id:
                 return
             return await func(client, message)
