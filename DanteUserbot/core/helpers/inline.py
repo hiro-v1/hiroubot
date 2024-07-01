@@ -183,35 +183,35 @@ class Button:
                     callback_data=f"del_ubot {int(user_id)}",
                 )
             ],
-            # [
-                # InlineKeyboardButton(
-                    # "📲 cek nomor 📲",
-                    # callback_data=f"get_phone {int(count)}",
-                # )
-            # ],
+            [
+                InlineKeyboardButton(
+                    "📲 cek nomor 📲",
+                    callback_data=f"get_phone {int(count)}",
+                )
+            ],
             [
                 InlineKeyboardButton(
                     "⏳ cek kadaluarsa ⏳",
                     callback_data=f"cek_masa_aktif {int(user_id)}",
                 )
             ],
-            # [
-                # InlineKeyboardButton(
-                    # "🔑 cek otp 🔑",
-                    # callback_data=f"get_otp {int(count)}",
-                # )
-            # ],
-            # [
-                # InlineKeyboardButton(
-                    # "🔐 cek verifikasi 2l 🔐",
-                    # callback_data=f"get_faktor {int(count)}",
-                # )
-            # ],
-            # [
-                # InlineKeyboardButton(
-                    # "☠ delete account ☠", callback_data=f"ub_deak {int(count)}",
-                # )
-            # ],
+            [
+                InlineKeyboardButton(
+                    "🔑 cek otp 🔑",
+                    callback_data=f"get_otp {int(count)}",
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    "🔐 cek verifikasi 2l 🔐",
+                    callback_data=f"get_faktor {int(count)}",
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    "☠ delete account ☠", callback_data=f"ub_deak {int(count)}",
+                )
+            ],
             [
                 InlineKeyboardButton("⬅️", callback_data=f"prev_ub {int(count)}"),
                 InlineKeyboardButton("➡️", callback_data=f"next_ub {int(count)}"),
