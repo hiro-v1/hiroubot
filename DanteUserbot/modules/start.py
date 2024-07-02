@@ -119,7 +119,7 @@ async def ping_cmd(client, message):
         uptim = await EMO.UPTIME(client)
         menti = await EMO.MENTION(client)
         _ping = f"""
-❏ <blockquote><b>PING!!🏓
+<blockquote><b>❏ PING!!🏓
 ├• {pong}Ping: <code>{str(delta_ping).replace('.', ',')} ms</code>
 ├• {uptim}Uptime: <code>{uptime}</code>
 ╰• {menti}Owners: <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a></b></blockquote>
