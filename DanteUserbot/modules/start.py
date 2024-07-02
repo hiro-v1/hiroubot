@@ -16,8 +16,8 @@ from DanteUserbot import *
 START_TIME = datetime.utcnow()
 
 PONG = """
-<b>❏ PING!!🏓</b>
-<b>╰•{pong} ms</b>
+<blockquote><b>❏ PING!!🏓</b></blockquote>
+<blockquote><b>╰•{pong} ms</b></blockquote>
 """
 
 TIME_DURATION_UNITS = (
@@ -84,7 +84,7 @@ async def pong(client, message):
    uptime_sec = (current_time - START_TIME).total_seconds()
    uptime = await _human_time_duration(int(uptime_sec))
    await pong.edit(
-       f"**❏Userbot**\n**❏Pong** : {delta_ping * 1000:.3f} ms\n**❏Bot Uptime** : {uptime}")
+       f"<blockquote><b>❏Userbot\n❏Pong : {delta_ping * 1000:.3f} ms\n❏Bot Uptime : {uptime} </b></blockquote>")
     
 async def send_msg_to_owner(client, message):
     if message.from_user.id == OWNER_ID:
@@ -119,10 +119,10 @@ async def ping_cmd(client, message):
         uptim = await EMO.UPTIME(client)
         menti = await EMO.MENTION(client)
         _ping = f"""
-❏ <b><u>PING!!</b></u>🏓
-├• <b>{pong}Ping:</b> <code>{str(delta_ping).replace('.', ',')} ms</code>
-├• <b>{uptim}Uptime: <code>{uptime}</code></b>
-╰• <b>{menti}Owners:</b> <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a>
+❏ <blockquote><b>PING!!</b></blockquote>🏓
+├• <blockquote><b>{pong}Ping:</b></blockquote> <code>{str(delta_ping).replace('.', ',')} ms</code>
+├• <blockquote><b>{uptim}Uptime: <code>{uptime}</code></b></blockquote>
+╰• <blockquote><b>{menti}Owners:</b></blockquote> <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a>
 """
         await message.reply_text(_ping)
     except UserBannedInChannel:
