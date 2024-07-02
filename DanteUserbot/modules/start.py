@@ -16,8 +16,8 @@ from DanteUserbot import *
 START_TIME = datetime.utcnow()
 
 PONG = """
-<blockquote><b>❏ PING!!🏓</b></blockquote>
-<blockquote><b>╰•{pong} ms</b></blockquote>
+<blockquote><b>❏ PING!!🏓
+╰•{pong} ms</b></blockquote>
 """
 
 TIME_DURATION_UNITS = (
@@ -119,10 +119,10 @@ async def ping_cmd(client, message):
         uptim = await EMO.UPTIME(client)
         menti = await EMO.MENTION(client)
         _ping = f"""
-❏ <blockquote><b>PING!!</b></blockquote>🏓
-├• <blockquote><b>{pong}Ping:</b></blockquote> <code>{str(delta_ping).replace('.', ',')} ms</code>
-├• <blockquote><b>{uptim}Uptime: <code>{uptime}</code></b></blockquote>
-╰• <blockquote><b>{menti}Owners:</b></blockquote> <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a>
+❏ <blockquote><b>PING!!🏓
+├• {pong}Ping: <code>{str(delta_ping).replace('.', ',')} ms</code>
+├• {uptim}Uptime: <code>{uptime}</code>
+╰• {menti}Owners: <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a></b></blockquote>
 """
         await message.reply_text(_ping)
     except UserBannedInChannel:
