@@ -1,14 +1,14 @@
 from DanteUserbot import *
 
 __MODULE__ = "sᴛᴀғғ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ꜱᴛᴀꜰꜰ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}staff</code> [ɪᴘ ᴀᴅᴅʀᴇꜱ]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴᴅᴀᴘᴀᴛᴋᴀɴ ɪɴꜰᴏʀᴍᴀꜱɪ ꜱᴇʟᴜʀᴜʜ ꜱᴛᴀꜰꜰ ɢʀᴜᴘ
 
   <b>• ᴘᴇʀɪɴᴛᴀʜ: <code>.ʙᴏᴛʟɪsᴛ</code><\b>
-  <b>• ➡️ ᴘᴇɴᴊᴇʟᴀsᴀɴ: ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴅᴀғᴛᴀʀ ʙᴏᴛ.</b>
+  <b>• ➡️ ᴘᴇɴᴊᴇʟᴀsᴀɴ: ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴅᴀғᴛᴀʀ ʙᴏᴛ.</b></b></blockquote>
 """
 import os
 from DanteUserbot import *
