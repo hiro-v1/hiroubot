@@ -1,7 +1,7 @@
 from DanteUserbot import *
 
 __MODULE__ = "ʙʟᴀᴄᴋʟɪsᴛ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ʙʟᴀᴄᴋʟɪsᴛ ᴄʜᴀᴛ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}addbl</code>
@@ -15,4 +15,4 @@ __HELP__ = """
   
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}listbl</code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇᴍᴇʀɪᴋsᴀ ᴅᴀꜰᴛᴀʀ ʙʟᴀᴄᴋʟɪsᴛ ɢʀᴏᴜᴘ
-"""
+</b></blockquote>"""
