@@ -9,13 +9,12 @@ from DanteUserbot.core.helpers.tools import edit_or_reply
 from DanteUserbot import *
 
 __MODULE__ = "ᴄᴜʀɪ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 Curi 』</b>
 
   <b>• perintah:</b> <code>{PREFIX[0]}curi</code>
   <b>• penjelasan:</b> .curi untuk mengambil pap timer
-
-  
+</b></blockquote>
 """
 
 @DANTE.UBOT("curi")
