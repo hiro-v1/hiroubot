@@ -6,7 +6,7 @@ from pyrogram.enums import ChatType
 from DanteUserbot import *
 
 __MODULE__ = "ɪɴғᴏ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 bantuan untuk info 』</b>
 
   <b>• perintah:</b> <code>{PREFIX[0]}info</code> [user_id/username/reply to users]
@@ -14,7 +14,7 @@ __HELP__ = f"""
 
   <b>• perintah:</b> <code>{PREFIX[0]}cinfo</code> [chat_id/username/reply to chat]
   <b>• penjelasan:</b> untuk mendapatkan info group/channel dengan deskripsi lengkap
-"""
+</b></blockquote>"""
 
 
 @DANTE.UBOT("info")
