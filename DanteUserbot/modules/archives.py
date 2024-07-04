@@ -3,7 +3,7 @@ from pyrogram.enums import ChatType
 from asyncio import sleep
 
 __MODULE__ = "ᴀʀᴄʜɪᴠᴇ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴀʀᴄʜɪᴠᴇ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}archiveall</code> ɢᴄ ᴘᴠ
@@ -19,7 +19,7 @@ __HELP__ = """
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}unarchive</code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢᴜɴᴀʀᴄʜɪᴠᴇᴋᴀɴ ᴄʜᴀᴛ ꜱᴀᴀᴛ ɪɴɪ
-
+</b></blockquote>
 """
 
 
