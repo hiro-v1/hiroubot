@@ -5,14 +5,14 @@ from pyrogram.types import InputMediaPhoto
 from DanteUserbot import *
 
 __MODULE__ = "ᴄᴀʀɪ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 <b>『 Bantuan Untuk cari 』</b>
 • perintah: <code>.pic</code> [query]
 • penjelasan: Untuk gambar secara limit 5.
 
 • Perintah: <code>.gif</code> [query]
 • Penjelasan: Untuk gif.
-"""
+</b></blockquote>"""
 
 @DANTE.UBOT("pic")
 async def pic_bing_cmd(client, message):
