@@ -16,7 +16,7 @@ from yt_dlp import YoutubeDL
 from functools import partial
 from DanteUserbot import *
 __MODULE__ = "ᴍᴜsɪᴄ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 cmd : <code>{0}play</code>
     untuk memutar music
 
@@ -30,7 +30,7 @@ cmd : <code>{0}pause</code>
     untuk menjeda music
 
 cmd : <code>{0}resume</code>
-    untuk menjeda music
+    untuk menjeda music</b></blockquote>
 """
 def ytsearch(query):
     try:
