@@ -11,7 +11,7 @@ from pyrogram.errors.exceptions import FloodWait
 from DanteUserbot import *
 
 __MODULE__ = "ɢᴄᴀsᴛ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
   <b>Bantuan untuk Broadcast</b>
 
 <b>command:</b> <code>{0}gcast</code> <b>or</b> <code>{0}brocast</code>
@@ -31,7 +31,7 @@ __HELP__ = """
 <b>command:</b> <code>{0}autogikes</code>
 <b>mengirim pesan siaran secara otomatis</b>
 <b>query:</b>
-<code>|on/off |text |delay |remove |limit</code>
+<code>|on/off |text |delay |remove |limit</code></b></blockquote>
 """
 
 async def get_data_id(client, query):
