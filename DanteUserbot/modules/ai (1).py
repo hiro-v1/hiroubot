@@ -7,12 +7,12 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 __MODULE__ = "ᴀɪ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 chat GPT 』</b>
 
   <b>• perintah:</b> <code>{PREFIX[0]}ask</code>
   <b>• penjelasan:</b> buat pertanyaan contoh .ask dimana letak Antartika
-"""
+</b></blockquote>"""
 
 
 @DANTE.UBOT("ask")
