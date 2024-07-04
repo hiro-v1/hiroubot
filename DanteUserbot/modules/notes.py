@@ -21,7 +21,7 @@ async def remove_pm_id(me_id, user_id):
         await set_vars(me_id, "PM_PERMIT", " ".join(map(str, list_id)))
 
 __MODULE__ = "ɴᴏᴛᴇs"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 Document for <b>Notes</b>
 
 <b>command:</b> <code>{0}addnote</code> [name]
@@ -46,8 +46,7 @@ Document for <b>Notes</b>
   <i>melihat daftar callback yang di simpan</i>
 
 <b>for button:</b>
-<b>format | nama tombol - url/callback |</code>
-
+<b>format | nama tombol - url/callback |</code></b></blockquote>
 """
 
 
