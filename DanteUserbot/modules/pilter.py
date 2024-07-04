@@ -5,7 +5,7 @@ from DanteUserbot import *
 from DanteUserbot.core.database.filters import get_filters_count, _get_filters, get_filters_names, get_filter, save_filter, delete_filter
 
 __MODULE__ = "ғɪʟᴛᴇʀ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 <b>『 Bantuan Untuk Filter 』</b>
 
  • Perintah: <code>.addfil</code> [nama filter] [balas ke pesan]
@@ -16,7 +16,7 @@ __HELP__ = """
 
  • Perintah: <code>.filters</code>
     Penjelasan: Untuk melihat filter grup.
-"""
+</b></blockquote>"""
 
 
 @DANTE.UBOT("addfil")
