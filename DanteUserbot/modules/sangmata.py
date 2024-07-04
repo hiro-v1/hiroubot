@@ -4,12 +4,12 @@ import random
 from pyrogram.raw.functions.messages import DeleteHistory
 
 __MODULE__ = "sɢ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ꜱᴀɴɢᴍᴀᴛᴀ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}sg</code> [ᴜꜱᴇʀ_ɪᴅ/ʀᴇᴘʟʏ ᴜꜱᴇʀ]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇᴍᴇʀɪᴋꜱᴀ ʜɪꜱᴛᴏʀɪ ɴᴀᴍᴀ/ᴜꜱᴇʀɴᴀᴍᴇ
-"""
+</b></blockquote>"""
 
 @DANTE.UBOT("sg")
 async def _(client, message):
