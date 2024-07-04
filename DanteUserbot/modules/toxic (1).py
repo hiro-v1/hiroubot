@@ -342,7 +342,7 @@ async def toxicvir(ubot: ubot, message: Message):
 
 
 __MODULE__ = "ᴋᴀsᴀʀ¹"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>ngata ngatain :</b>
 
 <b>• Bct & jamet</b>
@@ -353,7 +353,7 @@ __HELP__ = f"""
 <b>• nrk & war</b>
 <b>• cpr & kis</b>
 <b>• van & gcast</b>
-<b>• sokab</b>
+<b>• sokab</b></b></blockquote>
 """
 
 
