@@ -1,7 +1,7 @@
 from DanteUserbot import *
 
 __MODULE__ = "ᴘᴜʀɢᴇ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴘᴜʀɢᴇ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}ᴘᴜʀɢᴇ</code> [ʀᴇᴘʟʏ ᴛᴏ ᴍᴇꜱꜱᴀɢᴇ]
@@ -12,7 +12,7 @@ __HELP__ = f"""
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}ᴘᴜʀɢᴇᴍᴇ</code> [ɴᴜᴍʙᴇʀ ᴏꜰ ᴍᴇꜱꜱᴀɢᴇꜱ]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ʜᴀᴘᴜꜱ ᴘᴇꜱᴀɴ ᴀɴᴅᴀ ꜱᴇɴᴅɪʀɪ ᴅᴇɴɢᴀɴ ᴍᴇɴᴇɴᴛᴜᴋᴀɴ ᴛᴏᴛᴀʟ ᴘᴇꜱᴀɴ
-"""
+</b></blockquote>"""
 
 import asyncio
 from DanteUserbot.core.function.emoji import emoji
