@@ -1,5 +1,5 @@
 __MODULE__ = "ᴠᴄᴛᴏᴏʟs"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴠᴄᴛᴏᴏʟꜱ 』</b>
 
 • Perintah: <code>{0}startvc</code>
@@ -13,7 +13,7 @@ __HELP__ = """
 
 • Perintah: <code>{0}lvc</code>
 • Penjelasan: Untuk meninggalkan voice chat grup.
-
+</b></blockquote>
 """
 
 
