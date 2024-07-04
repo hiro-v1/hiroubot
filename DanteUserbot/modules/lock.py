@@ -2,7 +2,7 @@ from DanteUserbot import *
 
 
 __MODULE__ = "ʟᴏᴄᴋ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ʟᴏᴄᴋꜱ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}lock</code> [ᴛʏᴘᴇ]
@@ -15,7 +15,7 @@ __HELP__ = f"""
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ɪᴢɪɴ ꜱᴀᴀᴛ ɪɴɪ.
 
   <b>• ᴛʏᴘᴇ : `ᴍꜱɢ`|`ᴍᴇᴅɪᴀ`|`ꜱᴛɪᴄᴋᴇʀꜱ`|`ᴘᴏʟʟꜱ`|`ɪɴꜰᴏ`|`ɪɴᴠɪᴛᴇ`|`ᴡᴇʙᴘʀᴇᴠ`|`ᴘɪɴ`
-"""
+</b></blockquote>"""
 import asyncio
 
 from pyrogram import Client, filters
