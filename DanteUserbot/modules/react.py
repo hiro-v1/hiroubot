@@ -1,5 +1,5 @@
 __MODULE__ = "ʀᴇᴀᴄᴛ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ʀᴇᴀᴄᴛɪᴏɴ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}ʀᴇᴀᴄᴛ</code></code>
@@ -11,7 +11,7 @@ __HELP__ = """
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}ꜱᴠᴋᴏɴ</code></code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴʏɪᴍᴘᴀɴ ᴋᴏɴᴛᴀᴋ ᴘᴇɴɢɢᴜɴᴀ
-
+</b></blockquote>
 """
 
 from DanteUserbot import *
