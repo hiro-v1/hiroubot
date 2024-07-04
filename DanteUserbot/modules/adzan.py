@@ -6,11 +6,11 @@ from pyrogram import filters
 from DanteUserbot import *
 
 __MODULE__ = "ᴀᴅᴢᴀɴ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 Bantuan Untuk Adzan 』</b>
  • Perintah: <code>.adzan</code> [nama kota]
  • Penjelasan: Untuk mengetahui jadwal adzan di lokasi anda.
-"""
+</b></blockquote>"""
 
 @DANTE.UBOT("adzan")
 async def _(client, message):
