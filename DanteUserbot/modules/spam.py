@@ -1,7 +1,7 @@
 from DanteUserbot import *
 
 __MODULE__ = "sᴘᴀᴍ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ꜱᴘᴀᴍ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}spam</code> [ᴊᴜᴍʟᴀʜ_ᴘᴇꜱᴀɴ - ᴘᴇꜱᴀɴ_ꜱᴘᴀᴍ]
@@ -9,7 +9,7 @@ __HELP__ = f"""
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}dspam</code> [ᴊᴜᴍʟᴀʜ_ᴘᴇꜱᴀɴ - ᴊᴜᴍʟᴀʜ_ᴅᴇʟᴀʏ_ᴅᴇᴛɪᴋ - ᴘᴇꜱᴀɴ_ꜱᴘᴀᴍ]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ꜱᴘᴀᴍ ᴘᴇꜱᴀɴ ᴅᴇʟᴀʏ
-  
+</b></blockquote>  
 """
 import asyncio
 from gc import get_objects
