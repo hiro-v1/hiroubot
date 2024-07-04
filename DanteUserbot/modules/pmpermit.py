@@ -25,24 +25,23 @@ jangan spam atau kamu akan di blokir secara otomatis
 
 __MODULE__ = "ᴘᴍᴘᴇʀᴍɪᴛ"
 __HELP__ = """<blockquote><b>
-Bantuan untuk PM-Permit
+   Bantuan untuk PM-Permit
 
-command: <code>{0}pmpermit [on/off]</code>
+command: {0}pmpermit [on/off]
    mengaktifkan atau menonaktifkan pm permit
-
-command: <code>{0}ok</code>
+   
+command: {0}ok
    mengizinkan seseoranh untuk pm anda
 
-command: <code>{0}no</code>
+command: {0}no
    menolak seseorang untuk pm anda
 
-command: <code>{0}setpm</code>
-   query:<code>|pic |text |limit</code>
+command: {0}setpm
+   query: |pic |text |limit
    mengatur configuration pada pm_permit
 
 contoh menggunakan warning 
-   command: <code>setpm limit 5 </code>
-</b></blockquote>
+   command: setpm limit 5</b></blockquote>
 """
 
 async def delete_old_message(message, msg_id):
