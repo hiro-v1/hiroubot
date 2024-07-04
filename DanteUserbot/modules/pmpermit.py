@@ -24,7 +24,7 @@ jangan spam atau kamu akan di blokir secara otomatis
 
 
 __MODULE__ = "ᴘᴍᴘᴇʀᴍɪᴛ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 <b>Bantuan untuk PM-Permit</b>
 
 <b>command:</b> <code>{0}pmpermit</code> [on/off]
@@ -42,7 +42,7 @@ __HELP__ = """
 
 <b>contoh menggunakan warning </b>
     <b>command</b> : <code>setpm limit 5 </code>
-
+</b></blockquote>
 """
 
 async def delete_old_message(message, msg_id):
