@@ -36,7 +36,7 @@ async def limit_cmd(client, message):
         pjg = len(status.text)
         print(pjg)
         if pjg <= 100:
-            text = f"<b>{sks}kabar baik, akun anda tidak dibatasi. anda bebas, sebebas burung yang terbang lepas{sks}</b>"
+            text = f"<blockquote><b>{sks}kabar baik, akun anda tidak dibatasi. anda bebas, sebebas burung yang terbang lepas{sks}</b></blockquote>"
             await client.send_message(message.chat.id, text)
             return await client.invoke(DeleteHistory(peer=bot_info, max_id=0, revoke=True))
         else:
