@@ -1,6 +1,6 @@
 
 __MODULE__ = "ᴛᴀɢᴀʟʟ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴛᴀɢᴀʟʟ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}ᴀʟʟ</code> [ᴘᴇꜱᴀɴ - ʀᴇᴘ_ᴘᴇꜱᴀɴ]
@@ -8,7 +8,7 @@ __HELP__ = """
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}ʙᴀᴛᴀʟ</code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢʜᴇɴᴛɪᴋᴀɴ ᴛᴀɢᴀʟʟ
-"""
+</b></blockquote>"""
 
 import asyncio
 from random import shuffle
