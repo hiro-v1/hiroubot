@@ -2,12 +2,12 @@ from DanteUserbot import *
 
 __MODULE__ = "ʙᴀᴄᴀ"
 
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ʙᴀᴄᴀ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}ʙᴀᴄᴀ</code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴀᴄᴀ ꜱᴇᴍᴜᴀ ᴘᴇꜱᴀɴ ʏᴀɴɢ ʙᴇʟᴜᴍ ᴛᴇʀʙᴀᴄᴀ
-"""
+</b></blockquote>"""
 
 from pyrogram import Client, idle, filters
 from pyrogram.enums import ChatType, ChatMemberStatus
