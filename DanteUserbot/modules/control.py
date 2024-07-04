@@ -1,7 +1,7 @@
 from DanteUserbot import *
 
 __MODULE__ = "ᴄᴏɴᴛʀᴏʟ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴄᴏɴᴛʀᴏʟ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}setprefix</code> [sɪᴍʙᴏʟ ᴘʀᴇꜰɪx]
@@ -17,7 +17,7 @@ __HELP__ = f"""
        <b>•> BERHASIL </b>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ: ᴜɴᴛᴜᴋ ᴍᴇʀᴜʙᴀʜ ᴛᴀᴍᴘɪʟᴀɴ ᴘᴏɴɢ ᴘᴀᴅᴀ ᴘɪɴɢ</b>
 
-"""
+</b></blockquote>"""
 
 @DANTE.UBOT("setprefix")
 async def _(client, message):
