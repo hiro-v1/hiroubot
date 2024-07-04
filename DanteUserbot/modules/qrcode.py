@@ -1,7 +1,7 @@
 from DanteUserbot import *
 
 __MODULE__ = "ǫʀᴄᴏᴅᴇ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ qʀᴄᴏᴅᴇ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}qʀGᴇɴ</code> [ᴛᴇxᴛ qʀᴄᴏᴅᴇ]
@@ -9,7 +9,7 @@ __HELP__ = f"""
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}qʀRᴇᴀᴅ</code> [ʀᴇᴘʟʏ ᴛᴏ ᴍᴇᴅɪᴀ]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇʀᴜʙᴀʜ qʀᴄᴏᴅᴇ ᴍᴇɴᴊᴀᴅɪ ᴛᴇxᴛ
-"""
+</b></blockquote>"""
 
 import asyncio
 import os
