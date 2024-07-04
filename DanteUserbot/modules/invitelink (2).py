@@ -15,14 +15,14 @@ import json
 from pyrogram.types import Message
 
 __MODULE__ = "ʟɪɴᴋ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 『 Ambil Link 』
 
   • perintah: {0}copylink
   • penjelasan: untuk mengambil link digroup Maupun channels.
   • perintah: {0}idlink
   • penjelasan: untuk mengambil link digroup menggunakan id channels dan group.
-  EXAMPLE: .givelinkid -100xxxxxxxx
+  EXAMPLE: .givelinkid -100xxxxxxxx</b></blockquote>
 """
 
 
