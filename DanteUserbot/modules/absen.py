@@ -1,5 +1,5 @@
 __MODULE__ = "ᴀʙsᴇɴ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴀʙꜱᴇɴ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}ᴀʙꜱᴇɴ</code></code>
@@ -8,7 +8,7 @@ __HELP__ = """
   
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}ᴅᴇʟᴀʙꜱᴇɴ</code></code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢʜᴀᴘᴜꜱ ʟɪꜱᴛ ᴀʙꜱᴇɴ ᴋᴀᴍᴜ.
-  """
+  </b></blockquote> """
 from pyrogram import Client, filters
 from pyrogram.types import (InlineKeyboardMarkup, InlineQueryResultArticle,                            InputTextMessageContent, InlineKeyboardButton)
 from datetime import datetime
