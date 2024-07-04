@@ -1,13 +1,13 @@
 from DanteUserbot import *
 
 __MODULE__ = "ʟᴏɢs"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ʟᴏɢs 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}logs</code> [ᴛʏᴘᴇ]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ʟᴏɢs
 
-  <b>• ᴛʏᴘᴇ : on/off
+  <b>• ᴛʏᴘᴇ : on/off</b></blockquote>
 """
 
 @DANTE.UBOT("logs")
