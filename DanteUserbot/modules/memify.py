@@ -1,12 +1,12 @@
 from DanteUserbot import *
 
 __MODULE__ = "ᴍᴇᴍᴇғʏ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴍᴇᴍɪꜰʏ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}mmf</code> [ᴛᴇxᴛ]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ʙᴀʟᴀꜱ ᴋᴇ ꜱᴛɪᴄᴋᴇʀ ᴀᴛᴀᴜ ꜰᴏᴛᴏ ᴀᴋᴀɴ ᴅɪ ᴜʙᴀʜ ᴍᴇɴᴊᴀᴅɪ ꜱᴛɪᴄᴋᴇʀ ᴛᴇᴋꜱ ᴍᴇᴍᴇ ʏᴀɴɢ ᴅɪ ᴛᴇɴᴛᴜᴋᴀɴ
-"""
+</b></blockquote>"""
 
 import asyncio
 import os
