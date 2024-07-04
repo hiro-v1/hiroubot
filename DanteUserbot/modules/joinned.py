@@ -9,7 +9,7 @@ from pyrogram.errors.exceptions.not_acceptable_406 import ChannelPrivate
 
 
 __MODULE__ = "ɢᴀʙᴜɴɢ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴊᴏɪɴʟᴇᴀᴠᴇ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}kickme</code>
@@ -29,7 +29,7 @@ __HELP__ = f"""
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}leave</code> [ᴜꜱᴇʀɴᴀᴍᴇɢᴄ]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴋᴇʟᴜᴀʀ ᴅᴀʀɪ ɢʀᴜᴘ ᴍᴇʟᴀʟᴜɪ ᴜꜱᴇʀɴᴀᴍᴇ
-"""
+</b></blockquote>"""
 from pyrogram import Client, enums, filters
 from pyrogram.types import Message
 import asyncio
