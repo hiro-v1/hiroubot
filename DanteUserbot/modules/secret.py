@@ -1,12 +1,12 @@
 from DanteUserbot import *
 
 __MODULE__ = "sᴇᴄʀᴇᴛ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ꜱᴇᴄʀᴇᴛ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}msg</code> [ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ - ᴛᴇxᴛ]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢɪʀɪᴍ ᴘᴇꜱᴀɴ ꜱᴇᴄᴀʀᴀ ʀᴀʜᴀꜱɪᴀ
-"""
+</b></blockquote>"""
 from gc import get_objects
 
 from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,
