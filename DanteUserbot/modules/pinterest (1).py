@@ -11,7 +11,7 @@ from pyrogram.raw.functions.messages import DeleteHistory
 
 
 __MODULE__ = "ᴘɪɴᴛ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 『 Pinterest 』
 
   • perintah: {0}.pint jumlah kata_kunci
@@ -19,7 +19,7 @@ __HELP__ = """
 
   • Perintah: {0}.pintlink tautan link pinterest 
   • Penjelasan: Untuk mengunduh media dari pinterest.
-"""
+</b></blockquote>"""
 
 @DANTE.UBOT("pint")
 async def pinterest(client, message):
