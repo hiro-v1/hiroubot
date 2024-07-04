@@ -49,7 +49,7 @@ async def truth(client, message):
 
 
 __MODULE__ = "ʙᴇʀᴍᴀɪɴ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 <b>『 truth & dare 』</b>
 
   <b>• perintah:</b> <code>dare
@@ -65,6 +65,6 @@ __HELP__ = """
   <b>• penjelasan:</b> coba aja
   
   <b>• perintah:</b> <code>kenapa
-  <b>• penjelasan:</b> coba aja
+  <b>• penjelasan:</b> coba aja</b></blockquote>
  
   """
