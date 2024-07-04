@@ -25,23 +25,23 @@ jangan spam atau kamu akan di blokir secara otomatis
 
 __MODULE__ = "ᴘᴍᴘᴇʀᴍɪᴛ"
 __HELP__ = """<blockquote><b>
-<b>Bantuan untuk PM-Permit</b>
+Bantuan untuk PM-Permit
 
-<b>command:</b> <code>{0}pmpermit</code> [on/off]
-   <b>mengaktifkan atau menonaktifkan pm permit</b>
+command: <code>{0}pmpermit [on/off]</code>
+   mengaktifkan atau menonaktifkan pm permit
 
-<b>command:</b> <code>{0}ok</code>
-   <b>mengizinkan seseoranh untuk pm anda</b>
+command: <code>{0}ok</code>
+   mengizinkan seseoranh untuk pm anda
 
-<b>command:</b> <code>{0}no</code>
-   <b>menolak seseorang untuk pm anda</b>
+command: <code>{0}no</code>
+   menolak seseorang untuk pm anda
 
-<b>command:</b> <code>{0}setpm</code>
-<b>query:</b> <code>|pic |text |limit</code>
-   <b>mengatur configuration pada pm_permit</b>
+command: <code>{0}setpm</code>
+   query:<code>|pic |text |limit</code>
+   mengatur configuration pada pm_permit
 
-<b>contoh menggunakan warning </b>
-    <b>command</b> : <code>setpm limit 5 </code>
+contoh menggunakan warning 
+   command: <code>setpm limit 5 </code>
 </b></blockquote>
 """
 
