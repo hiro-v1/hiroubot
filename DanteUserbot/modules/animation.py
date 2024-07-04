@@ -1115,7 +1115,7 @@ async def santet(ubot: ubot, message: Message):
 
 
 __MODULE__ = "ᴀɴɪᴍᴀsɪ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 
 <b>• fuck =</b> Untuk menampilkan animasi jari tengah.
 <b>• dino =</b> Untuk menampilkan animasi dikejar dino.
@@ -1125,4 +1125,4 @@ __HELP__ = f"""
 <b>• hack =</b> Untuk menampilkan animasi ngehek palsu.
 <b>• bomb =</b> Untuk menampilkan animasi Bomb.
 <b>• Animasi lain =</b> kontol, penis,callx, tembak, bundir, helikopter, y, awk, nah, ajg, babi, hmm, love, loveyou.
-"""
+</b></blockquote>"""
