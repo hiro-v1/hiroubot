@@ -2,7 +2,7 @@ from DanteUserbot import *
 from pyrogram.enums import ParseMode
 
 __MODULE__ = "ᴄᴇᴋ ɪᴅ"
-__HELP__ = f"""
+__HELP__ = f"""<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ꜱʜᴏᴡɪᴅ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}id</code>
@@ -16,7 +16,7 @@ __HELP__ = f"""
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}id</code> [ᴜꜱᴇʀɴᴀᴍᴇ ᴜꜱᴇʀ/ɢʀᴜᴘ/ᴄʜᴀɴɴᴇʟ]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇᴛᴀʜᴜɪ ɪᴅ ᴜꜱᴇʀ/ɢʀᴜᴘ/ᴄʜᴀɴɴᴇʟ ᴍᴇʟᴀʟᴜɪ ᴜꜱᴇʀɴᴀᴍᴇ
-"""
+</b></blockquote>"""
 import html
 import asyncio
 from pyrogram import *
