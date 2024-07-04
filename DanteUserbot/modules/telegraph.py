@@ -2,12 +2,12 @@ from DanteUserbot import *
 from telegraph import Telegraph, exceptions, upload_file
 
 __MODULE__ = "ᴛɢʀᴀᴘʜ"
-__HELP__ = """
+__HELP__ = """<blockquote><b>
 <b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴛᴇʟᴇɢʀᴀᴘʜ 』</b>
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}tg</code> [ʀᴇᴘʟʏ ᴍᴇᴅɪᴀ/ᴛᴇxᴛ]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢᴀᴘʟᴏᴀᴅ ᴍᴇᴅɪᴀ/ᴛᴇxᴛ ᴋᴇ ᴛᴇʟᴇɢʀᴀ.ᴘʜ
-"""
+</b></blockquote>"""
 
 
 @DANTE.UBOT("tg")
