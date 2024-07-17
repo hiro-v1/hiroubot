@@ -25,8 +25,11 @@ __HELP__ = """<blockquote><b>
 <b>mengirim pesan ke user/group/channel</b>
 
 <b>spesial</b>
-<b>command:</b> <code>{0}bgcast</code>
-<b>modul backup jika akun kamu tidak bisa menggunakan gcast atau delay, silahkan gunakan bgcast</b>
+
+<b>command:</b> <code>{0}bcast</code>
+<b>example:</b> <code>bcast untuk grup</code> <code>bcast gcast yang bisa di cancel</code>
+<b>command:</b> <code>{0}gcan</code>
+<b>example:</b> <code>untuk memberhentikan bcast</code> <code>bcast gcast yang bisa di cancel</code>
 
 <b>command:</b> <code>{0}autogikes</code>
 <b>mengirim pesan siaran secara otomatis</b>
@@ -34,6 +37,17 @@ __HELP__ = """<blockquote><b>
 <code>|on/off |text |delay |remove |limit</code></b></blockquote>
 """
 
+
+def get_message(message):
+    msg = (
+        message.reply_to_message
+        if message.reply_to_message
+        else ""
+        if len(message.command) < 2
+        else " ".join(message.command[1:])
+    )
+    return msg
+  
 async def get_data_id(client, query):
     chat_types = {
         "global": [ChatType.CHANNEL, ChatType.GROUP, ChatType.SUPERGROUP],
@@ -93,53 +107,63 @@ async def limit_cmd(client, message):
     await status.copy(message.chat.id, reply_to_message_id=message.id)
     return await client.invoke(DeleteHistory(peer=bot_info, max_id=0, revoke=True))
 
-@DANTE.UBOT("bgcast")
-async def _(client, message: Message):
-    ggl = await EMO.GAGAL(client)
-    brs = await EMO.BERHASIL(client)
-    prs = await EMO.PROSES(client)
-    sent = 0
+
+broadcast_running = False
+
+@DANTE.UBOT("bcast")
+async def broadcast_group_cmd(client, message):
+    global broadcast_running
+
+    msg = await message.reply("Processing...", quote=True)
+
+    send = get_message(message)
+    if not send:
+        return await msg.edit("Silakan balas ke pesan atau berikan pesan.")
+
+    broadcast_running = True
+
+    chats = await get_data_id(client, "group")
+    blacklist = await get_chat(client.me.id)
+
+    done = 0
     failed = 0
-    user_id = client.me.id
-    msg = await message.reply(f"<code>{prs}Processing global broadcast...</code>")
-    list_blchat = await get_list_from_vars(client.me.id, "BL_ID")
     
-    async for dialog in client.get_dialogs():
-        if dialog.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-            if message.reply_to_message:
-                send = message.reply_to_message
-            elif len(message.command) < 2:
-                return await msg.edit(f"<code>{ggl}Berikan pesan atau balas pesan...</code>")
-            else:
-                send = message.text.split(None, 1)[1]
+    for chat_id in chats:
+
+        if not broadcast_running:
+            break
+        
+        if chat_id not in blacklist and chat_id not in BLACKLIST_CHAT:
             
-            chat_id = dialog.chat.id
-            if chat_id not in list_blchat and chat_id not in BLACKLIST_CHAT:
-                try:
-                    if message.reply_to_message:
-                        try:
-                            await send.copy(chat_id)
-                            sent += 1
-                        except FloodWait as e:
-                            await asyncio.sleep(e.value)
-                            await send.copy(chat_id)
-                            sent += 1
-                        except Exception:
-                            failed += 1
-                    else:
-                        try:
-                            await client.send_message(chat_id, send)
-                            sent += 1
-                        except FloodWait as e:
-                            await asyncio.sleep(e.value)
-                            await client.send_message(chat_id, send)
-                            sent += 1
-                        except Exception:
-                            failed += 1
-                except Exception:
-                    failed += 1
-                    
-    await msg.edit(f"**{brs}Berhasil Terkirim: `{sent}` \n{ggl} Gagal Terkirim: `{failed}`**")
+            try:
+                if message.reply_to_message:
+                    await send.copy(chat_id)
+                else:
+                    await client.send_message(chat_id, send)
+                done += 1
+                await asyncio.sleep(0.1)
+            except Exception:
+                failed += 1
+                pass
+                await asyncio.sleep(1)
+                                
+    broadcast_running = True
+
+    if done > 0:
+        await msg.edit(f"**<emoji id=5780777456428388142>🤖</emoji>Berhasil Terkirim:** `{done}` \n**<emoji id=5019523782004441717>❌</emoji>Gagal Mengirim Pesan Ke:** `{failed}`.")
+    else:
+        await msg.edit(f"**Pesan Broadcast Berhasil Dibatalkan**.")
+
+@DANTE.UBOT("gcan")
+async def cancel_broadcast(client, message):
+    global broadcast_running
+
+    if not broadcast_running:
+        return await eor(message, "<code>Tidak ada pengiriman pesan global yang sedang berlangsung.</code>")
+
+    broadcast_running = False
+    await eor(message, "<b>Pengiriman pesan global telah dibatalkan!</b>")
+
 
 
 @DANTE.UBOT("gcast")
