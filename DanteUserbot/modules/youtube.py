@@ -104,6 +104,9 @@ async def vsong_cmd(client, message):
             "result"
         ][0]
         link = f"https://youtu.be/{search['id']}"
+        with yt_dlp.YoutubeDL({"cookiefile": "usup_cok.txt", "quiet": True}) as ytdl:
+
+        title = ytdl.extract_info(link, download=False)
     except Exception as error:
         return await infomsg.edit(f"<b><emoji id =5803403369913520877>🔍</emoji> pencarian...\n\n{error}</b>")
     try:
@@ -171,6 +174,9 @@ async def song_cmd(client, message):
             "result"
         ][0]
         link = f"https://youtu.be/{search['id']}"
+        with yt_dlp.YoutubeDL({"cookiefile": "usup_cok.txt", "quiet": True}) as ytdl:
+
+        title = ytdl.extract_info(link, download=False)
     except Exception as error:
         return await infomsg.edit(f"<b>{prs}ᴘᴇɴᴄᴀʀɪᴀɴ...\n\n{error}</b>")
     try:
