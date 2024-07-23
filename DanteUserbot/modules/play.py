@@ -32,6 +32,9 @@ cmd : <code>{0}pause</code>
 cmd : <code>{0}resume</code>
     untuk menjeda music</b></blockquote>
 """
+
+mycookies = "usup_cok.txt"
+
 def ytsearch(query):
     try:
         search = VideosSearch(query, limit=1)
@@ -63,6 +66,7 @@ async def YoutubeDownload(url, as_video=False):
             "outtmpl": "downloads/%(id)s.%(ext)s",
             "nocheckcertificate": True,
             "geo_bypass": True,
+            "cookiefile": mycookies,
         }
     else:
         ydl_opts = {
@@ -72,6 +76,7 @@ async def YoutubeDownload(url, as_video=False):
             "outtmpl": "downloads/%(id)s.%(ext)s",
             "nocheckcertificate": True,
             "geo_bypass": True,
+            "cookiefile": mycookies,
         }
     data_ytp = "<b>🗯 ɪɴꜰᴏʀᴍᴀsɪ {}</b>\n\n<b>💠 ɴᴀᴍᴀ:</ʙ> {}<b>\n<b>⏲ ᴅᴜʀᴀsɪ:</b> {}\n<b>🎑 ᴅɪʟɪʜᴀᴛ:</b> {}\n<b>🌍 ᴄʜᴀɴɴᴇʟ:</b> {}\n<b>🔗 ᴛᴀᴜᴛᴀɴ:</b> <a href={}>ʏᴏᴜᴛᴜʙᴇ</a>\n\n<b> ᴘʟᴀʏ ʙʏ :</b> {}"
     ydl = YoutubeDL(ydl_opts)
