@@ -3,6 +3,7 @@ from functools import partial
 
 from yt_dlp import YoutubeDL
 
+mycookies = "usup_cok.txt"
 
 def run_sync(func, *args, **kwargs):
     return get_event_loop().run_in_executor(None, partial(func, *args, **kwargs))
@@ -12,6 +13,7 @@ async def YoutubeDownload(url, as_video=False):
     if as_video:
         ydl_opts = {
             "quiet": True,
+            "cookiefile": mycookies,
             "no_warnings": True,
             "format": "(bestvideo[height<=?720][width<=?1280][ext=mp4])+(bestaudio[ext=m4a])",
             "outtmpl": "downloads/%(id)s.%(ext)s",
@@ -21,6 +23,7 @@ async def YoutubeDownload(url, as_video=False):
     else:
         ydl_opts = {
             "quiet": True,
+            "cookiefile": mycookies,
             "no_warnings": True,
             "format": "bestaudio[ext=m4a]",
             "outtmpl": "downloads/%(id)s.%(ext)s",
