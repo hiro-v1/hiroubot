@@ -34,11 +34,6 @@ async def save_filters(client, message):
             message,
             f"<b>Gunakan Format:</b>\n Balas ke pesan atau sticker <code>addfil</code> [nama filter] [balas ke pesan] untuk save filter.",
         )
-    chat_id = message.chat.id
-    user_id = client.me.id
-    if message.chat.id in BLACKLIST_CHAT:
-        await eor(message, "<code>Filter tidak diperkenankan di group support.</code>")
-        return
     _type = "text" if message.reply_to_message.text else "sticker"
     _filter = {
         "type": _type,
