@@ -41,7 +41,7 @@ async def save_filters(client, message):
         if _type == "text"
         else message.reply_to_message.sticker.file_id,
     }
-    await save_filter(user_id, chat_id, name, _filter)
+    await save_filter(chat_id, name, _filter)
     await eor(message, f"<b>Filter <code>{name}</code> disimpan!.</b>")
 
 
