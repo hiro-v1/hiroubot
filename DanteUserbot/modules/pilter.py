@@ -34,6 +34,11 @@ async def save_filters(client, message):
             message,
             f"<b>Gunakan Format:</b>\n Balas ke pesan atau sticker <code>addfil</code> [nama filter] [balas ke pesan] untuk save filter.",
         )
+    chat_id = message.chat.id
+    user_id = client.me.id
+    if not message.chat.id in BLACKLIST_CHAT:
+        await eor(message, "<code>Filter tidak diperkenankan di group support.</code>")
+        return
     _type = "text" if message.reply_to_message.text else "sticker"
     _filter = {
         "type": _type,
@@ -41,9 +46,8 @@ async def save_filters(client, message):
         if _type == "text"
         else message.reply_to_message.sticker.file_id,
     }
-    await save_filter(chat_id, name, _filter)
+    await save_filter(user_id, chat_id, name, _filter)
     await eor(message, f"<b>Filter <code>{name}</code> disimpan!.</b>")
-
 
 @DANTE.UBOT("filter")
 async def get_filterss(client, message):
