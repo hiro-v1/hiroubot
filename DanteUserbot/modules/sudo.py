@@ -21,6 +21,8 @@ from pyrogram.types import *
 
 from DanteUserbot import *
 
+SUDO_USER = "940232666"
+
 @DANTE.UBOT("addsudo")
 async def _(client, message):
     msg = await message.reply(f"<b>Processing...</b>")
@@ -33,7 +35,7 @@ async def _(client, message):
     except Exception as error:
         return await msg.edit(error)
 
-    sudo_users = await get_list_from_vars(client.me.id, "SUDO_USER", "ID_NYA")
+    sudo_users = await get_list_from_vars(client.me.id, "SUDO_USER")
 
     if user.id in sudo_users:
         return await msg.edit(
@@ -41,7 +43,7 @@ async def _(client, message):
         )
 
     try:
-        await add_to_vars(client.me.id, "SUDO_USER", user.id, "ID_NYA")
+        await add_to_vars(client.me.id, "SUDO_USER", user.id, "940232666")
         return await msg.edit(
             f"<b>[{user.first_name} {user.last_name or ''}](tg://user?id={user.id}) Ditambahkan ke pengguna sudo.</b>"
         )
