@@ -23,6 +23,8 @@ COMMAND = os.getenv("COMMAND", ".")
 
 OPENAI_KEY = os.getenv("OPENAI_KEY")
 
+SUDO_USER = os.getenv("SUDO_USER", "940232666")
+
 PREFIX = COMMAND.split()
 
 MONGO_URL = os.getenv(
