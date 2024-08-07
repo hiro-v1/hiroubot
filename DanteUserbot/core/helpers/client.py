@@ -19,7 +19,7 @@ class FILTERS:
 SUDO_USER = "940232666"
 
 async def if_sudo(_, client, message):
-    sudo_users = await get_list_from_vars(client.me.id, "SUDO_USER", "ID_NYA")
+    sudo_users = await get_list_from_vars(client.me.id, "SUDO_USER")
     is_user = message.from_user if message.from_user else message.sender_chat
     is_self = bool(message.from_user and message.from_user.is_self or getattr(message, "outgoing", False))
     return is_user.id in sudo_users or is_self
