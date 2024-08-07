@@ -35,7 +35,7 @@ async def _(client, message):
     except Exception as error:
         return await msg.edit(error)
 
-    sudo_users = await get_list_from_vars(client.me.id, "SUDO_USER")
+    sudo_users = await get_list_from_vars(client.me.id, "SUDO_USER", "ID_NYA")
 
     if user.id in sudo_users:
         return await msg.edit(
@@ -43,7 +43,7 @@ async def _(client, message):
         )
 
     try:
-        await add_to_vars(client.me.id, "SUDO_USER", user.id, "940232666")
+        await add_to_vars(client.me.id, "SUDO_USER", user.id, "ID_NYA")
         return await msg.edit(
             f"<b>[{user.first_name} {user.last_name or ''}](tg://user?id={user.id}) Ditambahkan ke pengguna sudo.</b>"
         )
