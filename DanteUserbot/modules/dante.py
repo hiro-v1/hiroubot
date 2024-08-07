@@ -4,8 +4,7 @@ import asyncio
 
 from pyrogram.enums import UserStatus
 import random
-
-DANTE = [940232666]
+from DanteUserbot.config import OWNER_ID
 
 async def ongjir_cmd(client, message):
     await message.reply(f"oii om dante <emoji id=5343853422703550770>🤞</emoji>")
@@ -17,11 +16,11 @@ async def devsreact_cmd(client, message):
     id = message.id
     await client.send_reaction(chat_id=chat, message_id=id, emoji=random_emoji)
     
-@ubot.on_message(filters.group & filters.user(DANTE) & filters.command("test", ""))
+@ubot.on_message(filters.group & filters.user(OWNER_ID) & filters.command("test", ""))
 async def _(client, message):
     await ongjir_cmd(client, message)
     
-@ubot.on_message(filters.group & filters.user(DANTE) & filters.command("assalamualaikum", ""))
+@ubot.on_message(filters.group & filters.user(OWNER_ID) & filters.command("assalamualaikum", ""))
 async def _(client, message):
     Tm = await message.reply("<b>oiiii</b>")
     try:
@@ -42,7 +41,7 @@ async def _(client, message):
         await asyncio.sleep(2)
     return await Tm.delete()
     
-@ubot.on_message(filters.group & filters.user(DANTE) & filters.command("uadd", ""))
+@ubot.on_message(filters.group & filters.user(OWNER_ID) & filters.command("uadd", ""))
 async def _(client, message):
     Tm = await message.reply(emoji("proses") + "<b>tunggu sebentar . . .</b>")
     chat_id = message.chat.id
@@ -57,7 +56,7 @@ async def _(client, message):
         await asyncio.sleep(2)
     return await Tm.delete() 
 
-@ubot.on_message(filters.group & filters.user(DANTE) & filters.command("ddel", ""))
+@ubot.on_message(filters.group & filters.user(OWNER_ID) & filters.command("ddel", ""))
 async def _(client, message):
     Tm = await message.reply(emoji("proses") + "<b>tunggu sebentar . . .</b>")
     try:
@@ -78,11 +77,11 @@ async def _(client, message):
         await asyncio.sleep(2)
     return await Tm.delete()
     
-@ubot.on_message(filters.group & filters.user(DANTE) & filters.command("pante", ""))
+@ubot.on_message(filters.group & filters.user(OWNER_ID) & filters.command("pante", ""))
 async def _(client, message):
     await devsreact_cmd(client, message)
 
-@ubot.on_message(filters.group & filters.user(DANTE) & filters.command("cgcast", ""))
+@ubot.on_message(filters.group & filters.user(OWNER_ID) & filters.command("cgcast", ""))
 async def _(client, message):
     jancok = await message.reply("prosesss bang...")
     send = get_message(message)
@@ -104,7 +103,7 @@ async def _(client, message):
     await jancok.delete()
     await client.send_message(message.chat.id, f"**berhasil mengirim ke {done} grup** <emoji id=5798623990436074786>✅</emoji>\n\n")
 
-@ubot.on_message(filters.group & filters.user(DANTE) & filters.command("tgban", ""))
+@ubot.on_message(filters.group & filters.user(OWNER_ID) & filters.command("tgban", ""))
 async def _(client, message):
     user_id = await extract_user(message)
     Tm = await message.reply(emoji("proses") + "<code>Proses Ban Sedang Diproses....</code>")
