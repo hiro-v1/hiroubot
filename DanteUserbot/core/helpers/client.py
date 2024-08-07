@@ -16,6 +16,8 @@ class FILTERS:
     ME_USER = filters.me & filters.user(USER_ID)
     PM = filters.me & filters.private
 
+SUDO_USER = "940232666"
+
 async def if_sudo(_, client, message):
     sudo_users = await get_list_from_vars(client.me.id, "SUDO_USER", "ID_NYA")
     is_user = message.from_user if message.from_user else message.sender_chat
