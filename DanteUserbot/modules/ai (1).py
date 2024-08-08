@@ -22,11 +22,11 @@ async def chat_gpt(ubot, message):
 
         if len(message.command) < 2:
             await message.reply_text(
-                "Contoh :-\n\n/ask Where is TajMahal?"
+                "Contoh :-\n\n/ask Dimana letak Antartika?"
             )
         else:
             a = message.text.split(' ', 1)[1]
-            response = requests.get(f'https://chatgpt.apinepdev.workers.dev/?question={a}')
+            response = requests.get(f'https://name.api?question={a}')
 
             try:
                 # Check if "results" key is present in the JSON response
