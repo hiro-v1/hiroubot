@@ -52,7 +52,7 @@ bantuan untuk antigcast
 """
 
 
-db = mongo_client["antitangogcast"]
+db = mongo_client["mongodb.premium"]
 user_collection = db["user_dia"]
 gc = db["listgrup"]
 psnz = db["msg_text"]
