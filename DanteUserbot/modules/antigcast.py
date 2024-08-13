@@ -77,7 +77,7 @@ async def get_msg_ids(client_id):
     return msg_ids["msg_text"] if msg_ids else []
 
 async def purge(message):
-    await asyncio.sleep(0.5)
+    await asyncio.sleep(0.1)
     await message.delete()
 
 def get_message(message):
