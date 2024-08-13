@@ -117,7 +117,7 @@ on = emoji("on")
 off = emoji("off")
 dftr = emoji("daftar")
 
-@CB.UBOT("adduser", sudo=True)
+@DANTE.UBOT("adduser", sudo=True)
 async def add_user_to_blacklist(c, m):
     if len(m.command) != 2 and not m.reply_to_message:
         await m.reply_text(f"{batal}**ɢᴜɴᴀᴋᴀɴ ғᴏʀᴍᴀᴛ** : `adduser` **ᴜsᴇʀ ɪᴅ ᴀᴛᴀᴜ ʙᴀʟᴀs ᴋᴇ ᴘᴇsᴀɴ ᴜɴᴛᴜᴋ ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ᴅᴀғᴛᴀʀ ᴀɴᴛɪɢᴄᴀsᴛ {Q}**", quote=True)
