@@ -12,10 +12,10 @@ from pyrogram.raw import functions
 from pyrogram.errors.exceptions.bad_request_400 import ReactionInvalid, MessageTooLong
 
 from pyrogram.raw.functions.messages import TranslateText
-from userbot.core.database import mongo_client
-from userbot import *
+from DanteUserbot.core.database import mongo_client
+from DanteUserbot import *
 
-__MODULE__ = "antigcast"
+__MODULE__ = "ᴀɴᴛɪɢᴄᴀsᴛ"
 __HELP__ = """
 bantuan untuk antigcast
 
@@ -136,12 +136,12 @@ async def add_user_to_blacklist(c, m):
     else:
         await m.reply_text(f"{dn}**ᴜsᴇʀ ᴛᴇʀsᴇʙᴜᴛ sᴜᴅᴀʜ ᴀᴅᴀ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ ᴀɴᴛɪɢᴄᴀsᴛ {Q}**", quote=True)
 
-@CB.UBOT("listuser", sudo=True)
+@DANTE.UBOT("listuser", sudo=True)
 async def display_blacklist(client, message):
     user_ids = await get_user_ids(client.me.id)
     await message.reply_text(f"{dftr} ɪɴɪ ʜᴀsɪʟɴʏᴀ : `{user_ids}`\n", quote=True)
 
-@CB.UBOT("rmuser", sudo=True)
+@DANTE.UBOT("rmuser", sudo=True)
 async def remove_user_from_blacklist(c, m):
     if len(m.command) != 2 and not m.reply_to_message:
         await m.reply_text(f"{batal}**ɢᴜɴᴀᴋᴀɴ ғᴏʀᴍᴀᴛ** : `rmuser` **ᴜsᴇʀ ɪᴅ ᴀᴛᴀᴜ ʙᴀʟᴀs ᴋᴇ ᴘᴇsᴀɴ ᴜɴᴛᴜᴋ ᴍᴇɴɢʜᴀᴘᴜs ᴅᴀʀɪ ᴅᴀғᴛᴀʀ ᴀɴᴛɪɢᴄᴀsᴛ {Q}**", quote=True)
@@ -160,7 +160,7 @@ async def remove_user_from_blacklist(c, m):
     else:
         await m.reply_text(f"{Q}**ᴜsᴇʀ ᴛᴇʀsᴇʙᴜᴛ ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ ᴀɴᴛɪɢᴄᴀsᴛ {gagal}**", quote=True)
 
-@CB.UBOT("cek", sudo=True)
+@DANTE.UBOT("cek", sudo=True)
 async def checkstatus(client, message):
     cek = await get_blacklist_status(client.me.id)
     if cek == True:
@@ -168,17 +168,17 @@ async def checkstatus(client, message):
     else:
         await message.reply_text(f"{Q}**ᴀɴᴅᴀ ʙᴇʟᴜᴍ ᴍᴇɴɢᴀᴋᴛɪғᴋᴀɴ ᴀɴᴛɪɢᴄᴀsᴛ**{gagal}", quote=True)        
 
-@CB.UBOT("on", sudo=True)
+@DANTE.UBOT("on", sudo=True)
 async def enable_blacklist(c, m):
     await set_blacklist_status(c.me.id, True)
     await m.reply_text(f"{Q}**ᴀɴᴛɪɢᴄᴀsᴛ ᴜsᴇʀ ʙᴇʀʜᴀsɪʟ ᴅɪ ᴀᴋᴛɪғᴋᴀɴ** {on}", quote=True)
 
-@CB.UBOT("off", sudo=True)
+@DANTE.UBOT("off", sudo=True)
 async def disable_blacklist(c, m):
     await set_blacklist_status(c.me.id, False)
     await m.reply_text(f"{Q}**ᴀɴᴛɪɢᴄᴀsᴛ ᴜsᴇʀ ʙᴇʀʜᴀsɪʟ ᴅɪ ᴍᴀᴛɪᴋᴀɴ** {off}", quote=True)
 
-@CB.UBOT("addgp", sudo=True)
+@DANTE.UBOT("addgp", sudo=True)
 async def add_group_to_antigcast(c, m):
     type = (ChatType.GROUP, ChatType.SUPERGROUP)
 
@@ -195,7 +195,7 @@ async def add_group_to_antigcast(c, m):
     else:
         await m.reply_text(f"{dn}**ɢʀᴜᴘ ᴛᴇʀsᴇʙᴜᴛ sᴜᴅᴀʜ ᴀᴅᴀ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ ᴀɴᴛɪɢᴄᴀsᴛ {Q}**", quote=True)
 
-@CB.UBOT("rmgp", sudo=True)
+@DANTE.UBOT("rmgp", sudo=True)
 async def remove_group_from_antigcast(c, m):
     type = (ChatType.GROUP, ChatType.SUPERGROUP)
     if m.chat.type not in type:
@@ -222,12 +222,12 @@ async def remove_group_from_antigcast(c, m):
         await m.reply_text(f"{Q} Grup dengan ID {chat_id} tidak ada dalam daftar antigcast {gagal}", quote=True)
 
 
-@CB.UBOT("listgp", sudo=False)
+@DANTE.UBOT("listgp", sudo=False)
 async def display_antigcast(c, m):
     user_ids = await get_chat_ids(c.me.id)
     await m.reply_text(f"{dftr}**ᴅᴀғᴛᴀʀ ɢʀᴜᴘ ᴀɴᴛɪɢᴄᴀsᴛ** : `{user_ids}` \n", quote=True)
 
-@CB.UBOT("bl", sudo=True)
+@DANTE.UBOT("bl", sudo=True)
 async def add_pesan(c, m):
     _rply = m.reply_to_message
     if not _rply:
@@ -247,7 +247,7 @@ async def add_pesan(c, m):
         await asyncio.sleep(0.5)
         await x.delete()
 
-@CB.UBOT("strdb", sudo=False)
+@DANTE.UBOT("strdb", sudo=False)
 async def strdb(client, message):
     pesan = await get_msg_ids(client.me.id)
     try:
@@ -259,7 +259,7 @@ async def strdb(client, message):
         if kirim:
             os.remove("db.txt")
 
-@CB.UBOT("rmkat", sudo=True)
+@DANTE.UBOT("rmkat", sudo=True)
 async def remove_kata_from_blacklist(c, m):
     if len(m.command) != 2 and not m.reply_to_message:
         await m.reply_text(f"{batal}**ɢᴜɴᴀᴋᴀɴ ғᴏʀᴍᴀᴛ** : `rmkat` **ᴜsᴇʀ ɪᴅ ᴀᴛᴀᴜ ʙᴀʟᴀs ᴋᴇ ᴘᴇsᴀɴ ᴜɴᴛᴜᴋ ᴍᴇɴɢʜᴀᴘᴜs ᴅᴀʀɪ ᴅᴀғᴛᴀʀ ᴀɴᴛɪɢᴄᴀsᴛ {Q}**", quote=True)
