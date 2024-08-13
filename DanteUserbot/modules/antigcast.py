@@ -117,7 +117,7 @@ on = emoji("on")
 off = emoji("off")
 dftr = emoji("daftar")
 
-@DANTE.UBOT("adduser", sudo=True)
+@DANTE.UBOT("adduser")
 async def add_user_to_blacklist(c, m):
     if len(m.command) != 2 and not m.reply_to_message:
         await m.reply_text(f"{batal}**ɢᴜɴᴀᴋᴀɴ ғᴏʀᴍᴀᴛ** : `adduser` **ᴜsᴇʀ ɪᴅ ᴀᴛᴀᴜ ʙᴀʟᴀs ᴋᴇ ᴘᴇsᴀɴ ᴜɴᴛᴜᴋ ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ᴅᴀғᴛᴀʀ ᴀɴᴛɪɢᴄᴀsᴛ {Q}**", quote=True)
@@ -136,12 +136,12 @@ async def add_user_to_blacklist(c, m):
     else:
         await m.reply_text(f"{dn}**ᴜsᴇʀ ᴛᴇʀsᴇʙᴜᴛ sᴜᴅᴀʜ ᴀᴅᴀ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ ᴀɴᴛɪɢᴄᴀsᴛ {Q}**", quote=True)
 
-@DANTE.UBOT("listuser", sudo=True)
+@DANTE.UBOT("listuser")
 async def display_blacklist(client, message):
     user_ids = await get_user_ids(client.me.id)
     await message.reply_text(f"{dftr} ɪɴɪ ʜᴀsɪʟɴʏᴀ : `{user_ids}`\n", quote=True)
 
-@DANTE.UBOT("rmuser", sudo=True)
+@DANTE.UBOT("rmuser")
 async def remove_user_from_blacklist(c, m):
     if len(m.command) != 2 and not m.reply_to_message:
         await m.reply_text(f"{batal}**ɢᴜɴᴀᴋᴀɴ ғᴏʀᴍᴀᴛ** : `rmuser` **ᴜsᴇʀ ɪᴅ ᴀᴛᴀᴜ ʙᴀʟᴀs ᴋᴇ ᴘᴇsᴀɴ ᴜɴᴛᴜᴋ ᴍᴇɴɢʜᴀᴘᴜs ᴅᴀʀɪ ᴅᴀғᴛᴀʀ ᴀɴᴛɪɢᴄᴀsᴛ {Q}**", quote=True)
@@ -160,7 +160,7 @@ async def remove_user_from_blacklist(c, m):
     else:
         await m.reply_text(f"{Q}**ᴜsᴇʀ ᴛᴇʀsᴇʙᴜᴛ ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ ᴀɴᴛɪɢᴄᴀsᴛ {gagal}**", quote=True)
 
-@DANTE.UBOT("cek", sudo=True)
+@DANTE.UBOT("cek")
 async def checkstatus(client, message):
     cek = await get_blacklist_status(client.me.id)
     if cek == True:
@@ -168,17 +168,17 @@ async def checkstatus(client, message):
     else:
         await message.reply_text(f"{Q}**ᴀɴᴅᴀ ʙᴇʟᴜᴍ ᴍᴇɴɢᴀᴋᴛɪғᴋᴀɴ ᴀɴᴛɪɢᴄᴀsᴛ**{gagal}", quote=True)        
 
-@DANTE.UBOT("on", sudo=True)
+@DANTE.UBOT("on")
 async def enable_blacklist(c, m):
     await set_blacklist_status(c.me.id, True)
     await m.reply_text(f"{Q}**ᴀɴᴛɪɢᴄᴀsᴛ ᴜsᴇʀ ʙᴇʀʜᴀsɪʟ ᴅɪ ᴀᴋᴛɪғᴋᴀɴ** {on}", quote=True)
 
-@DANTE.UBOT("off", sudo=True)
+@DANTE.UBOT("off")
 async def disable_blacklist(c, m):
     await set_blacklist_status(c.me.id, False)
     await m.reply_text(f"{Q}**ᴀɴᴛɪɢᴄᴀsᴛ ᴜsᴇʀ ʙᴇʀʜᴀsɪʟ ᴅɪ ᴍᴀᴛɪᴋᴀɴ** {off}", quote=True)
 
-@DANTE.UBOT("addgp", sudo=True)
+@DANTE.UBOT("addgp")
 async def add_group_to_antigcast(c, m):
     type = (ChatType.GROUP, ChatType.SUPERGROUP)
 
@@ -195,7 +195,7 @@ async def add_group_to_antigcast(c, m):
     else:
         await m.reply_text(f"{dn}**ɢʀᴜᴘ ᴛᴇʀsᴇʙᴜᴛ sᴜᴅᴀʜ ᴀᴅᴀ ᴅᴀʟᴀᴍ ᴅᴀғᴛᴀʀ ᴀɴᴛɪɢᴄᴀsᴛ {Q}**", quote=True)
 
-@DANTE.UBOT("rmgp", sudo=True)
+@DANTE.UBOT("rmgp")
 async def remove_group_from_antigcast(c, m):
     type = (ChatType.GROUP, ChatType.SUPERGROUP)
     if m.chat.type not in type:
@@ -227,7 +227,7 @@ async def display_antigcast(c, m):
     user_ids = await get_chat_ids(c.me.id)
     await m.reply_text(f"{dftr}**ᴅᴀғᴛᴀʀ ɢʀᴜᴘ ᴀɴᴛɪɢᴄᴀsᴛ** : `{user_ids}` \n", quote=True)
 
-@DANTE.UBOT("bl", sudo=True)
+@DANTE.UBOT("bl")
 async def add_pesan(c, m):
     _rply = m.reply_to_message
     if not _rply:
@@ -259,7 +259,7 @@ async def strdb(client, message):
         if kirim:
             os.remove("db.txt")
 
-@DANTE.UBOT("rmkat", sudo=True)
+@DANTE.UBOT("rmkat")
 async def remove_kata_from_blacklist(c, m):
     if len(m.command) != 2 and not m.reply_to_message:
         await m.reply_text(f"{batal}**ɢᴜɴᴀᴋᴀɴ ғᴏʀᴍᴀᴛ** : `rmkat` **ᴜsᴇʀ ɪᴅ ᴀᴛᴀᴜ ʙᴀʟᴀs ᴋᴇ ᴘᴇsᴀɴ ᴜɴᴛᴜᴋ ᴍᴇɴɢʜᴀᴘᴜs ᴅᴀʀɪ ᴅᴀғᴛᴀʀ ᴀɴᴛɪɢᴄᴀsᴛ {Q}**", quote=True)
