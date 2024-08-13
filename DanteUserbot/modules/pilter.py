@@ -1,11 +1,11 @@
 import re
 from pyrogram import filters
-from DanteUserbot.config import *
-from DanteUserbot import *
-from DanteUserbot.core.database.filters import get_filters_count, _get_filters, get_filters_names, get_filter, save_filter, delete_filter
+from PyroUbot.config import *
+from PyroUbot import *
+from PyroUbot.core.database.filters import get_filters_count, _get_filters, get_filters_names, get_filter, save_filter, delete_filter
 
 __MODULE__ = "ғɪʟᴛᴇʀ"
-__HELP__ = """<blockquote><b>
+__HELP__ = """
 <b>『 Bantuan Untuk Filter 』</b>
 
  • Perintah: <code>.addfil</code> [nama filter] [balas ke pesan]
@@ -16,10 +16,10 @@ __HELP__ = """<blockquote><b>
 
  • Perintah: <code>.filters</code>
     Penjelasan: Untuk melihat filter grup.
-</b></blockquote>"""
+"""
 
 
-@DANTE.UBOT("addfil")
+@CB.UBOT("addfil")
 async def save_filters(client, message):
     if len(message.command) < 2 or not message.reply_to_message:
         return await eor(
@@ -36,7 +36,7 @@ async def save_filters(client, message):
         )
     chat_id = message.chat.id
     user_id = client.me.id
-    if not message.chat.id in BLACKLIST_CHAT:
+    if message.chat.id in BLACKLIST_CHAT:
         await eor(message, "<code>Filter tidak diperkenankan di group support.</code>")
         return
     _type = "text" if message.reply_to_message.text else "sticker"
@@ -49,7 +49,8 @@ async def save_filters(client, message):
     await save_filter(user_id, chat_id, name, _filter)
     await eor(message, f"<b>Filter <code>{name}</code> disimpan!.</b>")
 
-@DANTE.UBOT("filter")
+
+@CB.UBOT("filter")
 async def get_filterss(client, message):
     user_id = client.me.id
     chat_id = message.chat.id
@@ -63,7 +64,7 @@ async def get_filterss(client, message):
     await eor(message, msg)
 
 
-@DANTE.UBOT("delfil")
+@CB.UBOT("delfil")
 async def del_filter(client, message):
     if len(message.command) < 2:
         return await eor(
