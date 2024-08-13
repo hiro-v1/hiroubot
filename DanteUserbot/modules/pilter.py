@@ -1,8 +1,8 @@
 import re
 from pyrogram import filters
-from PyroUbot.config import *
-from PyroUbot import *
-from PyroUbot.core.database.filters import get_filters_count, _get_filters, get_filters_names, get_filter, save_filter, delete_filter
+from DanteUserbot.config import *
+from DanteUserbot import *
+from DanteUserbot.core.database.filters import get_filters_count, _get_filters, get_filters_names, get_filter, save_filter, delete_filter
 
 __MODULE__ = "ғɪʟᴛᴇʀ"
 __HELP__ = """
