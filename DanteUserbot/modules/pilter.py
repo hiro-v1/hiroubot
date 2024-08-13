@@ -19,7 +19,7 @@ __HELP__ = """
 """
 
 
-@CB.UBOT("addfil")
+@DANTE.UBOT("addfil")
 async def save_filters(client, message):
     if len(message.command) < 2 or not message.reply_to_message:
         return await eor(
@@ -50,7 +50,7 @@ async def save_filters(client, message):
     await eor(message, f"<b>Filter <code>{name}</code> disimpan!.</b>")
 
 
-@CB.UBOT("filter")
+@DANTE.UBOT("filter")
 async def get_filterss(client, message):
     user_id = client.me.id
     chat_id = message.chat.id
@@ -64,7 +64,7 @@ async def get_filterss(client, message):
     await eor(message, msg)
 
 
-@CB.UBOT("delfil")
+@DANTE.UBOT("delfil")
 async def del_filter(client, message):
     if len(message.command) < 2:
         return await eor(
