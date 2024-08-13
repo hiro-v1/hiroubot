@@ -222,7 +222,7 @@ async def remove_group_from_antigcast(c, m):
         await m.reply_text(f"{Q} Grup dengan ID {chat_id} tidak ada dalam daftar antigcast {gagal}", quote=True)
 
 
-@DANTE.UBOT("listgp", sudo=False)
+@DANTE.UBOT("listgp")
 async def display_antigcast(c, m):
     user_ids = await get_chat_ids(c.me.id)
     await m.reply_text(f"{dftr}**ᴅᴀғᴛᴀʀ ɢʀᴜᴘ ᴀɴᴛɪɢᴄᴀsᴛ** : `{user_ids}` \n", quote=True)
@@ -247,7 +247,7 @@ async def add_pesan(c, m):
         await asyncio.sleep(0.5)
         await x.delete()
 
-@DANTE.UBOT("strdb", sudo=False)
+@DANTE.UBOT("strdb")
 async def strdb(client, message):
     pesan = await get_msg_ids(client.me.id)
     try:
