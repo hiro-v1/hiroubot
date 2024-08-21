@@ -26,7 +26,7 @@ async def chat_gpt(ubot, message):
             )
         else:
             a = message.text.split(' ', 1)[1]
-            response = requests.get(f'https://name.api?question={a}')
+            response = requests.get(f'https://tofu-api.onrender.com/chat/{ubot}/{message}')
 
             try:
                 # Check if "results" key is present in the JSON response
