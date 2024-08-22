@@ -4,7 +4,6 @@ from pyrogram.types import Message
 from pyrogram import Client, filters
 from DanteUserbot import *
 from pymongo import MongoClient
-from config import MONGO_DB_URI
 
 __MODULE__ = "ᴀɪ"
 __HELP__ = f"""<blockquote><b>
