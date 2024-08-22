@@ -13,7 +13,7 @@ __HELP__ = f"""<blockquote><b>
   <b>• penjelasan:</b> buat pertanyaan contoh .ask dimana letak Antartika
 </b></blockquote>"""
 
-DATABASE = MongoClient(MONGO_DB_URI)
+DATABASE = MongoClient(MONGO_URL)
 db = DATABASE["MAIN"]["USERS"]
 collection = db["members"]
 
