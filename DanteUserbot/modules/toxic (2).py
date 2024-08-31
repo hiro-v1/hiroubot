@@ -244,8 +244,8 @@ async def toxicpeka(ubot: ubot, message: Message):
 
 __MODULE__ = "ᴋᴀsᴀʀ²"
 __HELP__ = f"""<blockquote><b>
-<b>『 Ngatain²』</b>
-❏ `malu` - coba aja.
+❏<b>『 Ngatain²』</b>
+├• `malu` - coba aja.
 ├• `curhat` - coba aja.
 ├• `umm` - coba aja.
 ├• `knl` - coba aja.
