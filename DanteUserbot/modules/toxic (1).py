@@ -343,17 +343,16 @@ async def toxicvir(ubot: ubot, message: Message):
 
 __MODULE__ = "ᴋᴀsᴀʀ¹"
 __HELP__ = f"""<blockquote><b>
-<b>ngata ngatain :</b>
+<b>『 Ngatain¹ 』</b>
 
-<b>• Bct & jamet</b>
-<b>• vir & cuih</b>
-<b>• poto & gembel</b>
-<b>• so & sni</b>
-<b>• hah & ppx</b>
-<b>• nrk & war</b>
-<b>• cpr & kis</b>
-<b>• van & gcast</b>
-<b>• sokab</b></b></blockquote>
+❏<b>• Bct & jamet</b>
+├• <b>• vir & cuih</b>
+├• <b>• poto & gembel</b>
+├• <b>• so & sni</b>
+├• <b>• hah & ppx</b>
+├• <b>• nrk & war</b>
+├• <b>• cpr & kis</b>
+╰• <b>• sokab</b></b></blockquote>
 """
 
 
