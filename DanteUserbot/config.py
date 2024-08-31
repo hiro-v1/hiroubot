@@ -17,7 +17,7 @@ LOGS_MAKER_UBOT = int(os.getenv("LOGS_MAKER_UBOT", "-1002009684047"))
 
 BLACKLIST_CHAT = list(map(int, os.getenv("BLACKLIST_CHAT", "-1002119660672").split()))
 
-MAX_BOT = int(os.getenv("MAX_BOT", "100"))
+MAX_BOT = int(os.getenv("MAX_BOT", "200"))
 
 COMMAND = os.getenv("COMMAND", ".")
 
@@ -29,5 +29,5 @@ PREFIX = COMMAND.split()
 
 MONGO_URL = os.getenv(
     "MONGO_URL",
-    "mongodb+srv://Xyxx:Helmi4636@cluster0.9yy5ve9.mongodb.net/?retryWrites=true&w=majority",
+    "mongodb+srv://usrbot:usrbot4646@cluster0.6hroi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
 )
