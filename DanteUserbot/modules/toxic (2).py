@@ -244,17 +244,16 @@ async def toxicpeka(ubot: ubot, message: Message):
 
 __MODULE__ = "ᴋᴀsᴀʀ²"
 __HELP__ = f"""<blockquote><b>
-ngata ngatain :
-
-`malu` - coba aja.
-`curhat` - coba aja.
-`umm` - coba aja.
-`knl` - coba aja.
-`be` - coba aja.
-`psn` - coba aja.
-`kasihan` - coba aja.
-`rosting` - coba aja.
-`peka` - coba aja.</b></blockquote>
+<b>『 Ngatain²』</b>
+❏ `malu` - coba aja.
+├• `curhat` - coba aja.
+├• `umm` - coba aja.
+├• `knl` - coba aja.
+├• `be` - coba aja.
+├• `psn` - coba aja.
+├• `kasihan` - coba aja.
+├• `rosting` - coba aja.
+╰• `peka` - coba aja.</b></blockquote>
 """
 
 
