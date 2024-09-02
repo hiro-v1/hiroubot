@@ -35,7 +35,6 @@ logger.addHandler(stream_handler)
 logger.addHandler(connection_handler)
 logging.getLogger("pytgcalls").setLevel(logging.WARNING)
 
-aiosession = ClientSession()
 
 class Bot(Client):
     def __init__(self, **kwargs):
