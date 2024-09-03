@@ -87,7 +87,7 @@ class DANTE:
         return decorator
 
     @staticmethod
-    def ME_USER(command, filter=FILTER.ME_USER):
+    def ME_USER(command, filter=FILTERS.ME_USER):
         def wrapper(func):
             message_filters = (
                 filters.command(command, "") & filter
