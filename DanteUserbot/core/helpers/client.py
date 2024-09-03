@@ -85,6 +85,23 @@ class DANTE:
             return wrapped_func
 
         return decorator
+
+    @staticmethod
+    def ME_USER(command, filter=FILTER.ME_USER):
+        def wrapper(func):
+            message_filters = (
+                filters.command(command, "") & filter
+                if filter
+                else filters.command(command)
+            )
+
+            @ubot.on_message(message_filters)
+            async def wrapped_func(client, message):
+                await func(client, message)
+
+            return wrapped_func
+
+        return wrapper
         
     @staticmethod
     def ADMIN(func):
