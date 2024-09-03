@@ -179,6 +179,7 @@ async def start_cmd(client, message):
 
 
 @DANTE.UBOT("ping")
+@DANTE.ME_USER("uping")
 async def _(client, message):
     await ping_cmd(client, message)
 
