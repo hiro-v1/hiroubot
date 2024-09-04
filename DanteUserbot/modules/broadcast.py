@@ -547,6 +547,8 @@ async def _(client, message):
     else:
         return await msg.edit(f"<b>{ggl}<code>{message.text.split()[0]}</code> [query] - [value]</b>")
 
+gcast_progress = []
+
 @DANTE.UBOT("ucast")
 async def gcast_handler(client, message):
     global gcast_progress
