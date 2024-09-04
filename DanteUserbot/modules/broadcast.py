@@ -216,45 +216,6 @@ async def _(client, message):
 """
     return await message.reply(_gcs)
 
-@DANTE.UBOT("brocast")
-async def _(client, message):
-    prs = await EMO.PROSES(client)
-    brhsl = await EMO.BERHASIL(client)
-    ggl = await EMO.GAGAL(client)
-    bcs = await EMO.BROADCAST(client)
-    ngentod = await STR.PRS(client)    
-    _msg = f"<b>{prs}{ngentod}</b>"
-    gcs = await message.reply(_msg)
-    if not message.reply_to_message:
-        return await gcs.edit(f"**{ggl} mohon balas ke pesan !**")
-    text = message.reply_to_message
-    chats = await get_data_id(client, "users")
-    blacklist = await get_list_from_vars(client.me.id, "BL_ID")
-    done = 0
-    failed = 0
-    for chat_id in chats:
-        if chat_id in blacklist or chat_id in BLACKLIST_CHAT:
-            continue
-
-        try:
-            await text.copy(chat_id)
-            done += 1
-        except FloodWait as e:
-            await asyncio.sleep(e.value)
-            await text.copy(chat_id)
-            done += 1
-        except Exception:
-            failed += 1
-            pass
-
-    await gcs.delete()
-    _gcs = f"""
-<b>{bcs}broadcaꜱt meꜱꜱage done</b>
-<b>{brhsl}ꜱucceꜱ {done} user</b>
-<b>{ggl}failed {failed} user</b>
-"""
-    return await message.reply(_gcs)
-
 
 @DANTE.UBOT("bcfd|cfd")
 async def _(client, message):
@@ -606,4 +567,7 @@ async def gcast_handler(client, message):
 <b>{ktrng}ᴛʏᴘᴇ :</b> <code>{command}</code></blockquote>
 """
     return await message.reply(_gcs)
+
+
+
   
