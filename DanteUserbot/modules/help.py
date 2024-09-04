@@ -30,7 +30,7 @@ async def help_cmd(client, message):
 @INLINE.QUERY
 async def menu_inline(client, inline_query):
     SH = await ubot.get_prefix(inline_query.from_user.id)
-    msg = f"<blockquote><b>❏ Help\n├  Prefixes: {' '.join(SH)}\n╰  Commands: {len(HELP_COMMANDS)}</b></blockquote>"
+    msg = f"<blockquote><b>❏ Help\n├ Owner: <a href=tg://user?id={callback_query.from_user.id}>{callback_query.from_user.first_name} {callback_query.from_user.last_name or ''}</a>\n├ Prefixes: {' '.join(SH)}\n╰  Commands: {len(HELP_COMMANDS)}</b></blockquote>"
     await client.answer_inline_query(
         inline_query.id,
         cache_time=60,
@@ -56,7 +56,7 @@ async def menu_callback(client, callback_query):
     next_match = re.match(r"help_next\((.+?)\)", callback_query.data)
     back_match = re.match(r"help_back", callback_query.data)
     SH = await ubot.get_prefix(callback_query.from_user.id)
-    top_text = f"<blockquote><b>❏ Help \n├  Prefixes: {' '.join(SH)}\n╰  Commands: {len(HELP_COMMANDS)}</b></blockquote>"
+    top_text = f"<blockquote><b>❏ Help \n├ Owner: <a href=tg://user?id={callback_query.from_user.id}>{callback_query.from_user.first_name} {callback_query.from_user.last_name or ''}</a>\n├ Prefixes: {' '.join(SH)}\n╰  Commands: {len(HELP_COMMANDS)}</b></blockquote>"
     if mod_match:
         module = (mod_match.group(1)).replace(" ", "_")
         text = HELP_COMMANDS[module].__HELP__.format(next((p) for p in SH))
