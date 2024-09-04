@@ -14,23 +14,20 @@ __MODULE__ = "ɢᴄᴀsᴛ"
 __HELP__ = """<blockquote><b>
   <b>Bantuan untuk Broadcast</b>
 
-<b>command:</b> <code>{0}gcast</code> <b>or</b> <code>{0}brocast</code>
-<b>example:</b> <code>gikes untuk grup</code> <code>brocast untuk chat private</code>
-<b>mengirim pesan siaran group private</b>
-
+<b>command:</b> <code>{0}gcast</code>
+<b>command:</b> <code>{0}gcast mulai broadcast digroup</code>
 <b>command:</b> <code>{0}bcfd</code> <b>or</b> <code>{0}cfd</code>
-<b>mengirim pesan siaran secara forward</b>
 
+<b>mengirim pesan siaran secara forward</b>
 <b>command:</b> <code>{0}send</code>
 <b>mengirim pesan ke user/group/channel</b>
 
 <b>spesial</b>
-
 <b>command:</b> <code>{0}ucast users</code>
 <b>command:</b> <code>Untuk mengirim pesan siaran ke users contoh: ucast users hai</code>
-
 <b>command:</b> <code>{0}gikes all</code>
 <b>mengirim pesan ke user/group/channels contoh gikes all hallo</b>
+<b>command stop:</b> <code>{0}stopg agar memberhentikan ucast/gikes.</code>
 
 <b>command:</b> <code>{0}bcast</code>
 <b>example:</b> <code>bcast untuk grup</code> <code>bcast gcast yang bisa di cancel</code>
