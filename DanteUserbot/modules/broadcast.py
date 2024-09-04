@@ -26,6 +26,8 @@ __HELP__ = """<blockquote><b>
 
 <b>spesial</b>
 
+"group", "users", "all"
+
 <b>command:</b> <code>{0}bcast</code>
 <b>example:</b> <code>bcast untuk grup</code> <code>bcast gcast yang bisa di cancel</code>
 <b>command:</b> <code>{0}gcan</code>
@@ -543,3 +545,62 @@ async def _(client, message):
 
     else:
         return await msg.edit(f"<b>{ggl}<code>{message.text.split()[0]}</code> [query] - [value]</b>")
+
+@DANTE.UBOT("ucast")
+async def gcast_handler(client, message):
+    global gcast_progress
+    gcast_progress.append(client.me.id)
+    
+    prs = await EMO.PROSES(client)
+    sks = await EMO.BERHASIL(client)
+    ggl = await EMO.GAGAL(client)
+    bcs = await EMO.BROADCAST(client)
+    ktrng = await EMO.BL_KETERANGAN(client)    
+    _msg = f"<b>{prs}ᴍᴇᴍᴘʀᴏsᴇs...</b>"
+    gcs = await message.reply(_msg)    
+    command, text = extract_type_and_msg(message)
+
+    if command not in ["users"] or not text:
+        gcast_progress.remove(client.me.id)
+        return await gcs.edit(f"<blockquote><code>{message.text.split()[0]}</code> <b>[ᴛʏᴘᴇ] [ᴛᴇxᴛ/ʀᴇᴘʟʏ]</b> {ggl}</blockquote>")
+    chats = await get_data_id(client, command)
+    blacklist = await get_list_from_vars(client.me.id, "BL_ID")
+
+    done = 0
+    failed = 0
+    for chat_id in chats:
+        if client.me.id not in gcast_progress:
+            await gcs.edit(f"<blockquote><b>ᴘʀᴏsᴇs ɢᴄᴀsᴛ ʙᴇʀʜᴀsɪʟ ᴅɪ ʙᴀᴛᴀʟᴋᴀɴ !</b> {sks}</blockquote>")
+            return
+        if chat_id in blacklist or chat_id in BLACKLIST_CHAT:
+            continue
+
+        try:
+            if message.reply_to_message:
+                await text.copy(chat_id)
+            else:
+                await client.send_message(chat_id, text)
+            done += 1
+        except FloodWait as e:
+            await asyncio.sleep(e.value)
+            try:
+                if message.reply_to_message:
+                    await text.copy(chat_id)
+                else:
+                    await client.send_message(chat_id, text)
+                done += 1
+            except (Exception, ChannelPrivate):
+                failed += 1
+        except (Exception, ChannelPrivate):
+            failed += 1
+
+    gcast_progress.remove(client.me.id)
+    await gcs.delete()
+    _gcs = f"""
+<blockquote><b>{bcs}ʙʀᴏᴀᴅᴄᴀsᴛ ᴛᴇʀᴋɪʀɪᴍ</b></blockquote>
+<blockquote><b>{sks}ʙᴇʀʜᴀsɪʟ : {done} ᴄʜᴀᴛ</b>
+<b>{ggl}ɢᴀɢᴀʟ : {failed} ᴄʜᴀᴛ</b>
+<b>{ktrng}ᴛʏᴘᴇ :</b> <code>{command}</code></blockquote>
+"""
+    return await message.reply(_gcs)
+  
