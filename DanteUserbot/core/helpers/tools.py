@@ -132,7 +132,31 @@ async def extract_user_and_reason(message, sender_chat=False):
 async def extract_user(message):
     return (await extract_user_and_reason(message))[0]
 
+def extract_type_and_msg(message):
+    args = message.text.split(None, 2)
+    if len(args) < 2:
+        return None, None
+    
+    type = args[1]
+    msg = message.reply_to_message if message.reply_to_message else args[2] if len(args) > 2 else None
+    return type, msg
 
+
+def extract_type_and_text(message):
+    args = message.text.split(None, 2)
+    if len(args) < 2:
+        return None, None
+
+    type = args[1]
+    msg = (
+        message.reply_to_message.text
+        if message.reply_to_message
+        else args[2]
+        if len(args) > 2
+        else None
+    )
+    return type, msg
+    
 class Media_Info:
     def data(media):
         found = False
