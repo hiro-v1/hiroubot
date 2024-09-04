@@ -27,7 +27,10 @@ __HELP__ = """<blockquote><b>
 <b>spesial</b>
 
 <b>command:</b> <code>{0}ucast users</code>
-<b>command:</b> <code>Untuk mengirim pesan siaran ke users contoh : ucast users hai</code>
+<b>command:</b> <code>Untuk mengirim pesan siaran ke users contoh: ucast users hai</code>
+
+<b>command:</b> <code>{0}gikes all</code>
+<b>mengirim pesan ke user/group/channels contoh gikes all hallo</b>
 
 <b>command:</b> <code>{0}bcast</code>
 <b>example:</b> <code>bcast untuk grup</code> <code>bcast gcast yang bisa di cancel</code>
