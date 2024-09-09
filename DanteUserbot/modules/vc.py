@@ -163,7 +163,7 @@ async def leavevc(client, message):
             return await message.reply_text(e)
 
 
-@DANTE.UBOT("listvc")
+@DANTE.UBOT("listvc", FILTERS.OWNER)
 async def list_vc(client, message):
     chat_id = message.chat.id
     chat_title = message.chat.title if hasattr(message.chat, 'title') else 'Obrolan'
