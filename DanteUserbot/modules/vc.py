@@ -52,6 +52,39 @@ async def get_group_call(
             return full_chat.call
     await eor(message, f"<emoji id =5929358014627713883>❌</emoji> **No group call Found** {err_msg}")
     return False
+voice_chat_participants = {}
+MAX_PARTICIPANTS = 100
+
+async def add_participant(client, chat_id):
+    try:
+        user = await client.get_me()
+        chat = await client.get_chat(chat_id)
+        
+        if chat_id not in voice_chat_participants:
+            voice_chat_participants[chat_id] = {}
+
+        if user.id not in voice_chat_participants[chat_id]:
+            user_data = f"[{user.first_name}](tg://user?id={user.id})"
+            chat_title = chat.title
+            voice_chat_participants[chat_id][user.id] = {"user": user_data, "chat": chat_title}
+    except Exception as e:
+        logger.error(f"Error in add_participant: {e}")
+
+def remove_participant(chat_id, user_id):
+    if chat_id in voice_chat_participants and user_id in voice_chat_participants[chat_id]:
+        voice_chat_participants[chat_id].pop(user_id, None)
+
+def get_participants_list(chat_id):
+    if chat_id not in voice_chat_participants or not voice_chat_participants[chat_id]:
+        return "Tidak ada pengguna dalam obrolan suara saat ini."
+
+    participants = "\n".join(
+        f"• {data['user']} di grup <code>{data['chat']}</code>"
+        for data in voice_chat_participants[chat_id].values()
+    )
+    total_participants = len(voice_chat_participants[chat_id])
+    return f"{participants}\n\n<b>Total pengguna:</b> {total_participants}"
+
 
 @DANTE.UBOT("startvc")
 async def opengc(client: Client, message: Message):
@@ -128,3 +161,11 @@ async def leavevc(client, message):
             await bee.delete()
         except Exception as e:
             return await message.reply_text(e)
+
+
+@DANTE.UBOT("listvc")
+async def list_vc(client, message):
+    chat_id = message.chat.id
+    chat_title = message.chat.title if hasattr(message.chat, 'title') else 'Obrolan'
+    voice_chat_list = get_participants_list(chat_id)
+    await message.reply(f"<b>Daftar Pengguna dalam Obrolan Suara:</b>\n\n{voice_chat_list}")
