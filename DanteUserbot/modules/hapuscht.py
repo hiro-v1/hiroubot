@@ -27,7 +27,6 @@ async def cc(client: Client, message: Message):
 
 @DANTE.UBOT("clchat")
 async def clchat(client: Client, message: Message):
-    em.initialize()
     rep = message.reply_to_message
     mek = await message.reply.text("proses")
     if len(message.command) < 2 and not rep:
