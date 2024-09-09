@@ -3,7 +3,7 @@ import asyncio
 import time
 from pyrogram.types import ChatPermissions, Message
 
-@DANTE.UBOT(ccall)
+@DANTE.UBOT("ccall")
 async def delete_user_history(client: Client, message: Message):
     chat_id=message.chat.id
     msg_id=message.message_id
