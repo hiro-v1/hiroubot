@@ -3,6 +3,7 @@ import re
 import requests
 from pyrogram import enums
 from unidecode import unidecode
+from DanteUserbot.core.helpers.client import NO_CMD_UBOT
 
 from DanteUserbot import *
 
