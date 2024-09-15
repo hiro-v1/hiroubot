@@ -41,8 +41,6 @@ def send_simtalk(msg):
     response = requests.post("https://api.simsimi.vn/v1/simtalk", data=params).json()
     return response.get("message")
 
-
-@DANTE.UBOT("CHATBOT_TEXT")
 async def _(client, msg, _):
     txt = msg.text if msg.text else msg.caption
     rep = msg.reply_to_message or msg
