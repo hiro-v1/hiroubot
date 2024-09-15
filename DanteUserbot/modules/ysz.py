@@ -42,7 +42,7 @@ def send_simtalk(msg):
     return response.get("message")
 
 
-@DANTE.UBOT("onx")
+@DANTE.UBOT("CHATBOT_TEXT")
 async def _(client, msg, _):
     txt = msg.text if msg.text else msg.caption
     rep = msg.reply_to_message or msg
