@@ -70,7 +70,7 @@ async def clearall(client, message):
                     await asyncio.sleep(e.value)
                     info = await client.resolve_peer(kelot)
                     await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-            await message.reply("berhasil menghapus semua chat berhasil {} gagal {}")
+            await message.reply("berhasil menghapus semua chat")
         else:
             who = message.text.split(None, 1)[1]
             try:
