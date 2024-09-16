@@ -94,7 +94,6 @@ async def clearall(client, message):
                 info = await client.resolve_peer(who)
                 await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
             await message.reply("gagal menghapus chat private kamu")
-          await dantekntl.delete()
       try:
         return await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
       except Exception as ev:
