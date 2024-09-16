@@ -94,9 +94,9 @@ async def clearall(client, message):
                 info = await client.resolve_peer(who)
                 await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
             await message.reply("gagal menghapus chat private kamu")
-      try:
-        return await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-      except Exception as ev:
-        print(f"Error saat menghapus pesan: {ev}")
-        await message.reply("Terjadi kesalahan saat menghapus pesan.")  # Memberi tahu user      
+          try:
+            return await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
+          except Exception as ev:
+            print(f"Error saat menghapus pesan: {ev}")
+            await message.reply("Terjadi kesalahan saat menghapus pesan.")  # Memberi tahu user      
       
