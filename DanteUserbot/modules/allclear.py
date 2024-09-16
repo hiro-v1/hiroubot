@@ -10,6 +10,7 @@ from pyrogram.raw.functions.messages import DeleteHistory
 
 @DANTE.UBOT("cc")
 async def cc(client, message):
+    try:
     reply = message.reply_to_message
     if reply and reply.sender_chat and reply.sender_chat != message.chat.id:
         aan = await message.reply("terjadi masalah saat menghapus semua pesan kamu")
@@ -28,12 +29,13 @@ async def cc(client, message):
         return await client.delete_user_history(message.chat.id, user)
     except:
         pass
-      except Exception as ev:  # Menambahkan 'Exception as ev' di sini
-        print(f"Error saat menghapus pesan: {ev}")  # Cetak pesan error
+    except Exception as ev:
+        print(f"Error saat menghapus pesan: {ev}")
         await message.reply("Terjadi kesalahan saat menghapus pesan.")  # Memberi tahu user      
 
 @DANTE.UBOT("clearall")
 async def clearall(client, message):
+    try:
     rep = message.reply_to_message
     dantekntl = await message.reply("proses")
     if len(message.command) < 2 and not rep:
@@ -87,7 +89,7 @@ async def clearall(client, message):
                 await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
             await message.reply("gagal menghapus chat private kamu")
     return await dantekntl.delete()
-      except Exception as ev:  # Menambahkan 'Exception as ev' di sini
-        print(f"Error saat menghapus pesan: {ev}")  # Cetak pesan error
-        await message.reply("Terjadi kesalahan saat menghapus pesan.")  # Memberi tahu user  
+        except Exception as ev:
+            print(f"Error saat menghapus pesan: {ev}")  # Cetak pesan error
+            await message.reply("Terjadi kesalahan saat menghapus pesan.")  # Memberi tahu user  
    
