@@ -9,7 +9,7 @@ from pyrogram.errors import *
 from pyrogram.raw.functions.messages import DeleteHistory
 
 @DANTE.UBOT("cc")
-async def cc(client: Client, message: Message):
+async def cc(client, message):
     reply = message.reply_to_message
     if reply and reply.sender_chat and reply.sender_chat != message.chat.id:
         aan = await message.reply("terjadi masalah saat menghapus semua pesan kamu")
@@ -30,7 +30,7 @@ async def cc(client: Client, message: Message):
         pass
 
 @DANTE.UBOT("clearall")
-async def clearall(client: Client, message: Message):
+async def clearall(client, message):
     rep = message.reply_to_message
     dantekntl = await message.reply("proses")
     if len(message.command) < 2 and not rep:
