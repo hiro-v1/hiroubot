@@ -4,12 +4,6 @@ import os
 
 from pyrogram.errors import *
 from pyrogram.raw.functions.messages import DeleteHistory
-import pyrogram 
-from DanteUserbot.core import allclearchat
-
-
-__.__
-__.__
 
 @DANTE.UBOT("cc")
 async def _(client: Client, message: Message):
@@ -33,7 +27,7 @@ async def _(client: Client, message: Message):
         pass
 
 @DANTE.UBOT("clearall")
-async def _(client: Client, Message: message: Message):
+async def _(client: Client, message: Message):
     rep = message.replay_to_message
     mek = await message.replay.text("proses")
     if len(message.command) < 2 and not rep:
@@ -85,5 +79,5 @@ async def _(client: Client, Message: message: Message):
                 await asyncio.sleep(e.value)
                 info = await client.resolve_peer(who)
                 await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-            await message.replay.text("auend_2")
+            await message.replay.text("gagal menghapus chat private kamu")
     return await mek.delete()
