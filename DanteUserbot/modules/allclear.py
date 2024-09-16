@@ -7,31 +7,31 @@ from pyrogram.raw.functions.messages import DeleteHistory
 
 @DANTE.UBOT("cc")
 async def _(client: Client, message: Message):
-    reply = message.replay_to_message
+    reply = message.reply_to_message
     if reply and reply.sender_chat and reply.sender_chat != message.chat.id:
-        aan = await message.replay_text("terjadi masalah saat menghapus semua pesan kamu")
+        aan = await message.reply_text("terjadi masalah saat menghapus semua pesan kamu")
         await asyncio.sleep(0.3)
         return await aan.delete()
     if len(message.command) == 2:
         user = message.text.split(None, 1)[1]
     elif len(message.command) == 1 and reply:
-        user = message.replay_to_message.from_user.id
+        user = message.reply_to_message.from_user.id
     else:
-        aa = await message.replay_text("silahkan tunggu..")
+        aa = await message.reply_text("silahkan tunggu..")
         await asyncio.sleep(0.3)
         return await aa.delete()
     await message.delete()
     try:
-        return await c.delete_user_history(message.chat.id, user)
+        return await client.delete_user_history(message.chat.id, user)
     except:
         pass
 
 @DANTE.UBOT("clearall")
 async def _(client: Client, message: Message):
-    rep = message.replay_to_message
-    mek = await message.replay.text("proses")
+    rep = message.reply_to_message
+    mek = await message.reply.text("proses")
     if len(message.command) < 2 and not rep:
-        await message.replay.text("apakah kamu ingin menghapus chat?")
+        await message.reply.text("apakah kamu ingin menghapus chat?")
         return
     if len(message.command) == 1 and rep:
         who = rep.from_user.id
@@ -40,7 +40,7 @@ async def _(client: Client, message: Message):
             await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
         except PeerIdInvalid:
             pass
-        await message.replay.text("berhasil mengahapus semua chat")
+        await message.reply.text("berhasil mengahapus semua chat")
     else:
         if message.command[1].strip().lower() == "all":
             biji = await client.get_chats_dialog("usbot")
@@ -54,7 +54,7 @@ async def _(client: Client, message: Message):
                     await asyncio.sleep(e.value)
                     info = await client.resolve_peer(kelot)
                     await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-            await message.replay.text("sukses menghapus seluruh chat kamu")
+            await message.reply.text("sukses menghapus seluruh chat kamu")
         elif message.command[1].strip().lower() == "bot":
             bijo = await client.get_chats_dialog("bot")
             for kelot in bijo:
@@ -67,7 +67,7 @@ async def _(client: Client, message: Message):
                     await asyncio.sleep(e.value)
                     info = await client.resolve_peer(kelot)
                     await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-            await message.replay.text("berhasil menghapus semua chat berhasil {} gagal {}")
+            await message.reply.text("berhasil menghapus semua chat berhasil {} gagal {}")
         else:
             who = message.text.split(None, 1)[1]
             try:
@@ -79,5 +79,5 @@ async def _(client: Client, message: Message):
                 await asyncio.sleep(e.value)
                 info = await client.resolve_peer(who)
                 await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-            await message.replay.text("gagal menghapus chat private kamu")
+            await message.reply.text("gagal menghapus chat private kamu")
     return await mek.delete()
