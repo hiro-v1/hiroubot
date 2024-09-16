@@ -11,21 +11,19 @@ from DanteUserbot.core import allclearchat
 __.__
 __.__
 
-#
-async def _(c: nlx, m, _):
-    em = Emojik(c)
-    em.initialize()
-    reply = m.reply_to_message
+@DANTE.UBOT("cc")
+async def _(c: nlx, message):
+    reply = message.replay_to_message
     if reply and reply.sender_chat and reply.sender_chat != m.chat.id:
-        aan = await m.reply_text(_("res_3").format(em.gagal))
+        aan = await message.replay_text(_("res_3").format(em.gagal))
         await asyncio.sleep(0.5)
         return await aan.delete()
-    if len(m.command) == 2:
+    if len(message.command) == 2:
         user = m.text.split(None, 1)[1]
-    elif len(m.command) == 1 and reply:
-        user = m.reply_to_message.from_user.id
+    elif len(message.command) == 1 and reply:
+        user = message.replay_to_message.from_user.id
     else:
-        aa = await m.reply_text(_("prof_1").format(em.gagal))
+        aa = await message.replay_text(_("prof_1").format(em.gagal))
         await asyncio.sleep(0.5)
         return await aa.delete()
     await m.delete()
@@ -34,25 +32,23 @@ async def _(c: nlx, m, _):
     except:
         pass
 
-#
-async def _(c: nlx, m, _):
-    em = Emojik(c)
-    em.initialize()
-    rep = m.reply_to_message
-    mek = await m.reply(_("proses").format(em.proses))
-    if len(m.command) < 2 and not rep:
-        await m.reply(_("auend_1").format(em.gagal))
+@DANTE.UBOT("clearall")
+async def _(c: nlx, Message: message):
+    rep = message.replay_to_message
+    mek = await message.replay.text("proses").format(em.proses))
+    if len(message.command) < 2 and not rep:
+        await message.replay.text("apakah kamu ingin menghapus chat?")
         return
-    if len(m.command) == 1 and rep:
+    if len(message.command) == 1 and rep:
         who = rep.from_user.id
         try:
             info = await c.resolve_peer(who)
             await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
         except PeerIdInvalid:
             pass
-        await m.reply(_("auend_2").format(em.sukses, who))
+        await message.replay.text("berhasil mengahapus semua chat")
     else:
-        if m.command[1].strip().lower() == "all":
+        if message.command[1].strip().lower() == "all":
             biji = await c.get_chats_dialog("usbot")
             for kelot in biji:
                 try:
@@ -64,8 +60,8 @@ async def _(c: nlx, m, _):
                     await asyncio.sleep(e.value)
                     info = await c.resolve_peer(kelot)
                     await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-            await m.reply(_("auend_3").format(em.sukses, len(biji)))
-        elif m.command[1].strip().lower() == "bot":
+            await message.replay.text("auend_3").format(em.sukses, len(biji)))
+        elif message.command[1].strip().lower() == "bot":
             bijo = await c.get_chats_dialog("bot")
             for kelot in bijo:
                 try:
@@ -77,7 +73,7 @@ async def _(c: nlx, m, _):
                     await asyncio.sleep(e.value)
                     info = await c.resolve_peer(kelot)
                     await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-            await m.reply(_("auend_4").format(em.sukses, len(bijo)))
+            await message.replay.text("auend_4").format(em.sukses, len(bijo)))
         else:
             who = m.text.split(None, 1)[1]
             try:
@@ -89,5 +85,5 @@ async def _(c: nlx, m, _):
                 await asyncio.sleep(e.value)
                 info = await c.resolve_peer(who)
                 await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-            await m.reply(_("auend_2").format(em.sukses, who))
+            await message.replay.text("auend_2")
     return await mek.delete()
