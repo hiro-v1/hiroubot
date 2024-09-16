@@ -12,7 +12,7 @@ __.__
 __.__
 
 @DANTE.UBOT("cc")
-async def _(c: nlx, message):
+async def _(client: Client, message: Message):
     reply = message.replay_to_message
     if reply and reply.sender_chat and reply.sender_chat != message.chat.id:
         aan = await message.replay_text("terjadi masalah saat menghapus semua pesan kamu")
@@ -33,7 +33,7 @@ async def _(c: nlx, message):
         pass
 
 @DANTE.UBOT("clearall")
-async def _(c: nlx, Message: message):
+async def _(client: Client, Message: message: Message):
     rep = message.replay_to_message
     mek = await message.replay.text("proses")
     if len(message.command) < 2 and not rep:
@@ -42,48 +42,48 @@ async def _(c: nlx, Message: message):
     if len(message.command) == 1 and rep:
         who = rep.from_user.id
         try:
-            info = await c.resolve_peer(who)
-            await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
+            info = await client.resolve_peer(who)
+            await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
         except PeerIdInvalid:
             pass
         await message.replay.text("berhasil mengahapus semua chat")
     else:
         if message.command[1].strip().lower() == "all":
-            biji = await c.get_chats_dialog("usbot")
+            biji = await client.get_chats_dialog("usbot")
             for kelot in biji:
                 try:
-                    info = await c.resolve_peer(kelot)
-                    await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
+                    info = await client.resolve_peer(kelot)
+                    await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
                 except PeerIdInvalid:
                     continue
                 except FloodWait as e:
                     await asyncio.sleep(e.value)
-                    info = await c.resolve_peer(kelot)
-                    await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
+                    info = await client.resolve_peer(kelot)
+                    await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
             await message.replay.text("sukses menghapus seluruh chat kamu")
         elif message.command[1].strip().lower() == "bot":
-            bijo = await c.get_chats_dialog("bot")
+            bijo = await client.get_chats_dialog("bot")
             for kelot in bijo:
                 try:
-                    info = await c.resolve_peer(kelot)
-                    await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
+                    info = await client.resolve_peer(kelot)
+                    await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
                 except PeerIdInvalid:
                     continue
                 except FloodWait as e:
                     await asyncio.sleep(e.value)
-                    info = await c.resolve_peer(kelot)
-                    await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
+                    info = await client.resolve_peer(kelot)
+                    await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
             await message.replay.text("berhasil menghapus semua chat berhasil {} gagal {}")
         else:
             who = message.text.split(None, 1)[1]
             try:
-                info = await c.resolve_peer(who)
-                await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
+                info = await client.resolve_peer(who)
+                await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
             except PeerIdInvalid:
                 pass
             except FloodWait as e:
                 await asyncio.sleep(e.value)
-                info = await c.resolve_peer(who)
-                await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
+                info = await client.resolve_peer(who)
+                await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
             await message.replay.text("auend_2")
     return await mek.delete()
