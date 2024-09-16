@@ -1,6 +1,9 @@
 from DanteUserbot import *
 import asyncio
 import os
+from pyrogram.types import Message
+from pyrogram import Client
+
 
 from pyrogram.errors import *
 from pyrogram.raw.functions.messages import DeleteHistory
