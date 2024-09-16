@@ -26,8 +26,6 @@ async def cc(client, message):
     await message.delete()
     try:
         return await client.delete_user_history(message.chat.id, user)
-    except:
-        pass
     except Exception as ev:
         print(f"Error saat menghapus pesan: {ev}")
         await message.reply("Terjadi kesalahan saat menghapus pesan.")  # Memberi tahu user      
