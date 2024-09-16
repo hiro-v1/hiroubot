@@ -12,6 +12,7 @@ __HELP__ = f"""<blockquote><b>
 from pyrogram import Client, idle, filters
 from pyrogram.enums import ChatType, ChatMemberStatus
 from pyrogram.types import ChatMember
+from pyrogram.raw.functions.messages import DeleteHistory
 from pyrogram.errors.exceptions import UserNotParticipant
 
 @DANTE.UBOT("baca")
@@ -25,3 +26,16 @@ async def baca_read(client, message):
             if anjai:
                 done += 1
     await Mai.edit_text(f"Berhasil Membaca Pesan Dari : {done} User✅")
+
+@DANTE.UBOT("hps")
+async def delmessage(client, message):
+    Mai = await message.reply_text(f"Proccesing...")
+    done = 0
+    async for dialog in client.get_dialogs():
+        if dialog.chat.type == ChatType.PRIVATE:
+            user_id = dialog.chat.id
+            anjai = await client.DeleteHistory(user_id)
+            if anjai:
+                done += 1
+    await Mai.edit_text(f"Berhasil menghapus Pesan Dari : {done} User✅")
+  
