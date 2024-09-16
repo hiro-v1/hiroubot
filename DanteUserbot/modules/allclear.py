@@ -28,6 +28,9 @@ async def cc(client, message):
         return await client.delete_user_history(message.chat.id, user)
     except:
         pass
+      except Exception as ev:  # Menambahkan 'Exception as ev' di sini
+        print(f"Error saat menghapus pesan: {ev}")  # Cetak pesan error
+        await message.reply("Terjadi kesalahan saat menghapus pesan.")  # Memberi tahu user      
 
 @DANTE.UBOT("clearall")
 async def clearall(client, message):
@@ -84,3 +87,7 @@ async def clearall(client, message):
                 await client.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
             await message.reply("gagal menghapus chat private kamu")
     return await dantekntl.delete()
+      except Exception as ev:  # Menambahkan 'Exception as ev' di sini
+        print(f"Error saat menghapus pesan: {ev}")  # Cetak pesan error
+        await message.reply("Terjadi kesalahan saat menghapus pesan.")  # Memberi tahu user  
+   
