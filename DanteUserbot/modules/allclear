@@ -14,28 +14,28 @@ __.__
 @DANTE.UBOT("cc")
 async def _(c: nlx, message):
     reply = message.replay_to_message
-    if reply and reply.sender_chat and reply.sender_chat != m.chat.id:
-        aan = await message.replay_text(_("res_3").format(em.gagal))
-        await asyncio.sleep(0.5)
+    if reply and reply.sender_chat and reply.sender_chat != message.chat.id:
+        aan = await message.replay_text("terjadi masalah saat menghapus semua pesan kamu")
+        await asyncio.sleep(0.3)
         return await aan.delete()
     if len(message.command) == 2:
-        user = m.text.split(None, 1)[1]
+        user = message.text.split(None, 1)[1]
     elif len(message.command) == 1 and reply:
         user = message.replay_to_message.from_user.id
     else:
-        aa = await message.replay_text(_("prof_1").format(em.gagal))
-        await asyncio.sleep(0.5)
+        aa = await message.replay_text("silahkan tunggu..")
+        await asyncio.sleep(0.3)
         return await aa.delete()
-    await m.delete()
+    await message.delete()
     try:
-        return await c.delete_user_history(m.chat.id, user)
+        return await c.delete_user_history(message.chat.id, user)
     except:
         pass
 
 @DANTE.UBOT("clearall")
 async def _(c: nlx, Message: message):
     rep = message.replay_to_message
-    mek = await message.replay.text("proses").format(em.proses))
+    mek = await message.replay.text("proses")
     if len(message.command) < 2 and not rep:
         await message.replay.text("apakah kamu ingin menghapus chat?")
         return
@@ -60,7 +60,7 @@ async def _(c: nlx, Message: message):
                     await asyncio.sleep(e.value)
                     info = await c.resolve_peer(kelot)
                     await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-            await message.replay.text("auend_3").format(em.sukses, len(biji)))
+            await message.replay.text("sukses menghapus seluruh chat kamu")
         elif message.command[1].strip().lower() == "bot":
             bijo = await c.get_chats_dialog("bot")
             for kelot in bijo:
@@ -73,9 +73,9 @@ async def _(c: nlx, Message: message):
                     await asyncio.sleep(e.value)
                     info = await c.resolve_peer(kelot)
                     await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
-            await message.replay.text("auend_4").format(em.sukses, len(bijo)))
+            await message.replay.text("berhasil menghapus semua chat berhasil {} gagal {}")
         else:
-            who = m.text.split(None, 1)[1]
+            who = message.text.split(None, 1)[1]
             try:
                 info = await c.resolve_peer(who)
                 await c.invoke(DeleteHistory(peer=info, max_id=0, revoke=True))
