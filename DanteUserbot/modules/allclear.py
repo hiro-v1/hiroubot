@@ -34,7 +34,6 @@ async def cc(client, message):
 
 @DANTE.UBOT("clearall")
 async def clearall(client, message):
-    try:
     rep = message.reply_to_message
     dantekntl = await message.reply("proses")
     if len(message.command) < 2 and not rep:
