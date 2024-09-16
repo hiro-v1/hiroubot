@@ -8,6 +8,16 @@ from pyrogram import Client
 from pyrogram.errors import *
 from pyrogram.raw.functions.messages import DeleteHistory
 
+__MODULE__ = "ᴄʟᴇᴀʀ ᴄʜᴀᴛ"
+
+__HELP__ = f"""<blockquote><b>
+<b>『 ᴄʟᴇᴀʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ 』</b>
+
+  <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}cc</code>
+  <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> hapus chat digroup replay ke users atau diri sendiri 
+</b></blockquote>"""
+
+
 @DANTE.UBOT("cc")
 async def cc(client, message):
     reply = message.reply_to_message
