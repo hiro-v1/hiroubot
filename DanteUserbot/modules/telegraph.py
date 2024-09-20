@@ -1,5 +1,6 @@
 from DanteUserbot import *
-from telegraph import Telegraph, exceptions, upload_file
+import requests
+from pyrogram import Client, filters
 
 __MODULE__ = "ᴛɢʀᴀᴘʜ"
 __HELP__ = """<blockquote><b>
@@ -9,33 +10,45 @@ __HELP__ = """<blockquote><b>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢᴀᴘʟᴏᴀᴅ ᴍᴇᴅɪᴀ/ᴛᴇxᴛ ᴋᴇ ᴛᴇʟᴇɢʀᴀ.ᴘʜ
 </b></blockquote>"""
 
+API_KEY = "539d3ecbc26d8be7519bb2c64b08da76") 
+
+def upload_media_to_imgbb(media_path):
+    url = "https://api.imgbb.com/1/upload"
+  key = API_KEY 
+    with open(media_path, 'rb') as file:
+        response = requests.post(url, data={'key': key}, files={'image': file})
+
+    if response.status_code == 200:
+        return response.json().get("data", {}).get("url", None)
+    else:
+        return None
+
 
 @DANTE.UBOT("tg")
-async def tg_cmd(client, message):
-    ggl = await EMO.GAGAL(client)
-    sks = await EMO.BERHASIL(client)
-    prs = await EMO.PROSES(client)
-    XD = await message.reply(f"{prs}<b>sᴇᴅᴀɴɢ ᴍᴇᴍᴘʀᴏsᴇs . . .</b>")
-    if not message.reply_to_message:
-        return await XD.edit(
-            f"{ggl}<b>ᴍᴏʜᴏɴ ʙᴀʟᴀs ᴋᴇ ᴘᴇsᴀɴ, ᴜɴᴛᴜᴋ ᴍᴇɴᴅᴀᴘᴀᴛᴋᴀɴ ʟɪɴᴋ ᴅᴀʀɪ ᴛᴇʟᴇɢʀᴀᴘʜ.</b>"
-        )
-    telegraph = Telegraph()
-    if message.reply_to_message.media:
-        m_d = await dl_pic(client, message.reply_to_message)
-        try:
-            media_url = upload_file(m_d)
-        except exceptions.TelegraphException as exc:
-            return await XD.edit(f"<code>{exc}</code>")
-        U_done = f"{sks}<b>ʙᴇʀʜᴀsɪʟ ᴅɪᴜᴘʟᴏᴀᴅ ᴋᴇ</b> <a href='https://telegra.ph/{media_url[0]}'>telegraph</a>"
-        await XD.edit(U_done)
-    elif message.reply_to_message.text:
-        page_title = f"{client.me.first_name} {client.me.last_name or ''}"
-        page_text = message.reply_to_message.text
-        page_text = page_text.replace("\n", "<br>")
-        try:
-            response = telegraph.create_page(page_title, html_content=page_text)
-        except exceptions.TelegraphException as exc:
-            return await XD.edit(f"<code>{exc}</code>")
-        wow_graph = f"{sks}<b>ʙᴇʀʜᴀsɪʟ ᴅɪᴜᴘʟᴏᴀᴅ ᴋᴇ</b> <a href='https://telegra.ph/{response['path']}'>telegraph</a>"
-        await XD.edit(wow_graph)
+async def link_media_handler(client, message):
+    media_path = None
+    if message.reply_to_message:
+        if message.reply_to_message.photo:
+            media_path = await message.reply_to_message.download()
+        elif message.reply_to_message.video:
+            media_path = await message.reply_to_message.download()
+        elif message.reply_to_message.document and message.reply_to_message.document.mime_type == 'image/gif':
+            media_path = await message.reply_to_message.download()
+        elif message.reply_to_message.sticker:
+            # Download the sticker
+            media_path = await message.reply_to_message.download()
+
+        if media_path:
+            imgbb_link = upload_media_to_imgbb(media_path)
+            
+            if imgbb_link:
+                # Send a message with the link embedded under text using Markdown format
+                text = f"Here is your media: {imgbb_link}"
+                await message.reply_text(text)
+            else:
+                await message.reply_text("gagal mengupload media kamu.")
+        else:
+            await message.reply_text("Unsupported media type or no media found.")
+    else:
+        await message.reply_text("tolong reply photo, video, GIF, or sticker.")
+      
