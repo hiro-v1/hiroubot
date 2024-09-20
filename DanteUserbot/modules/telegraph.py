@@ -10,7 +10,7 @@ __HELP__ = """<blockquote><b>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢᴀᴘʟᴏᴀᴅ ᴍᴇᴅɪᴀ/ᴛᴇxᴛ ᴋᴇ ᴛᴇʟᴇɢʀᴀ.ᴘʜ
 </b></blockquote>"""
 
-API_KEY = "539d3ecbc26d8be7519bb2c64b08da76") 
+API_KEY = "539d3ecbc26d8be7519bb2c64b08da76"
 
 def upload_media_to_imgbb(media_path):
     url = "https://api.imgbb.com/1/upload"
