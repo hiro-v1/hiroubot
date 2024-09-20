@@ -1,3 +1,9 @@
+import requests
+from pyrogram import Client, filters
+from pyrogram.types import Message
+
+from DanteUserbot import *
+
 __MODULE__ = "ᴀɪ"
 __HELP__ = f"""<blockquote><b>
 <b>『 chat GPT 』</b>
@@ -5,13 +11,6 @@ __HELP__ = f"""<blockquote><b>
   <b>• perintah:</b> <code>{PREFIX[0]}ask</code>
   <b>• penjelasan:</b> buat pertanyaan contoh .ask dimana letak Antartika
 </b></blockquote>"""
-
-import requests
-from pyrogram import Client, filters
-from pyrogram.types import Message
-
-from DanteUserbot import *
-
 
 def get_text(message: Message) -> [None, str]:
     """Extract Text From Commands"""
