@@ -1,10 +1,3 @@
-import asyncio
-import aiohttp
-from pyrogram.types import Message
-from pyrogram import Client, filters
-from DanteUserbot import *
-from pymongo import MongoClient
-
 __MODULE__ = "ᴀɪ"
 __HELP__ = f"""<blockquote><b>
 <b>『 chat GPT 』</b>
@@ -13,33 +6,43 @@ __HELP__ = f"""<blockquote><b>
   <b>• penjelasan:</b> buat pertanyaan contoh .ask dimana letak Antartika
 </b></blockquote>"""
 
-DATABASE = MongoClient(MONGO_URL)
-db = DATABASE["MAIN"]["USERS"]
-collection = db["members"]
+import requests
+from pyrogram import Client, filters
+from pyrogram.types import Message
 
-def add_user_database(user_id: int):
-    check_user = collection.find_one({"user_id": user_id})
-    if not check_user:
-        return collection.insert_one({"user_id": user_id})
+from DanteUserbot import *
 
-async def chat_with_api(model, prompt):
-    url = f"https://tofu-api.onrender.com/chat/{model}/{prompt}"
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
-            if response.status == 200:
-                data = await response.json()
-                if data["code"] == 2:
-                    return data["content"]
-                else:
-                    return "Ada masalah, tidak dapat memperoleh respons dari api"
-            else:
-                return "Ada masalah, tidak dapat mencari karena api ai eror"
 
-@DANTE.UBOT("ask")
-async def gptAi(client, message):
-    split_text = message.text.split(None, 1)
-    if len(split_text) < 2:
-        await message.reply_text("cari: .gpt [printah]")
+def get_text(message: Message) -> [None, str]:
+    """Extract Text From Commands"""
+    text_to_return = message.text
+    if message.text is None:
+        return None
+    if " " in text_to_return:
+        try:
+            return message.text.split(None, 1)[1]
+        except IndexError:
+            return None
     else:
-        response = await chat_with_api("gpt", split_text[1])
-        await message.reply_text(response)
+        return None
+      
+async def tanya(text):
+    url = "https://widipe.com/gpt4"
+    params = {'text': text}
+    headers = {'accept': 'application/json'}
+    response = requests.get(url, headers=headers, params=params)
+    if response.status_code == 200:
+        data = response.json()
+    if 'result' in data:
+        return data['result']
+    else:
+        return f"{response.text}"
+      
+@DANTE.UBOT("ask")
+async def gtp(client, message: Message):
+    text = get_text(message)
+    if not text:
+        return await message.reply("Example: .ask dimana kamu berada")
+    pros = await message.reply("proses..")
+    hasil = await tanya(text)
+    return await pros.edit(hasil)
