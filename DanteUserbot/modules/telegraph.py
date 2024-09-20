@@ -13,15 +13,14 @@ __HELP__ = """<blockquote><b>
 API_KEY = "539d3ecbc26d8be7519bb2c64b08da76"
 
 def upload_media_to_imgbb(media_path):
-    url = "https://api.imgbb.com/1/upload"
-  key = API_KEY 
-    with open(media_path, 'rb') as file:
-        response = requests.post(url, data={'key': key}, files={'image': file})
-
+  url = "https://api.imgbb.com/1/upload"
+  key = API_KEY
+  with open(media_path, 'rb') as file:
+    response = requests.post(url, data={'key': key}, files={'image': file})
     if response.status_code == 200:
-        return response.json().get("data", {}).get("url", None)
+      return response.json().get("data", {}).get("url", None)
     else:
-        return None
+      return None
 
 
 @DANTE.UBOT("tg")
