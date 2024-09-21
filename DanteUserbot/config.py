@@ -29,5 +29,5 @@ PREFIX = COMMAND.split()
 
 MONGO_URL = os.getenv(
     "MONGO_URL",
-    "mongodb+srv://usrbot:usrbot4646@cluster0.6hroi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "mongodb+srv://sidante:dante4636@cluster0.oy125.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
 )
