@@ -6,7 +6,8 @@ dnspython
 GitPython
 pykeyboard
 bs4
-git+https://github.com/PyrogramMod/PyrogramMod@ab8dc95bd1505acb834fba95386f9f510221019e
+# git+https://github.com/PyrogramMod/PyrogramMod@ab8dc95bd1505acb834fba95386f9f510221019e
+git+https://github.com/naya1503/mypyrogram@dev
 Pillow==9.5.0
 pymediainfo
 opencv-python-headless 
