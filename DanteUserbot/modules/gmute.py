@@ -8,6 +8,16 @@ from pyrogram.errors import *
 from pyrogram.types import *
 from DanteUserbot import *
 
+
+unmute_permissions = ChatPermissions(
+    can_send_messages=True,
+    can_send_media_messages=True,
+    can_send_polls=True,
+    can_change_info=False,
+    can_invite_users=True,
+    can_pin_messages=False,
+)
+
 @DANTE.UBOT("gmute")
 async def gmute_user(client, message):
     user_id = await extract_user(message)
