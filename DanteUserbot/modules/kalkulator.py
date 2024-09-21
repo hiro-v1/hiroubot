@@ -1,6 +1,12 @@
 from pyrogram import Client, filters, enums
 from DanteUserbot import *
 
+__MODULE__ = "ʜɪᴛᴜɴɢ"
+__HELP__ = f"""<blockquote><b>
+<b>『 Bantuan Untuk Kalkulator 』</b>
+ • Perintah: <code>.hitung</code>
+ • Penjelasan: Untuk menghitung di button.
+</b></blockquote>"""
 
 @DANTE.UBOT("hitung")
 async def calc(client, message):
