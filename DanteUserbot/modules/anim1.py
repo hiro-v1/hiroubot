@@ -104,95 +104,95 @@ async def hack(client: Client, message: Message):
     await asyncio.sleep(3)
     await e.edit("ᴄᴏɴɴᴇᴄᴛɪɴɢ ɴᴅ ɢᴇᴛᴛɪɴɢ ᴄᴏᴍʙɪɴᴇᴅ ᴛᴏᴋᴇɴ ꜰʀᴏᴍ ᴍʏ.ᴛᴇʟᴇɢʀᴀᴍ.ᴏʀɢ")
     await asyncio.sleep(3)
-    await e.edit("root@storm:~#")
+    await e.edit("root@dante:~#")
     await asyncio.sleep(2)
-    await e.edit("root@storm:~# ls")
+    await e.edit("root@dante:~# ls")
     await asyncio.sleep(3)
-    await e.edit("root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~#")
+    await e.edit("root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~#")
     await asyncio.sleep(3)
-    await e.edit("root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # S")
-    await e.edit("root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # So")
+    await e.edit("root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # S")
+    await e.edit("root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # So")
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟ"
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟ"
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇ"
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇ"
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ"
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ"
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'"
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'"
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ "
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ "
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜ"
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜ"
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀ"
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀ"
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄ"
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄ"
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ "
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ "
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪ"
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪ"
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ "
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ "
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ."
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ."
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ .."
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ .."
     )
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ..."
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ..."
     )
     await asyncio.sleep(3)
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@storm:~# "
-    )
-    await asyncio.sleep(2)
-    await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@storm:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ"
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@dante:~# "
     )
     await asyncio.sleep(2)
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@storm:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ..."
-    )
-    await asyncio.sleep(3)
-    await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@storm:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ..."
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@dante:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ"
     )
     await asyncio.sleep(2)
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@storm:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ...\n\nroot@storm:~#ᴛʀᴀᴘ ᴡʜᴏᴀᴍɪ"
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@dante:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ..."
     )
     await asyncio.sleep(3)
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@storm:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ...\n\nroot@storm:~#ᴛʀᴀᴘ ᴡʜᴏᴀᴍɪ\n\nᴡʜᴏᴀᴍɪ=ᴜꜱᴇʀ"
-    )
-    await asyncio.sleep(3)
-    await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@storm:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ...\n\nroot@storm:~#ᴛʀᴀᴘ ᴡʜᴏᴀᴍɪ\n\nᴡʜᴏᴀᴍɪ=ᴜꜱᴇʀ\nʙᴏᴏꜱᴛ_ᴛʀᴀᴘ ᴏɴ ꜰᴏʀᴄᴇ ..."
-    )
-    await asyncio.sleep(3)
-    await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@storm:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ...\n\nroot@storm:~#ᴛʀᴀᴘ ᴡʜᴏᴀᴍɪ\n\nᴡʜᴏᴀᴍɪ=ᴜꜱᴇʀ\nʙᴏᴏꜱᴛ_ᴛʀᴀᴘ ᴏɴ ꜰᴏʀᴄᴇ ...\nᴠɪᴄᴛɪᴍ ᴅᴇᴛᴇᴄᴛᴇᴅ ɪɴ ɢʜᴏꜱᴛ ..."
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@dante:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ..."
     )
     await asyncio.sleep(2)
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@storm:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ...\n\nroot@storm:~#ᴛʀᴀᴘ ᴡʜᴏᴀᴍɪ\n\nᴡʜᴏᴀᴍɪ=ᴜꜱᴇʀ\nʙᴏᴏꜱᴛ_ᴛʀᴀᴘ ᴏɴ ꜰᴏʀᴄᴇ ...\nᴠɪᴄᴛɪᴍ ᴅᴇᴛᴇᴄᴛᴇᴅ ɪɴ ɢʜᴏꜱᴛ ...\n\nᴀʟʟ ᴅᴏɴᴇ !"
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@dante:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ...\n\nroot@dante:~#ᴛʀᴀᴘ ᴡʜᴏᴀᴍɪ"
+    )
+    await asyncio.sleep(3)
+    await e.edit(
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@dante:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ...\n\nroot@dante:~#ᴛʀᴀᴘ ᴡʜᴏᴀᴍɪ\n\nᴡʜᴏᴀᴍɪ=ᴜꜱᴇʀ"
+    )
+    await asyncio.sleep(3)
+    await e.edit(
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@dante:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ...\n\nroot@dante:~#ᴛʀᴀᴘ ᴡʜᴏᴀᴍɪ\n\nᴡʜᴏᴀᴍɪ=ᴜꜱᴇʀ\nʙᴏᴏꜱᴛ_ᴛʀᴀᴘ ᴏɴ ꜰᴏʀᴄᴇ ..."
+    )
+    await asyncio.sleep(3)
+    await e.edit(
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@dante:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ...\n\nroot@dante:~#ᴛʀᴀᴘ ᴡʜᴏᴀᴍɪ\n\nᴡʜᴏᴀᴍɪ=ᴜꜱᴇʀ\nʙᴏᴏꜱᴛ_ᴛʀᴀᴘ ᴏɴ ꜰᴏʀᴄᴇ ...\nᴠɪᴄᴛɪᴍ ᴅᴇᴛᴇᴄᴛᴇᴅ ɪɴ ɢʜᴏꜱᴛ ..."
     )
     await asyncio.sleep(2)
     await e.edit(
-        "root@storm:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@storm:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@storm:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ...\n\nroot@storm:~#ᴛʀᴀᴘ ᴡʜᴏᴀᴍɪ\n\nᴡʜᴏᴀᴍɪ=ᴜꜱᴇʀ\nʙᴏᴏꜱᴛ_ᴛʀᴀᴘ ᴏɴ ꜰᴏʀᴄᴇ ...\nᴠɪᴄᴛɪᴍ ᴅᴇᴛᴇᴄᴛᴇᴅ ɪɴ ɢʜᴏꜱᴛ ...\n\nᴀʟʟ ᴅᴏɴᴇ !\nɪɴꜱᴛᴀʟʟɪɴɢ ᴛᴏᴋᴇɴ!\nᴛᴏᴋᴇɴ=ᴅᴊ65ɢᴜʟᴏ90ᴘ90ɴʟᴋᴍ65ᴅʀꜰᴄ8ɪ"
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@dante:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ...\n\nroot@dante:~#ᴛʀᴀᴘ ᴡʜᴏᴀᴍɪ\n\nᴡʜᴏᴀᴍɪ=ᴜꜱᴇʀ\nʙᴏᴏꜱᴛ_ᴛʀᴀᴘ ᴏɴ ꜰᴏʀᴄᴇ ...\nᴠɪᴄᴛɪᴍ ᴅᴇᴛᴇᴄᴛᴇᴅ ɪɴ ɢʜᴏꜱᴛ ...\n\nᴀʟʟ ᴅᴏɴᴇ !"
+    )
+    await asyncio.sleep(2)
+    await e.edit(
+        "root@dante:~# ls\n\n  ᴜꜱʀ ɢʜᴏꜱᴛ ᴄᴏᴅᴇꜱ  \n\nroot@dante:~# # ꜱᴏ ʟᴇᴛ'ꜱ ʜᴀᴄᴋ ɪᴛ ...\nroot@dante:~# ᴘʏᴛʜᴏɴ ꜱᴇᴛᴜᴘ.ᴘʏ\n\nꜱᴇᴛᴜᴘ.ᴘʏ ᴅᴇᴘʟᴏʏᴇᴅ ...\nᴀᴜᴛᴏ ᴄᴍᴅ ᴅᴇᴘʟᴏʏᴇᴅ ...\n\nroot@dante:~#ᴛʀᴀᴘ ᴡʜᴏᴀᴍɪ\n\nᴡʜᴏᴀᴍɪ=ᴜꜱᴇʀ\nʙᴏᴏꜱᴛ_ᴛʀᴀᴘ ᴏɴ ꜰᴏʀᴄᴇ ...\nᴠɪᴄᴛɪᴍ ᴅᴇᴛᴇᴄᴛᴇᴅ ɪɴ ɢʜᴏꜱᴛ ...\n\nᴀʟʟ ᴅᴏɴᴇ !\nɪɴꜱᴛᴀʟʟɪɴɢ ᴛᴏᴋᴇɴ!\nᴛᴏᴋᴇɴ=ᴅᴊ65ɢᴜʟᴏ90ᴘ90ɴʟᴋᴍ65ᴅʀꜰᴄ8ɪ"
     )
     await asyncio.sleep(3)
     await e.edit("ꜱᴛᴀʀᴛɪɴɢ ᴛᴇʟᴇɢʀᴀᴍ ʜᴀᴄᴋ")
