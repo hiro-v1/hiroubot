@@ -3,6 +3,15 @@ from pyrogram import Client, filters
 from DanteUserbot import *
 from pyrogram.types import Message
 
+
+__MODULE__ = "ᴀɴɪᴍᴀsɪ²"
+__HELP__ = f"""<blockquote><b>
+
+<b>• nikah =</b> Untuk menampilkan animasi jari tengah.
+<b>• kis =</b> Untuk menampilkan animasi dikejar dino.
+<b>• hack =</b> Untuk menampilkan animasi menyantet onlen.
+</b></blockquote>"""
+
 @DANTE.UBOT("nikah")
 async def sux(client: Client, message: Message):
     await message.edit("🤵‍♂               👰‍♀")
