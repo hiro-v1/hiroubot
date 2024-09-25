@@ -8,6 +8,7 @@ from DanteUserbot.config import MONGO_URL
 
 mongo = MongoClient(MONGO_URL)
 db = mongo
+vardb = db["DanteUserbot"]["variable"]
 permitdb = db["DanteUserbot"]["pmguard"]
 
 async def add_approved_user(user_id):
