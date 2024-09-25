@@ -46,7 +46,7 @@ async def tanya(text):
         return f"{response.text}"
 
 @DANTE.UBOT("ppcp")
-async def ambil_ppcp(message)
+async def ambil_ppcp(message):
     url = "https://widipe.com/ppcp"
     headers = {'accept': 'application/json'}
     
