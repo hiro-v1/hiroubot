@@ -32,7 +32,6 @@ def get_text(message: Message) -> [None, str]:
     else:
         return None
 
-@DANTE.UBOT("ask")
 async def tanya(text):
     url = "https://widipe.com/v2/gpt4"
     params = {'text': text}
@@ -44,6 +43,15 @@ async def tanya(text):
         return data['result']
     else:
         return f"{response.text}"
+
+@DANTE.UBOT("ask")
+async def gtp(client, message: Message):
+    text = get_text(message)
+    if not text:
+        return await message.reply("perintah anda salah, gunakan .ask pertanyaan")
+    pros = await message.reply("menjawab..")
+    hasil = await tanya(text)
+    return await pros.edit(hasil)
   
 async def ambil_ppcp(message: Message):
     url = "https://widipe.com/ppcp"
