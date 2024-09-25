@@ -91,3 +91,29 @@ async def ambil_ppcp(message: Message):
 @DANTE.UBOT("cp")
 async def handle_ppcp(client: Client, message: Message):
     await ambil_ppcp(message)
+
+async def pinterest(asal, tujuan):
+    url = "https://widipe.com/pinterest"
+    headers = {'accept': 'application/json'}
+    
+    response = requests.get(url, headers=headers, params=params)
+    data = response.json()
+
+    if data.get('status'):
+        if 'url' in data and 'data' in data['url']:
+            gambar_url = data['url']['data']
+            deskripsi = data['url']['desc']
+            return gambar_url, deskripsi
+    return None, None
+
+@DANTE.UBOT("pinter")
+async def pinter(client, message: Message):
+    text = message.text.split(" ")
+    
+    if len(text) < 3:
+        return await message.reply(".pinter cari gambar di pinterest")   
+
+    if gambar_url:
+        await message.reply_photo(photo=gambar_url, caption=f"<blockquote> link = <code>{deskripsi}</code></blockquote>")
+    else:
+        await message.reply("Gambar tidak tersedia atau tidak ada hasil.")
