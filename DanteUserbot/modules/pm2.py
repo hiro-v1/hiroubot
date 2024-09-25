@@ -1,6 +1,6 @@
 from pyrogram import *
 
-from config import DEVS
+from DanteUserbot.config import DEVS
 
 from DanteUserbot import *
 
