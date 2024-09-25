@@ -12,7 +12,7 @@ from DanteUserbot import *
 
 FLOOD = {}
 MSG_ID = {}
-PM_TEXT = """
+PM_TEXT = """<blockquote>
 <b><emoji id=5972302069770488984>🙋🏻‍♂</emoji>halo {mention} ada yang bisa saya bantu?
 
 perkenalkan saya adalah pm-security disini
@@ -20,7 +20,7 @@ silahkan tunggu majikan saya membalas pesan kamu
 jangan spam atau kamu akan di blokir secara otomatis
 
 <emoji id=6114074516395134769>⚠️</emoji>peringatan: {warn} hati-hati</b>
-"""
+</blockquote>"""
 
 
 __MODULE__ = "ᴘᴍᴘᴇʀᴍɪᴛ"
