@@ -112,6 +112,7 @@ async def pinter(client, message: Message):
     
     if len(text) < 3:
         return await message.reply(".pinter cari gambar di pinterest")
+      
   gambar_url, deskripsi = await pinterest(message)
 
     if gambar_url:
