@@ -109,12 +109,11 @@ async def pinterest(message: Message):
 @DANTE.UBOT("pinter")
 async def pinter(client, message: Message):
     text = message.text.split(" ")
+  if len(text) < 3:
+    return await message.reply(".pinter cari gambar di pinterest")
     
-    if len(text) < 3:
-        return await message.reply(".pinter cari gambar di pinterest")
-      
-  message = text[1]
-  gambar_url, deskripsi = await pinterest(message)
+    message = text[1]
+    gambar_url, deskripsi = await pinterest(message)
 
     if gambar_url:
         await message.reply_photo(photo=gambar_url, caption=f"<blockquote> link = <code>{deskripsi}</code></blockquote>")
