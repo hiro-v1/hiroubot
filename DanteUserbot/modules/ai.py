@@ -92,7 +92,7 @@ async def ambil_ppcp(message: Message):
 async def handle_ppcp(client: Client, message: Message):
     await ambil_ppcp(message)
 
-async def pinterest(asal, tujuan):
+async def pinterest(message: Message):
     url = "https://widipe.com/pinterest"
     headers = {'accept': 'application/json'}
     
@@ -111,7 +111,9 @@ async def pinter(client, message: Message):
     text = message.text.split(" ")
     
     if len(text) < 3:
-        return await message.reply(".pinter cari gambar di pinterest")   
+        return await message.reply(".pinter cari gambar di pinterest")
+      message = text[1]
+  gambar_url, deskripsi = await pinterest(message)
 
     if gambar_url:
         await message.reply_photo(photo=gambar_url, caption=f"<blockquote> link = <code>{deskripsi}</code></blockquote>")
