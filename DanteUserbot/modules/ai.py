@@ -26,7 +26,7 @@ def get_text(message: Message) -> [None, str]:
         return None
       
 async def tanya(text):
-    url = "https://widipe.com/gpt4"
+    url = "https://widipe.com/v2/gpt4"
     params = {'text': text}
     headers = {'accept': 'application/json'}
     response = requests.get(url, headers=headers, params=params)
