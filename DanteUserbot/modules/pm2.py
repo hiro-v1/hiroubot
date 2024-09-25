@@ -9,7 +9,7 @@ PM_GUARD_MSGS_DB = {}
 
 
 DEFAULT_TEXT = """<blockquote>
-<b><emoji id=5972302069770488984>🙋🏻‍♂</emoji>halo {mention} ada yang bisa saya bantu?
+<b><emoji id=5972302069770488984>🙋🏻‍♂</emoji>halo, ada yang bisa saya bantu?
 
 perkenalkan saya adalah pm-security disini
 silahkan tunggu majikan saya membalas pesan kamu
@@ -163,7 +163,7 @@ async def handle_pmpermit(client, message):
             await add_approved_user(chat_id)
             await client.send_message(
                 chat_id,
-                f"<b>Menerima Pesan Dari {biji} !!\nTerdeteksi Founder Dari Kazu Premium Bot.</b>",
+                f"<b>Menerima Pesan Dari {biji} !!\nTerdeteksi Founder Dari UBot • NeverTech</b>",
                 parse_mode=enums.ParseMode.HTML,
             )
         except BaseException:
@@ -174,7 +174,7 @@ async def handle_pmpermit(client, message):
             await add_approved_user(chat_id)
             await client.send_message(
                 chat_id,
-                f"<b>Menerima Pesan Dari {biji} !!\nTerdeteksi Admin Dari DanteUserbot!.</b>",
+                f"<b>Menerima Pesan Dari {biji} !!\nTerdeteksi Admin Dari UBot • NeverTech!.</b>",
                 parse_mode=enums.ParseMode.HTML,
             )
         except BaseException:
