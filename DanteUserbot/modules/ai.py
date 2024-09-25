@@ -44,9 +44,8 @@ async def tanya(text):
         return data['result']
     else:
         return f"{response.text}"
-
-@DANTE.UBOT("ppcp")
-async def ambil_ppcp(message):
+  
+async def ambil_ppcp(message: Message):
     url = "https://widipe.com/ppcp"
     headers = {'accept': 'application/json'}
     
@@ -81,3 +80,6 @@ async def ambil_ppcp(message):
     except Exception as e:
         await message.reply(f"Kesalahan: {str(e)}")
 
+@DANTE.UBOT("cp")
+async def handle_ppcp(client: Client, message: Message):
+    await ambil_ppcp(message)
