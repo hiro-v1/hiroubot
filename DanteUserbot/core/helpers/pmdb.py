@@ -7,7 +7,7 @@ from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from DanteUserbot.config import MONGO_URL
 
 mongo = MongoClient(MONGO_URL)
-
+db = mongo
 permitdb = db["DanteUserbot"]["pmguard"]
 
 async def add_approved_user(user_id):
