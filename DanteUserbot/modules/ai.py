@@ -53,7 +53,7 @@ async def tebakkata(text):
 async def tebakkata(client, message: Message):
     text = get_text(message)
     if not text:
-        return await message.reply("Example: .ask dimana kamu berada")
+        return await message.reply("Example: .tebak tebak kata")
     pros = await message.reply("proses..")
     hasil = await tebakkata(text)
     return await pros.edit(hasil)
