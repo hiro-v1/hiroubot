@@ -36,12 +36,25 @@ async def tanya(text):
         return data['result']
     else:
         return f"{response.text}"
+
+async def tebakkata(text):
+    url = "https://widipe.com/tebakkata"
+    params = {'text': text}
+    headers = {'accept': 'application/json'}
+    response = requests.get(url, headers=headers, params=params)
+    if response.status_code == 200:
+        data = response.json()
+    if 'result' in data:
+        return data['result']
+    else:
+        return f"{response.text}"
       
-@DANTE.UBOT("ask")
-async def gtp(client, message: Message):
+@DANTE.UBOT("tebak")
+async def tebakkata(client, message: Message):
     text = get_text(message)
     if not text:
         return await message.reply("Example: .ask dimana kamu berada")
     pros = await message.reply("proses..")
-    hasil = await tanya(text)
+    hasil = await tebakkata(text)
     return await pros.edit(hasil)
+
