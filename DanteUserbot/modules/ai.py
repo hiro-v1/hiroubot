@@ -42,7 +42,7 @@ async def tanya(text):
     if 'result' in data:
         return data['result']
     else:
-        return f"{response.text}"
+        return f"<blockquote>{response.text}</blockquote>"
 
 @DANTE.UBOT("ask")
 async def gtp(client, message: Message):
