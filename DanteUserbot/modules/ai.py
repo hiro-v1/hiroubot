@@ -6,7 +6,7 @@ from pyrogram.types import Message
 
 from DanteUserbot import *
 
-__MODULE__ = "ᴀɪ"
+__MODULE__ = "ᴛᴏᴏʟs"
 __HELP__ = f"""<blockquote><b>
 <b>『 chat GPT 』</b>
 
