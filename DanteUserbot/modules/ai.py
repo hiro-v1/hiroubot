@@ -24,7 +24,8 @@ def get_text(message: Message) -> [None, str]:
             return None
     else:
         return None
-      
+
+@DANTE.UBOT("ask")
 async def tanya(text):
     url = "https://widipe.com/v2/gpt4"
     params = {'text': text}
