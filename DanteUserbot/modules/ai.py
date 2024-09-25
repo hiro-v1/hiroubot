@@ -96,7 +96,7 @@ async def pinterest(message: Message):
     url = "https://widipe.com/pinterest"
     headers = {'accept': 'application/json'}
     
-    response = requests.get(url, headers=headers, params=params)
+    response = requests.get(url, headers=headers)
     data = response.json()
 
     if data.get('status'):
