@@ -14,7 +14,7 @@ __HELP__ = f"""<blockquote><b>
   <b>• penjelasan:</b> buat pertanyaan contoh .ask dimana letak Antartika
 
 tambahan:
-  <b>• perintah:</b> <code>{PREFIX[0]}ppcp</code>
+  <b>• perintah:</b> <code>{PREFIX[0]}cp</code>
   <b>• penjelasan:</b> dapatkan poto profil couple pasangan.
   
 </b></blockquote>"""
