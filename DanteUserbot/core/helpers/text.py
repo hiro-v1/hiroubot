@@ -6,35 +6,35 @@ from DanteUserbot.core.database import get_expired_date
 
 class MSG:
     def DEAK(X):
-        return f"""
+        return f"""<blockquote>
 <b>❏ pemberitahuan</b>
 <b>├ akun:</b> <a href=tg://user?id={X.me.id}>{X.me.first_name} {X.me.last_name or ''}</a>
 <b>├ id:</b> <code>{X.me.id}</code>
-<b>╰ telah berhasil di hapus dari telegram</b>
+<b>╰ telah berhasil di hapus dari telegram</b></blockquote>
 """
             
     def EXPIRED_MSG_BOT(X):
-        return f"""
+        return f"""<blockquote>
 <b>❏ pemberitahuan</b>
 <b>├ akun:</b> <a href=tg://user?id={X.me.id}>{X.me.first_name} {X.me.last_name or ''}</a>
 <b>├ id:</b> <code>{X.me.id}</code>
-<b>╰ masa aktif telah habis</b>
+<b>╰ masa aktif telah habis</b></blockquote>
 """
 
     
     def START(message):
-        return f"""
+        return f"""<blockquote>
 <b>Hallo <a href=tg://user?id={message.from_user.id}>{message.from_user.first_name} {message.from_user.last_name or ''}</a>
 🤖 saya adalah pembuat <b><u>userbot telegram</b></u> 
 
 🚦 saya memiliki modul yang lengkap untuk membantu aktivitas anda ditelegram, jika kamu penasaran dengan modul saya, silahkan cek di modul
 
 ⚠️ jika kamu ingin menggunakan userbot ini <b><u>klik tombol buat userbot dibawah</b></u>
-
+</blockquote>
 """
 
     def TEXT_PAYMENT(harga, total, bulan):
-        return f"""
+        return f"""<blockquote>
 sɪʟᴀᴋᴀɴ ʟᴀᴋᴜᴋᴀɴ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ
 
 ʜᴀʀɢᴀ ᴘᴇʀʙᴜʟᴀɴ: {harga}.000
@@ -48,19 +48,19 @@ sɪʟᴀᴋᴀɴ ʟᴀᴋᴜᴋᴀɴ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴛᴇʀʟᴇʙ�
 🗓️ ᴛᴏᴛᴀʟ ʙᴜʟᴀɴ: {bulan}
 
 ✅ ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇɴɢɪʀɪᴍᴋᴀɴ ʙᴜᴋᴛɪ ᴘᴇᴍʙᴀʏᴀʀᴀɴ
-"""
+</blockquote>"""
 
     async def USERBOT(count):
         expired_date = await get_expired_date(ubot._ubot[int(count)].me.id)
-        return f"""
+        return f"""<blockquote>
 <b>❏ userbot ke</b> <code>{int(count) + 1}/{len(ubot._ubot)}</code>
 <b> ├ akun:</b> <a href=tg://user?id={ubot._ubot[int(count)].me.id}>{ubot._ubot[int(count)].me.first_name} {ubot._ubot[int(count)].me.last_name or ''}</a> 
 <b> ├ id:</b> <code>{ubot._ubot[int(count)].me.id}</code>
 <b> ╰ expired</b> <code>{expired_date.strftime('%d-%m-%Y')}</code>
-"""
+</blockquote>"""
 
     def POLICY():
-        return """
+        return """<blockquote>
 Kebijakan Pengembalian:
 
 Setelah melakukan pembayaran, jika anda belum menerima manfaat dari pembelian, 
@@ -78,7 +78,7 @@ Tombol Lanjutkan:
 Klik tombol "Lanjutkan" untuk mengkonfirmasi 
 bahwa anda telah membaca dan menerima ketentuan ini dan 
 melanjutkan proses pembelian. Jika tidak, klik tombol "Kembali".
-"""
+</blockquote>"""
 
 
 async def sending_user(user_id):
@@ -102,9 +102,9 @@ async def sending_user(user_id):
             await bot.send_message(
                 LOGS_MAKER_UBOT,
                 f"""
-➡️ yang merasa memiliki id: {user_id}
+<blockquote>➡️ yang merasa memiliki id: {user_id}
 
-✅ silahkan buat ulang userbot nya di: @{bot.me.username}
+✅ silahkan buat ulang userbot nya di: @{bot.me.username}</blockquote>
         """,
                 reply_markup=InlineKeyboardMarkup(
                     [
