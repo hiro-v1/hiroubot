@@ -8,14 +8,18 @@ PM_GUARD_WARNS_DB = {}
 PM_GUARD_MSGS_DB = {}
 
 
-DEFAULT_TEXT = """
-<code>Saya adalah Bot yang menjaga Room Chat Ini.\n\nJangan Spam Atau Anda Akan Diblokir Otomatis.</code>
-"""
+DEFAULT_TEXT = """<blockquote>
+<b><emoji id=5972302069770488984>🙋🏻‍♂</emoji>halo {mention} ada yang bisa saya bantu?
+
+perkenalkan saya adalah pm-security disini
+silahkan tunggu majikan saya membalas pesan kamu
+jangan spam atau kamu akan di blokir secara otomatis
+</blockquote>"""
 
 PM_WARN = """
 {}
 
-<code>Anda memiliki `{}/{}` peringatan . Hati-hati !</code>
+<code>Anda memiliki {}/{} peringatan . Hati-hati !</code>
 """
 
 LIMIT = 5
@@ -43,7 +47,7 @@ async def permitpm(client, message):
         await babi.edit(f"`Gunakan Format : `{0}pmpermit on or off`.`")
 
 
-@DANTE.UBOT("sip")
+@DANTE.UBOT("ok")
 async def approve(client, message):
     babi = await message.edit("`Processing...`")
     chat_type = message.chat.type
@@ -72,7 +76,7 @@ async def approve(client, message):
     await babi.edit("`Baiklah, pengguna ini sudah disetujui untuk mengirim pesan.`")
 
 
-@DANTE.UBOT("tidak")
+@DANTE.UBOT("no")
 async def disapprove(client, message):
     babi = await message.edit("`Processing...`")
     chat_type = message.chat.type
@@ -116,7 +120,7 @@ async def set_msg(client, message):
     await babi.edit(f"`Pesan PMPemit berhasil diatur menjadi : `{pm_txt}`.`")
 
 
-@DANTE.UBOT("setl")
+@DANTE.UBOT("setpm")
 async def set_limit(client, message):
     babi = await message.edit("`Processing...`")
     user_id = client.me.id
@@ -170,7 +174,7 @@ async def handle_pmpermit(client, message):
             await add_approved_user(chat_id)
             await client.send_message(
                 chat_id,
-                f"<b>Menerima Pesan Dari {biji} !!\nTerdeteksi Admin Dari Kazu Premium Bot.</b>",
+                f"<b>Menerima Pesan Dari {biji} !!\nTerdeteksi Admin Dari DanteUserbot!.</b>",
                 parse_mode=enums.ParseMode.HTML,
             )
         except BaseException:
@@ -217,22 +221,23 @@ async def handle_pmpermit(client, message):
     PM_GUARD_MSGS_DB[message.chat.id] = rplied_msg.id
 
 
-__MODULE__ = "Security"
-__HELP__ = """
-Bantuan Untuk Security
+__MODULE__ = "ᴘᴍᴘᴇʀᴍɪᴛ"
+__HELP__ = """<blockquote><b>
+   Bantuan untuk PM-Permit
 
-• Perintah: <code>{0}antipm</code> [on atau off]
-• Penjelasan: Untuk menghidupkan atau mematikan antipm
+command: {0}pm [on/off]
+   mengaktifkan atau menonaktifkan pm permit
+   
+command: {0}ok
+   mengizinkan seseoranh untuk pm anda
 
-• Perintah: <code>{0}setmsg</code> [balas atau berikan pesan]
-• Penjelasan: Untuk mengatur pesan antipm.
+command: {0}no
+   menolak seseorang untuk pm anda
 
-• Perintah: <code>{0}setlimit</code> [angka]
-• Penjelasan: Untuk mengatur peringatan pesan blokir.
+command: {0}setpm
+   query: replay text
+   mengatur configuration pada pm_permit
 
-• Perintah: <code>{0}ok</code>
-• Penjelasan: Untuk menyetujui pesan.
-
-• Perintah: <code>{0}no</code>
-• Penjelasan: Untuk menolak pesan.
+contoh menggunakan warning 
+   command: setpm 5</b></blockquote>
 """
