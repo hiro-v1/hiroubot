@@ -2,11 +2,11 @@ __MODULE__ = "ᴀʙsᴇɴ"
 __HELP__ = """
 **--ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴀʙꜱᴇɴ--**
 <blockquote><b>
-  <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}ᴀʙꜱᴇɴ</code></code>
+  <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}`absen`</code></code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ʟɪꜱᴛ ᴀʙꜱᴇɴ ᴋᴀᴍᴜ.</b></blockquote> 
   
 <blockquote><b>  
-  <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}ᴅᴇʟᴀʙꜱᴇɴ</code></code>
+  <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}`delabsen`</code></code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢʜᴀᴘᴜꜱ ʟɪꜱᴛ ᴀʙꜱᴇɴ ᴋᴀᴍᴜ.
   </b></blockquote>"""
 
