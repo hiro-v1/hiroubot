@@ -10,9 +10,9 @@ from pyrogram.raw.functions.messages import DeleteHistory
 
 __MODULE__ = "ʜᴀᴘᴜs sᴇᴍᴜᴀ"
 
-__HELP__ = f"""<blockquote><b>
-<b> ʜᴀᴘᴜs sᴇᴍᴜᴀ ʙᴏᴛ ᴅᴀɴ ᴄʜᴀᴛ ᴘʀɪʙᴀᴅɪ </b>
-
+__HELP__ = f"""
+**--ʜᴀᴘᴜs sᴇᴍᴜᴀ ʙᴏᴛ ᴅᴀɴ ᴄʜᴀᴛ ᴘʀɪʙᴀᴅɪ--**
+<blockquote><b>
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}clearall</code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> hapus chat dan bot 
   
