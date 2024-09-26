@@ -126,7 +126,20 @@ class Ubot(Client):
             async for dialog in self.get_dialogs()
             if dialog.chat.type in chat_types.get(q, [])
         ]
-        
+
+    def get_arg(self, m):
+        if m.reply_to_message and len(m.command) < 2:
+            msg = m.reply_to_message.text or m.reply_to_message.caption
+            if not msg:
+                return ""
+            msg = msg.encode().decode("UTF-8")
+            msg = msg.replace(" ", "", 1) if msg[1] == " " else msg
+            return msg
+        elif len(m.command) > 1:
+            return " ".join(m.command[1:])
+        else:
+            return ""
+            
     def set_prefix(self, user_id, prefix):
         self._prefix[user_id] = prefix
     
