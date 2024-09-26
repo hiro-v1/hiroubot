@@ -7,9 +7,9 @@ from pyrogram.types import Message
 from DanteUserbot import *
 
 __MODULE__ = "ᴛᴏᴏʟs"
-__HELP__ = f"""<blockquote><b>
-<b>『 chat GPT 』</b>
-
+__HELP__ = f"""
+**--chat GPT--**
+<blockquote><b>
   <b>• perintah:</b> <code>{PREFIX[0]}ask</code>
   <b>• penjelasan:</b> buat pertanyaan contoh .ask dimana letak Antartika
 
