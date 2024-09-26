@@ -63,7 +63,7 @@ async def surah(client, message):
     )
 
     if not surah_name:
-        await message.reply("{} Silahkan berikan nama surah.")
+        await message.reply("Silahkan berikan nama surah. contoh `surah Al-Ma'un`")
         await pros.delete()
         return
 
@@ -107,13 +107,13 @@ async def surah(client, message):
                         reply_to_message_id=ReplyCheck(message),
                     )
             else:
-                await message.reply("{} Gagal mengunduh audio.")
+                await message.reply("Gagal mengunduh audio.")
         else:
             await message.reply(response_text, reply_to_message_id=ReplyCheck(message))
 
         await pros.delete()
         return
     else:
-        await message.reply("{} Surah dengan nama '{}' tidak ditemukan.")
+        await message.reply("Surah dengan nama 'tersebut' tidak ditemukan. gunakan listsurah")
         await pros.delete()
         return
