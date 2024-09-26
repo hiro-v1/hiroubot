@@ -6,8 +6,9 @@ from pyrogram import filters
 from DanteUserbot import *
 
 __MODULE__ = "ᴀᴅᴢᴀɴ"
-__HELP__ = f"""<blockquote><b>
-<b>『 Bantuan Untuk Adzan 』</b>
+__HELP__ = f"""
+**--Bantuan Untuk Adzan--**
+<blockquote><b>
  • Perintah: <code>.adzan</code> [nama kota]
  • Penjelasan: Untuk mengetahui jadwal adzan di lokasi anda.
 </b></blockquote>"""
