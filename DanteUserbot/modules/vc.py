@@ -13,6 +13,13 @@ __HELP__ = """<blockquote><b>
 
 • Perintah: <code>{0}lvc</code>
 • Penjelasan: Untuk meninggalkan voice chat grup.
+
+• Perintah: <code>{0}title</code>
+• Penjelasan: <b>.title text</b> untuk mengubah judul obrolan suara.
+
+• Perintah: <code>{0}listvc</code>
+• Penjelasan: melihat daftar obrolan suara ada siapa saja.
+
 </b></blockquote>
 """
 
