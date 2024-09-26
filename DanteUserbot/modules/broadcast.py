@@ -11,9 +11,9 @@ from pyrogram.errors.exceptions import FloodWait
 from DanteUserbot import *
 
 __MODULE__ = "ɢᴄᴀsᴛ"
-__HELP__ = """<blockquote><b>
-  <b>Bantuan untuk Broadcast</b>
-
+__HELP__ = """
+**--Bantuan untuk Broadcast--**
+<blockquote><b>
 <b>command:</b> <code>{0}gcast</code>
 <b>command:</b> <code>{0}gcast mulai broadcast digroup</code>
 <b>command:</b> <code>{0}bcfd</code> <b>or</b> <code>{0}cfd</code>
