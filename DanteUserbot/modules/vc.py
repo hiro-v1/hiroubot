@@ -27,7 +27,7 @@ from pyrogram import Client, enums
 from pytgcalls.types import MediaStream
 from pyrogram.raw.functions.channels import GetFullChannel
 from pyrogram.raw.functions.messages import GetFullChat
-from pyrogram.raw.functions.phone import CreateGroupCall, DiscardGroupCall
+from pyrogram.raw.functions.phone import CreateGroupCall, DiscardGroupCall, EditGroupCallTitle
 from pyrogram.raw.types import InputGroupCall, InputPeerChannel, InputPeerChat
 from pyrogram.types import Message
 from pytgcalls.types.calls import Call
@@ -162,6 +162,23 @@ async def leavevc(client, message):
         except Exception as e:
             return await message.reply_text(e)
 
+@DANTE.UBOT("title")
+async def vctittle(client, message):
+    txt = client.get_arg(message)
+    ky = await message.reply("proses")
+    if len(message.command) < 2:
+        await ky.edit("gagal mengubah judul obrolan suara")
+        return
+    if not (group_call := (await get_group_call(client, message, err_msg=", Kesalahan..."))):
+        return
+    try:
+        await client.invoke(EditGroupCallTitle(call=group_call, title=f"{txt}"))
+
+    except Forbidden:
+        await ky.edit("seperti ada kesalahan")
+        return
+    await ky.edit("berhasil mengubah judul obralan suara")
+    return
 
 @DANTE.UBOT("listvc", FILTERS.OWNER)
 async def list_vc(client, message):
