@@ -3,8 +3,8 @@ import asyncio
 import os
 from pyrogram.types import Message
 from pyrogram import Client
-
-
+from pyrogram.helpers import *
+from pyrogram.enums import *
 from pyrogram.errors import *
 from pyrogram.raw.functions.messages import DeleteHistory
 
@@ -17,7 +17,30 @@ __HELP__ = f"""<blockquote><b>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> hapus chat digroup replay ke users atau diri sendiri 
 </b></blockquote>"""
 
-
+async def get_chats_dialog(self, q):
+        chat_types = {
+            "grup": [ChatType.GROUP, ChatType.SUPERGROUP],
+            "all": [
+                ChatType.GROUP,
+                ChatType.SUPERGROUP,
+                ChatType.PRIVATE,
+            ],
+            "bot": [ChatType.BOT],
+            "usbot": [ChatType.PRIVATE, ChatType.BOT],
+            "user": [ChatType.PRIVATE],
+            "gban": [
+                ChatType.GROUP,
+                ChatType.SUPERGROUP,
+                ChatType.CHANNEL,
+            ],
+            "ch": [ChatType.CHANNEL],
+        }
+        return [
+            dialog.chat.id
+            async for dialog in self.get_dialogs()
+            if dialog.chat.type in chat_types.get(q, [])
+        ]
+      
 @DANTE.UBOT("cc")
 async def cc(client, message):
     reply = message.reply_to_message
