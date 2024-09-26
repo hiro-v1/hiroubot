@@ -21,7 +21,7 @@ async def ganteng(client, message):
     await dante.edit("**GUA GANTENG FIX NO DEBAT😏**")
 
 
-@ky.ubot("wibu")
+@DANTE.UBOT("wibu")
 async def wibu(client, message):
     if message.reply_to_message and message.reply_to_message.from_user.id in DEVS:
         await message.reply("**AKUN LO MO ILANG BANGSAT??**")
