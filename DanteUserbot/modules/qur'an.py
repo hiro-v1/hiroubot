@@ -107,7 +107,7 @@ async def surah(client, message):
                         reply_to_message_id=ReplyCheck(message),
                     )
             else:
-                await message.reply(_("{} Gagal mengunduh audio.")
+                await message.reply("{} Gagal mengunduh audio.")
         else:
             await message.reply(response_text, reply_to_message_id=ReplyCheck(message))
 
