@@ -63,7 +63,7 @@ async def surah(client, message):
     )
 
     if not surah_name:
-        await message.reply("qur_1")
+        await message.reply("{} Silahkan berikan nama surah.")
         await pros.delete()
         return
 
@@ -107,13 +107,13 @@ async def surah(client, message):
                         reply_to_message_id=ReplyCheck(message),
                     )
             else:
-                await message.reply(_("qur_2")
+                await message.reply(_("{} Gagal mengunduh audio.")
         else:
             await message.reply(response_text, reply_to_message_id=ReplyCheck(message))
 
         await pros.delete()
         return
     else:
-        await message.reply("qur_3")
+        await message.reply("{} Surah dengan nama '{}' tidak ditemukan.")
         await pros.delete()
         return
