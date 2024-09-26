@@ -2,6 +2,13 @@ import asyncio
 from pyrogram import *
 from DanteUserbot import *
 
+__MODULE__ = "ᴋᴀsᴀʀ³"
+__HELP__ = f"""<blockquote><b>
+❏<b> Ngatain³</b>
+`ganteng` - coba aja.
+`wibu` - coba aja.
+`senggol` - coba aja.</b></blockquote>
+"""
 
 @DANTE.UBOT("ganteng")
 async def ganteng(client, message):
