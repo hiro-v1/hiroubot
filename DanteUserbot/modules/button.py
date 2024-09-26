@@ -17,6 +17,9 @@ async def cl_ad(client, callback_query):
     if user_id in ubot._get_my_id:
         buttons = [
             [
+                InlineKeyboardButton("ǫᴜʀ'ᴀɴ", callback_data="cl_quraan"),
+            ],
+            [
                 InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="help_back"),
                 InlineKeyboardButton("ɪɴғᴏ", callback_data="cl_info")
             ],
@@ -58,4 +61,26 @@ async def cl_close(client, callback_query):
 ⚠️ Menu Ditutup!</b>
 """,
             disable_web_page_preview=True,
+        )
+
+@DANTE.CALLBACK("cl_quraan")
+async def cl_quraan(client, callback_query):
+    user_id = callback_query.from_user.id
+    if user_id in ubot._get_my_id:
+        buttons = [
+            [
+                InlineKeyboardButton("ᴋᴇᴍʙᴀʟɪ", callback_data="cl_ad")
+            ],
+        ]        
+        return await callback_query.edit_message_text(
+            f"""
+  🗂️ **--Dokumen untuk Qur'an--**
+  
+  <blockquote><b>📚 Perintah:</b> `surah [nama surah]`
+  <b>👉 Keterangan:</b> Mengambil informasi Surah.</blockquote>
+  <blockquote><b>📚 Perintah:</b> `listsurah`
+  <b>👉 Keterangan:</b> Mendapatkan Daftar Surah Al-Quran.</blockquote>
+""",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(buttons),
         )
