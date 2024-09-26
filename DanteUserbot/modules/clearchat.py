@@ -10,9 +10,9 @@ from pyrogram.raw.functions.messages import DeleteHistory
 
 __MODULE__ = "ᴄʟᴇᴀʀ ᴄʜᴀᴛ²"
 
-__HELP__ = f"""<blockquote><b>
-<b>『 ᴄʟᴇᴀʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ 』</b>
-
+__HELP__ = f"""
+**--ᴄʟᴇᴀʀ ᴄʜᴀᴛ ɢʀᴏᴜᴘ--**
+<blockquote><b>
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}cc</code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> hapus chat digroup replay ke users atau diri
   note : kamu harus admin digroup | semua chat kamu bakal terhapus.
