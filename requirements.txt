@@ -11,7 +11,7 @@ git+https://github.com/naya1503/mypyrogram@dev
 Pillow==9.5.0
 pymediainfo
 opencv-python-headless 
-py-tgcalls
+py-tgcalls==2.0.3
 requests
 unidecode
 pytimeparse
