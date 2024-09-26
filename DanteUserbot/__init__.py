@@ -60,29 +60,6 @@ class Bot(Client):
     async def start(self):
         await super().start()
 
-    async def get_chats_dialog(self, q):
-        chat_types = {
-            "grup": [ChatType.GROUP, ChatType.SUPERGROUP],
-            "all": [
-                ChatType.GROUP,
-                ChatType.SUPERGROUP,
-                ChatType.PRIVATE,
-            ],
-            "bot": [ChatType.BOT],
-            "usbot": [ChatType.PRIVATE, ChatType.BOT],
-            "user": [ChatType.PRIVATE],
-            "gban": [
-                ChatType.GROUP,
-                ChatType.SUPERGROUP,
-                ChatType.CHANNEL,
-            ],
-            "ch": [ChatType.CHANNEL],
-        }
-        return [
-            dialog.chat.id
-            async for dialog in self.get_dialogs()
-            if dialog.chat.type in chat_types.get(q, [])
-        ]
 
 class Ubot(Client):
     __module__ = "pyrogram.client"
@@ -126,6 +103,30 @@ class Ubot(Client):
 
         return decorator
 
+    async def get_chats_dialog(self, q):
+        chat_types = {
+            "grup": [ChatType.GROUP, ChatType.SUPERGROUP],
+            "all": [
+                ChatType.GROUP,
+                ChatType.SUPERGROUP,
+                ChatType.PRIVATE,
+            ],
+            "bot": [ChatType.BOT],
+            "usbot": [ChatType.PRIVATE, ChatType.BOT],
+            "user": [ChatType.PRIVATE],
+            "gban": [
+                ChatType.GROUP,
+                ChatType.SUPERGROUP,
+                ChatType.CHANNEL,
+            ],
+            "ch": [ChatType.CHANNEL],
+        }
+        return [
+            dialog.chat.id
+            async for dialog in self.get_dialogs()
+            if dialog.chat.type in chat_types.get(q, [])
+        ]
+        
     def set_prefix(self, user_id, prefix):
         self._prefix[user_id] = prefix
     
