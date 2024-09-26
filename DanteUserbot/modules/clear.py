@@ -1,9 +1,9 @@
 from DanteUserbot import *
 from pyrogram.raw.functions.messages import DeleteHistory
 __MODULE__ = "ᴄʟᴇᴀʀ"
-__HELP__ = f"""<blockquote><b>
-<b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴄʟᴇᴀʀ 』</b>
-
+__HELP__ = f"""
+**--ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴄʟᴇᴀʀ--**
+<blockquote><b>
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}clear</code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢʜᴀᴘᴜs ʜɪsᴛᴏʀʏ</b></blockquote>
 """
