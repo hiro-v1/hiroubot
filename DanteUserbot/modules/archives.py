@@ -3,9 +3,9 @@ from pyrogram.enums import ChatType
 from asyncio import sleep
 
 __MODULE__ = "ᴀʀᴄʜɪᴠᴇ"
-__HELP__ = """<blockquote><b>
-<b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴀʀᴄʜɪᴠᴇ 』</b>
-
+__HELP__ = """
+**--ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴀʀᴄʜɪᴠᴇ--**
+<blockquote><b>
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}archiveall</code> ɢᴄ ᴘᴠ
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢᴀʀᴄʜɪᴠᴇᴋᴀɴ ꜱᴇᴍᴜᴀ ᴘᴇꜱᴀɴ ᴘʀɪʙᴀᴅɪ
   <b>• ᴄᴏɴᴛᴏʜ : </b> <code>{0}ᴀʀᴄʜɪᴠᴇᴀʟʟ</code> ɢᴄ
