@@ -304,8 +304,8 @@ async def ngefuck(ubot: ubot, message: Message):
     )
 
 
-@DANTE.UBOT("hack")
-async def hak(ubot: ubot, message: Message):
+@DANTE.UBOT("code")
+async def code(ubot: ubot, message: Message):
     await message.edit_text("Looking for WhatsApp databases in targeted person...")
     await asyncio.sleep(2)
     await message.edit_text(
@@ -1115,14 +1115,15 @@ async def santet(ubot: ubot, message: Message):
 
 
 __MODULE__ = "ᴀɴɪᴍᴀsɪ"
-__HELP__ = f"""<blockquote><b>
-
-<b>• fuck =</b> Untuk menampilkan animasi jari tengah.
-<b>• dino =</b> Untuk menampilkan animasi dikejar dino.
-<b>• santet =</b> Untuk menampilkan animasi menyantet onlen.
-<b>• gabut =</b> Untuk menampilkan animasi gabut.
-<b>• sayang =</b> Untuk menampilkan animasi sayang.
-<b>• hack =</b> Untuk menampilkan animasi ngehek palsu.
-<b>• bomb =</b> Untuk menampilkan animasi Bomb.
-<b>• Animasi lain =</b> kontol, penis,callx, tembak, bundir, helikopter, y, awk, nah, ajg, babi, hmm, love, loveyou.
+__HELP__ = f"""
+**--bantuan untuk animasi--**
+<blockquote><b>
+<b>• `fuck` =</b> Untuk menampilkan animasi jari tengah.
+<b>• `dino` =</b> Untuk menampilkan animasi dikejar dino.
+<b>• `santet`=</b> Untuk menampilkan animasi menyantet onlen.
+<b>• `gabut` =</b> Untuk menampilkan animasi gabut.
+<b>• `sayang` =</b> Untuk menampilkan animasi sayang.
+<b>• `code` =</b> Untuk menampilkan animasi ngehek palsu.
+<b>• `bomb` =</b> Untuk menampilkan animasi Bomb.
+<b>• `Animasi lain` =</b> kontol, penis,callx, tembak, bundir, helikopter, y, awk, nah, ajg, babi, hmm, love, loveyou.
 </b></blockquote>"""
