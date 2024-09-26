@@ -1,14 +1,15 @@
 __MODULE__ = "ᴀʙsᴇɴ"
-__HELP__ = """<blockquote><b>
-<b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴀʙꜱᴇɴ 』</b>
-
+__HELP__ = """
+**--ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴀʙꜱᴇɴ--**
+<blockquote><b>
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}ᴀʙꜱᴇɴ</code></code>
-  <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ʟɪꜱᴛ ᴀʙꜱᴇɴ ᴋᴀᴍᴜ.
+  <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ʟɪꜱᴛ ᴀʙꜱᴇɴ ᴋᴀᴍᴜ.</b></blockquote> 
   
-  
+<blockquote><b>  
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}ᴅᴇʟᴀʙꜱᴇɴ</code></code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢʜᴀᴘᴜꜱ ʟɪꜱᴛ ᴀʙꜱᴇɴ ᴋᴀᴍᴜ.
-  </b></blockquote> """
+  </b></blockquote>"""
+
 from pyrogram import Client, filters
 from pyrogram.types import (InlineKeyboardMarkup, InlineQueryResultArticle,                            InputTextMessageContent, InlineKeyboardButton)
 from datetime import datetime
