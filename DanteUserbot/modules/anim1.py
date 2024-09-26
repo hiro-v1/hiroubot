@@ -5,11 +5,12 @@ from pyrogram.types import Message
 
 
 __MODULE__ = "ᴀɴɪᴍᴀsɪ²"
-__HELP__ = f"""<blockquote><b>
-
-<b>• nikah =</b> Untuk menampilkan animasi jari tengah.
-<b>• kis =</b> Untuk menampilkan animasi dikejar dino.
-<b>• hack =</b> Untuk menampilkan animasi menyantet onlen.
+__HELP__ = f"""
+**--Animasi--**
+<blockquote><b>
+<b>• `nikah` =</b> Untuk menampilkan animasi nikah.
+<b>• `kis` =</b> Untuk menampilkan animasi mencium.
+<b>• `hack` =</b> Untuk menampilkan animasi code hack.
 </b></blockquote>"""
 
 @DANTE.UBOT("nikah")
