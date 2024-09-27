@@ -140,6 +140,23 @@ class Ubot(Client):
         else:
             return ""
             
+    def get_text(self, m):
+        if m.reply_to_message:
+            if len(m.command) < 2:
+                text = m.reply_to_message.text or m.reply_to_message.caption
+            else:
+                text = (
+                    (m.reply_to_message.text or m.reply_to_message.caption)
+                    + "\n\n"
+                    + m.text.split(None, 1)[1]
+                )
+        else:
+            if len(m.command) < 2:
+                text = ""
+            else:
+                text = m.text.split(None, 1)[1]
+        return text 
+        
     def set_prefix(self, user_id, prefix):
         self._prefix[user_id] = prefix
     
