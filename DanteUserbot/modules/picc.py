@@ -5,8 +5,10 @@ from pyrogram.types import InputMediaPhoto
 from DanteUserbot import *
 
 __MODULE__ = "ᴄᴀʀɪ"
-__HELP__ = """<blockquote><b>
-<b>『 Bantuan Untuk cari 』</b>
+__HELP__ = """
+**--Bantuan Untuk cari--**
+
+<blockquote><b>
 • perintah: <code>.pic</code> [query]
 • penjelasan: Untuk gambar secara limit 5.
 
