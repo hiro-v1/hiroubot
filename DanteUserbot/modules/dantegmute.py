@@ -27,8 +27,9 @@ async def get_data_id(client, query):
 
 __MODULE__ = "ɢᴍᴜᴛᴇ"
 __HELP__ = """
-<blockquote>Bantuan Untuk Gmute
+**--Bantuan Untuk Gmute--**
 
+<blockquote><b>
 perintah : <code>{0}gmute</code>
     untuk mengemute user dari semua gc yg kmu admin 
 
