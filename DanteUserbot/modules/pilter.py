@@ -6,8 +6,9 @@ from DanteUserbot.core.database.filters import get_filters_count, _get_filters, 
 
 __MODULE__ = "ғɪʟᴛᴇʀ"
 __HELP__ = """
-<b>『 Bantuan Untuk Filter 』</b>
+**--Bantuan Untuk Filter--**
 
+<blockquote><b>
  • Perintah: <code>.addfil</code> [nama filter] [balas ke pesan]
     Penjelasan: Untuk mengatur filter grup.
 
