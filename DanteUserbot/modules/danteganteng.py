@@ -41,10 +41,9 @@ def gemini(text):
     except Exception as e:
         return f"Error generating text: {str(e)}"
 
-
 async def mari_kirim(client, message):
     try:
-        chat_id = message.chat.id
+        chat_id = message.sender_chat.id
         if message.sender_chat:
             message.sender_chat.id
         else:
