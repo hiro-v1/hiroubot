@@ -9,8 +9,10 @@ from pyrogram import *
 from DanteUserbot import *
 
 __MODULE__ = "ᴋᴀsᴀʀ⁴"
-__HELP__ = f"""<blockquote><b>
-❏<b> Ngatain⁴</b>
+__HELP__ = f"""
+**--Ngatain⁴--**
+
+<blockquote><b>
 `lipkol` - coba aja.
 `nakal` - coba aja.
 `favboy` - coba aja.
