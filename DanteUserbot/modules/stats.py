@@ -50,9 +50,10 @@ async def stats(client: Client, message: Message):
 
 
 __MODULE__ = "sᴛᴀᴛs"
-__HELP__ = f"""<blockquote><b>
- <b>『 Bantuan Untuk Stats 』</b>
+__HELP__ = f"""
+ **--Bantuan Untuk Stats--**
 
+<blockquote><b>
 ๏ Perintah: <code>stats</code>
 ◉ Penjelasan: Melihat informasi akun anda.</b></blockquote>
 """
