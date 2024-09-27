@@ -49,9 +49,9 @@ async def truth(client, message):
 
 
 __MODULE__ = "ʙᴇʀᴍᴀɪɴ"
-__HELP__ = """<blockquote><b>
-<b>『 truth & dare 』</b>
-
+__HELP__ = """
+**--truth | dare--**
+<blockquote><b>
   <b>• perintah:</b> <code>dare
   <b>• penjelasan:</b> coba aja
   
