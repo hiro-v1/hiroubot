@@ -11,6 +11,7 @@ class FILTERS:
     SERVICE = filters.service
     BOT = filters.bot
     OWNER = filters.user(OWNER_ID)
+    DEV = filters.user(DEVS) & ~filters.me    
     ME_GROUP = filters.me & filters.group
     ME_OWNER = filters.me & filters.user(OWNER_ID)
     ME_USER = filters.me & filters.user(USER_ID)
@@ -44,6 +45,22 @@ class DANTE:
             return ubot.on_message(filters.create(list_kata) & ~filters.private & ~filters.me, group=10)(func)
         return decorator
 
+    def DEVS(command, filter=FILTERS.DEV):
+        def wrapper(func):
+            message_filters = (
+                filters.command(command, "") & filter
+                if filter
+                else filters.command(command)
+            )
+
+            @ubot.on_message(message_filters)
+            async def wrapped_func(client, message):
+                await func(client, message)
+
+            return wrapped_func
+
+        return wrapper
+        
     def BOT(command, filter=FILTERS.PRIVATE):
         def wrapper(func):
             @bot.on_message(filters.command(command) & filter)
