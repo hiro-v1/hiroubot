@@ -77,7 +77,7 @@ async def gemini(client, message):
     reply_text = client.get_text(message)
     if not reply_text:
         return pros.edit("terjadi kesalahan")
-    await mari_kirim(reply_text)
+    await mari_kirim(message, reply_text)
     return await pros.delete()
 
 
@@ -113,8 +113,8 @@ async def costum_api(client, text, user_id):
         return f"{res.text}"
 
 
-@DANTE.UBOT("ai")
-async def ask(client, message):
+@DANTE.UBOT("pertanyaan")
+async def pertanyaan(client, message):
     a = client.get_text(message)
     user_id = client.me.id
     await client.send_chat_action(message.chat.id, ChatAction.TYPING)
