@@ -179,7 +179,7 @@ async def start_cmd(client, message):
 
 
 @DANTE.UBOT("ping")
-@DANTE.ME_USER("uping")
+@DANTE.DEVS("uping")
 async def _(client, message):
     await ping_cmd(client, message)
 
@@ -208,7 +208,7 @@ async def _(client, message):
         return await message.reply(
             f"{ggl}<code>{message.text.split()[0]}</code> <b>[query] [value]</b>"
         )
-    query = {"pong": "KONTOL_PING"}
+    query = {"ping": "KONTOL_PING"}
     if message.command[1].lower() not in query:
         return await message.reply(f"<b>{ggl}query yang di masukkan tidak valid</b>")
     query_str, value_str = (
