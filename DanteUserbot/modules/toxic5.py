@@ -8,8 +8,10 @@ from pyrogram import *
 from DanteUserbot import *
 
 __MODULE__ = "ᴋᴀsᴀʀ⁵"
-__HELP__ = f"""<blockquote><b>
-❏<b> Ngatain⁵</b>
+__HELP__ = f"""
+**--Ngatain⁵--**
+<blockquote><b>
+
 `ceking` - coba aja.
 `hinaa` - coba aja.
 `kaca` - coba aja.</b></blockquote>
