@@ -3,8 +3,10 @@ from pyrogram import *
 from DanteUserbot import *
 
 __MODULE__ = "ᴋᴀsᴀʀ³"
-__HELP__ = f"""<blockquote><b>
-❏<b> Ngatain³</b>
+__HELP__ = f"""
+**--Ngatain³--**
+
+<blockquote><b>
 `ganteng` - coba aja.
 `wibu` - coba aja.
 `senggol` - coba aja.</b></blockquote>
