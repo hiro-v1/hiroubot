@@ -2,9 +2,10 @@ from DanteUserbot import *
 from pyrogram.enums import ParseMode
 
 __MODULE__ = "ᴄᴇᴋ ɪᴅ"
-__HELP__ = f"""<blockquote><b>
-<b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ꜱʜᴏᴡɪᴅ 』</b>
+__HELP__ = f"""
+**--ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ꜱʜᴏᴡɪᴅ--**
 
+<blockquote><b>
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}id</code>
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇᴛᴀʜᴜɪ ɪᴅ ᴅᴀʀɪ ᴜꜱᴇʀ/ɢʀᴜᴘ/ᴄʜᴀɴɴᴇʟ
 
