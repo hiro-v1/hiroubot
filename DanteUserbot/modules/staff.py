@@ -1,9 +1,10 @@
 from DanteUserbot import *
 
 __MODULE__ = "sᴛᴀғғ"
-__HELP__ = f"""<blockquote><b>
-<b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ꜱᴛᴀꜰꜰ 』</b>
+__HELP__ = f"""
+**--ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ꜱᴛᴀꜰꜰ--**
 
+<blockquote><b>
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}staff</code> [ɪᴘ ᴀᴅᴅʀᴇꜱ]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴᴅᴀᴘᴀᴛᴋᴀɴ ɪɴꜰᴏʀᴍᴀꜱɪ ꜱᴇʟᴜʀᴜʜ ꜱᴛᴀꜰꜰ ɢʀᴜᴘ
 
