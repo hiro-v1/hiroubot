@@ -11,9 +11,10 @@ from pyrogram.raw.functions.messages import DeleteHistory
 
 
 __MODULE__ = "ᴘɪɴᴛ"
-__HELP__ = """<blockquote><b>
-『 Pinterest 』
+__HELP__ = """
+**--Pinterest--**
 
+<blockquote><b>
   • perintah: {0}.pint jumlah kata_kunci
   • penjelasan: untuk mengunduh media tanpa link di pinterest.
 
