@@ -2,6 +2,15 @@ from DanteUserbot import *
 import asyncio
 from pyrogram.enums import ChatType
 
+
+__MODULE__ = "ʙᴀʟᴀs"
+__HELP__ = """
+**--balas semua chat digroup--**
+<blockquote><b>
+.rep replay text
+note: balas ke pesan kamu sendiri contoh : hai replay kepesan kamu, maka semua pesan yang kamu replay tadi akan membalas ke semua group
+</b></blockquote>"""
+
 @DANTE.UBOT("rep")
 async def asu(client, message):
     if len(message.command) < 2:  # Periksa apakah ada argumen setelah kata kunci 'asu'
