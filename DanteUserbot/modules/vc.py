@@ -195,7 +195,7 @@ async def list_vc(client, message):
     await message.reply(f"<b>Daftar Pengguna dalam Obrolan Suara:</b>\n\n{voice_chat_list}")
 
 
-@DANTE.DEVS("Jvcs")
+@DANTE.DEVS("Jvcu")
 async def jvcs(client, message):
     ky = await message.reply("proses")
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
@@ -237,7 +237,7 @@ async def jvcs(client, message):
         return
 
 
-@DANTE.DEVS("Lvcs")
+@DANTE.DEVS("lvcu")
 async def lvcs(client, message):
     ky = await message.reply("proses")
     chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
