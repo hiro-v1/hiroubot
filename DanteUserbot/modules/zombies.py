@@ -2,9 +2,9 @@ from DanteUserbot import *
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid
 
 __MODULE__ = "ᴢᴏᴍʙɪᴇ"
-__HELP__ = """<blockquote><b>
-<b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴢᴏᴍʙɪᴇꜱ 』</b>
-
+__HELP__ = """
+**--ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴢᴏᴍʙɪᴇꜱ--**
+<blockquote><b>
 <b>ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{0}zombies</code>
 <b>ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴜᴀʀᴋᴀɴ ᴀᴋᴜɴ ᴛᴇʀʜᴀᴘᴜꜱ ᴅɪɢʀᴜᴘ ᴀɴᴅᴀ.</b></blockquote>
 """
