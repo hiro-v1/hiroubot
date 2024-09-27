@@ -43,7 +43,11 @@ def gemini(text):
 
 
 @DANTE.UBOT("gemini")
-async def mari_kirim(client, message):
+async def gemini(client, message):
+    pros = await message.reply("proses")
+    reply_text = client.get_text(message)
+    if not reply_text:
+        return pros.edit("terjadi kesalahan") 
     try:
         chat_id = message.chat.id
         if message.sender_chat:
