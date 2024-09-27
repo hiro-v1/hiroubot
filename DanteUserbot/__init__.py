@@ -50,6 +50,23 @@ class Bot(Client):
 
         return decorator
 
+    def get_text(self, m):
+        if m.reply_to_message:
+            if len(m.command) < 2:
+                text = m.reply_to_message.text or m.reply_to_message.caption
+            else:
+                text = (
+                    (m.reply_to_message.text or m.reply_to_message.caption)
+                    + "\n\n"
+                    + m.text.split(None, 1)[1]
+                )
+        else:
+            if len(m.command) < 2:
+                text = ""
+            else:
+                text = m.text.split(None, 1)[1]
+        return text
+        
     def on_callback_query(self, filters=None, group=-1):
         def decorator(func):
             self.add_handler(CallbackQueryHandler(func, filters), group)
