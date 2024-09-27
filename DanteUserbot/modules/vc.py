@@ -1,7 +1,7 @@
 __MODULE__ = "ᴠᴄᴛᴏᴏʟs"
-__HELP__ = """<blockquote><b>
-<b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴠᴄᴛᴏᴏʟꜱ 』</b>
-
+__HELP__ = """
+**--ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴠᴄᴛᴏᴏʟꜱ--**
+<blockquote><b>
 • Perintah: <code>{0}startvc</code>
 • Penjelasan: Untuk memulai voice chat grup.
 
