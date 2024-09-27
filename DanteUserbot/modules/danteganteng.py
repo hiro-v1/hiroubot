@@ -7,7 +7,7 @@ from pyrogram.errors import *
 
 from DanteUserbot import *
 
-genai.configure(api_key="AIzaSyC28dJ5wTyjm44ng1WCuz4uTppelgRcLuU")
+genai.configure(api_key="AIzaSyBw_hspHrlcySkIsa9Qx5zA7PqKAyCwwPs")
 
 
 def gemini(text):
@@ -41,9 +41,11 @@ def gemini(text):
     except Exception as e:
         return f"Error generating text: {str(e)}"
 
+
+@DANTE.UBOT("gemini")
 async def mari_kirim(client, message):
     try:
-        chat_id = message.sender_chat.id
+        chat_id = message.chat.id
         if message.sender_chat:
             message.sender_chat.id
         else:
@@ -51,7 +53,7 @@ async def mari_kirim(client, message):
         respon = gemini(query)
         await message._client.send_chat_action(chat_id, ChatAction.TYPING)
         await asyncio.sleep(2)
-        if len(respon) > 4096:
+        if len(respon) > 2550:
             with open("chatbot.txt", "wb") as file:
                 file.write(respon.encode("utf-8"))
             await message._client.send_chat_action(chat_id, ChatAction.UPLOAD_DOCUMENT)
@@ -63,25 +65,24 @@ async def mari_kirim(client, message):
             return await message._client.send_chat_action(chat_id, ChatAction.CANCEL)
         else:
             await message.reply_text(
-                "{} {}".format(em.sukses, respon), reply_to_message_id=message.id
+                "{} {}", reply_to_message_id=message.id
             )
         return await message._client.send_chat_action(chat_id, ChatAction.CANCEL)
     except ChatWriteForbidden:
         return
 
 
-@DANTE.UBOT("gemini")
-async def gemini(client, message):
-    pros = await message.reply("proses")
-    reply_text = client.get_text(message)
-    if not reply_text:
-        return pros.edit("terjadi kesalahan")
-    await mari_kirim(message, reply_text)
-    return await pros.delete()
+# @DANTE.UBOT("gemini")
+# async def gemini(client, message):
+#    pros = await message.reply("proses")
+#    reply_text = client.get_text(message)
+#    if not reply_text:
+#        return pros.edit("terjadi kesalahan")
+#   await mari_kirim()
+#    return await pros.delete()
 
 
 chat_topics = {}
-
 
 async def costum_api(client, text, user_id):
     if user_id in chat_topics:
@@ -137,7 +138,7 @@ async def generate_real(client, text):
     if res.status_code == 200:
         data = res.json()
         file = data["result"]
-        photo = f"iz_{c.me.id}.jpg"
+        photo = f"iz_{client.me.id}.jpg"
         await client.bash(f"wget {file} -O {photo}")
         return photo
 
