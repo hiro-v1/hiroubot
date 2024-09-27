@@ -77,7 +77,7 @@ async def gemini(client, message):
     reply_text = client.get_text(message)
     if not reply_text:
         return pros.edit("terjadi kesalahan")
-    await mari_kirim(client, message, reply_text)
+    await mari_kirim(reply_text)
     return await pros.delete()
 
 
