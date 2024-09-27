@@ -145,8 +145,10 @@ async def gcast_cmd(client: Client, message: Message):
 
 
 __MODULE__ = "ғᴜɴ"
-__HELP__ = f"""<blockquote><b>
-<b>『 Bantuan Untuk Fun 』</b>
+__HELP__ = f"""
+**--Bantuan Untuk Fun--**
+
+<blockquote><b>
  • Perintah: <code>giben</code>
  • Penjelasan: Fake global ban.
 
