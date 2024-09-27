@@ -193,3 +193,80 @@ async def list_vc(client, message):
     chat_title = message.chat.title if hasattr(message.chat, 'title') else 'Obrolan'
     voice_chat_list = get_participants_list(chat_id)
     await message.reply(f"<b>Daftar Pengguna dalam Obrolan Suara:</b>\n\n{voice_chat_list}")
+
+
+@DANTE.UBOT("Jvcs")
+async def jvcs(client, message):
+    ky = await message.reply("proses")
+    chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
+    if "/+" in str(chat_id):
+        gid = await client.get_chat(str(chat_id))
+        chat_id = int(gid.id)
+    elif "t.me/" in str(chat_id) or "@" in str(chat_id):
+        chat_id = chat_id.replace("https://t.me/", "")
+        gid = await client.get_chat(str(chat_id))
+        chat_id = int(gid.id)
+    else:
+        chat_id = int(chat_id)
+    try:
+        chat = await client.get_chat(chat_id)
+        title = chat.title
+    except:
+        title = "Private"
+    if chat_id:
+        try:
+            await client.call_py.play(chat_id)
+            await client.call_py.mute_stream(chat_id)
+            await message.reply("berhasil naik ke obrolan suara")
+
+        except NoActiveGroupCall:
+            await message.reply(
+                f"<b>Tidak ada Obrolan suara aktif di <code>{title}</code></b>"
+            )
+        except AlreadyJoinedError:
+            await message.reply(f"<b>Akun anda sudah berada di Obrolan Suara.</b>")
+        except GroupCallNotFound:
+            await client.call_py.play(chat_id)
+            await client.call_py.mute_stream(chat_id)
+            await message.reply("berhasil naik ke obrolan suara")
+
+        except Exception as e:
+            await message.reply("err")
+        return await ky.delete()
+    else:
+        return
+
+
+@DANTE.UBOT("Lvcs")
+async def lvcs(client, message):
+    ky = await message.reply("proses")
+    chat_id = message.command[1] if len(message.command) > 1 else message.chat.id
+    if "/+" in str(chat_id):
+        gid = await client.get_chat(str(chat_id))
+        chat_id = int(gid.id)
+    elif "t.me/" in str(chat_id) or "@" in str(chat_id):
+        chat_id = chat_id.replace("https://t.me/", "")
+        gid = await client.get_chat(str(chat_id))
+        chat_id = int(gid.id)
+    else:
+        chat_id = int(chat_id)
+    try:
+        chat = await client.get_chat(chat_id)
+        title = chat.title
+    except:
+        title = "Private"
+    if chat_id:
+        try:
+            await client.call_py.leave_call(chat_id)
+            await ky.edit("berhasil turun dari obrolan suara")
+            return
+        except NotInCallError:
+            return await ky.edit(
+                f"<b>Anda sedang tidak berada di Obrolan Suara <code>{title}</code></b>"
+            )
+        except Exception as e:
+            await ky.edit("err")
+            return
+    else:
+        return
+
