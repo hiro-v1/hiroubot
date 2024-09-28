@@ -15,3 +15,5 @@ from DanteUserbot.core.helpers.EMJI import *
 from DanteUserbot.core.helpers.queues import *
 from DanteUserbot.core.helpers.handlers import *
 from DanteUserbot.core.helpers.pmdb import *
+from DanteUserbot.core.helpers.Danstring import *
+
