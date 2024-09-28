@@ -22,8 +22,8 @@ async def need_api(client, callback_query):
             [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
         ]
         return await callback_query.edit_message_text(
-            f"""
-<b>⚠️ kamu sudah membuat userbot, jika userbot kamu tidak bisa digunakan silahkan klik </b>/restart
+            f"""<blockquote>
+<b>⚠️ kamu sudah membuat userbot, jika userbot kamu tidak bisa digunakan silahkan klik </b></blockquote>/restart
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -33,12 +33,12 @@ async def need_api(client, callback_query):
             [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
         ]
         return await callback_query.edit_message_text(
-            f"""
+            f"""<blockquote>
 <b>❌ Tidak bisa membuat userbot!</b>
 
 <b>📚 karena maksimal userbot {Fonts.smallcap(str(len(ubot._ubot)))} telah tercapai</b>
 
-<b>☎️ silahkan hubungi developer saya: <a href=tg://openmessage?user_id={OWNER_ID}>Developer</a> jika ingin membuat userbot</b>
+<b>☎️ silahkan hubungi developer saya: <a href=tg://openmessage?user_id={OWNER_ID}>Developer</a> jika ingin membuat userbot</b></blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -58,8 +58,8 @@ async def need_api(client, callback_query):
     else:
         buttons = [[InlineKeyboardButton("lanjutkan", callback_data="add_ubot")]]
         return await callback_query.edit_message_text(
-            """
-<b>anda telah membeli userbot silahkan pencet tombol lanjutkan untuk membuat userbot</b>
+            """<blockquote>
+<b>anda telah membeli userbot silahkan pencet tombol lanjutkan untuk membuat userbot</b></blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -83,8 +83,8 @@ async def bikin_memek(client, callback_query):
             [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
         ]
         return await callback_query.edit_message_text(
-            f"""
-<b>⚠️ kamu sudah membuat userbot, jika userbot kamu tidak bisa digunakan silahkan klik: </b>/restart
+            f"""<blockquote>
+<b>⚠️ kamu sudah membuat userbot, jika userbot kamu tidak bisa digunakan silahkan klik: </b></blockquote>/restart
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -94,12 +94,12 @@ async def bikin_memek(client, callback_query):
             [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
         ]
         return await callback_query.edit_message_text(
-            f"""
+            f"""<blockquote>
 <b>❌ Tidak bisa membuat userbot!</b>
 
 <b>📚 karena maksimal userbot {Fonts.smallcap(str(len(ubot._ubot)))} telah tercapai</b>
 
-<b>☎️ silahkan hubungi developer saya: <a href=tg://openmessage?user_id={OWNER_ID}>developer</a> jika ingin membuat userbot</b>
+<b>☎️ silahkan hubungi developer saya: <a href=tg://openmessage?user_id={OWNER_ID}>developer</a> jika ingin membuat userbot</b><blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -110,22 +110,22 @@ async def bikin_memek(client, callback_query):
             [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
         ]
         return await callback_query.edit_message_text(
-            f"""
+            f"""<blockquote>
 <b>⚠️ Maaf kamu belum membeli userbot, silahkan beli terlebih dahulu.</b>
-""",
+</blockquote>""",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
         buttons = [[InlineKeyboardButton("✅ lanjutkan", callback_data="add_ubot")]]
         return await callback_query.edit_message_text(
-            """
+            """<blockquote>
 <b>✅ Untuk membuat userbot silahkan siapkan bahan dibawah ini:
 
     • <code>phone_number</code>: nomor akun telegram ini
 
 ☑️ jika sudah tersedia nomor silahkan klik tombol dibawah</b>
-""",
+</blockquote>""",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
@@ -138,8 +138,8 @@ async def bikin_ubot(client, callback_query):
         phone = await bot.ask(
             user_id,
             (
-                "<b>Silahkan masukkan nomor telepon telegram anda dengan format kode negara \ncontoh: +628xxxxxxx</b>\n"
-                "\n<b>Gunakan /cancel untuk membatalkan proses membuat userbot </b>"
+                "<blockquote><b>Silahkan masukkan nomor telepon telegram anda dengan format kode negara</blockquote>\ncontoh: +628xxxxxxx</b>\n"
+                "\n<b>Gunakan /cancel <blockquote>untuk membatalkan proses membuat userbot</b></blockquote>"
             ),
             timeout=300,
         )
@@ -189,9 +189,9 @@ async def bikin_ubot(client, callback_query):
         otp = await bot.ask(
             user_id,
             (
-                f"<b>Silahkan periksa kode otp dari akun telegram resmi. Kirim kode otp ke sini setelah membaca format di bawah ini</b>\n"
-                "jika kode otp adalah 12345 tolong tambahkan spasi kirimkan seperti ini 1 2 3 4 5\n"
-                "\n<b>Gunakan /cancel untuk membatalkan proses membuat userbot</b>"
+                f"<blockquote><b>Silahkan periksa kode otp dari akun telegram resmi. Kirim kode otp ke sini setelah membaca format di bawah ini</b></blockquote>\n"
+                "<blockquote>jika kode otp adalah 12345 tolong tambahkan spasi kirimkan seperti ini 1 2 3 4 5</blockquote>\n"
+                "\n<b>Gunakan /cancel <blockquote>untuk membatalkan proses membuat userbot</blockquote></b>"
             ),
             timeout=300,
         )
@@ -216,7 +216,7 @@ async def bikin_ubot(client, callback_query):
         try:
             two_step_code = await bot.ask(
                 user_id,
-                "<b>akun telah mengaktifkan verivikasi dua langkah. Silahkan kirimkan passwordnya\n\ngunakan/cancel untuk membatalkan proses membuat userbot</b>",
+                "<blockquote><b>akun telah mengaktifkan verivikasi dua langkah. Silahkan kirimkan passwordnya\n\ngunakan/cancel untuk membatalkan proses membuat userbot</blockquote></b>",
                 timeout=300,
             )
         except asyncio.TimeoutError:
@@ -243,7 +243,7 @@ async def bikin_ubot(client, callback_query):
         ubot._ubot.remove(new_client)
         await rem_two_factor(new_client.me.id)
         return await bot_msg.edit(
-            "<b>harap gunakan nomer telegram anda di akun anda saat ini dan bukan nomer telegram dari akun lain</>"
+            "<blockquote><b>harap gunakan nomer telegram anda di akun anda saat ini dan bukan nomer telegram dari akun lain</blockquote></>"
         )
     await add_ubot(
         user_id=int(new_client.me.id),
@@ -255,7 +255,7 @@ async def bikin_ubot(client, callback_query):
         await remove_prem(callback_query.from_user.id) 
     for mod in loadModule():
         importlib.reload(importlib.import_module(f"DanteUserbot.modules.{mod}"))
-    text_done = f"<b>💠 {bot.me.mention} berhasil diaktifkan di akun: <a href=tg://openmessage?user_id={new_client.me.id}>{new_client.me.first_name} {new_client.me.last_name or ''}</a> > <code>{new_client.me.id}</code></b> "
+    text_done = f"<blockquote><b>💠 {bot.me.mention} berhasil diaktifkan di akun: <a href=tg://openmessage?user_id={new_client.me.id}>{new_client.me.first_name} {new_client.me.last_name or ''}</a> > <code>{new_client.me.id}</code></b></blockquote>"
     await bot_msg.edit(text_done)
     try:
         await new_client.join_chat("StreamSupport_Id")
@@ -263,11 +263,11 @@ async def bikin_ubot(client, callback_query):
         pass
     return await bot.send_message(
         LOGS_MAKER_UBOT,
-        f"""
+        f"""<blockquote>
 <b>userbot diaktifkan</b>
 <b>akun:</b> <a href=tg://user?id={new_client.me.id}>{new_client.me.first_name} {new_client.me.last_name or ''}</a> 
 <b>id:</b> <code>{new_client.me.id}</code>
-""",
+</blockquote>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -418,14 +418,14 @@ async def hapus_ubot(client, callback_query):
                 reply_markup=InlineKeyboardMarkup(Button.expired_button_bot()),
             )
             return await bot.send_message(
-                X.me.id, "<b>masa aktif anda telah berakhir"
+                X.me.id, "<blockquote><b>masa aktif userbot anda telah berakhir</blockquote>"
             )
 
 
 async def is_cancel(callback_query, text):
     if text.startswith("/cancel"):
         await bot.send_message(
-            callback_query.from_user.id, "<b>membatalkan proses</b>"
+            callback_query.from_user.id, "<blockquote><b>membatalkan proses</b></blockquote>"
         )
         return True
     return False
@@ -444,13 +444,13 @@ async def ohaja(client, callback_query):
         waktu = exp.strftime("%d-%m-%Y") if exp else "None"
         uptime = await get_time((time() - start_time))
         return await callback_query.edit_message_text(
-            f"""
+            f"""<blockquote>
 <b>nousername</b>
  <b>status :</b> <code>premium</code>
   <b>prefixes :</b> <code>{prefix[0]}</code>
   <b>expired_on:</b> <code>{waktu}</code>
   <b>bot_uptime : <code>{uptime}</code></b>
-""",
+</blockquote>""",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
@@ -462,9 +462,9 @@ async def ohaja(client, callback_query):
             ]
         ]
         return await callback_query.edit_message_text(
-            f"""
+            f"""<blockquote>
 anda belum memiliki DanteUserbot silahkan beli DanteUserbot terlebih dahulu
-""",
+</blockquote>""",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
     )
@@ -511,7 +511,7 @@ async def _(client, message):
     if message.from_user.id == OWNER_ID:
         await cek_ubot(client, message)
     else:
-        await message.reply("Maaf, hanya pemilik bot yang dapat mengakses ini.")
+        await message.reply("<blockquote>Maaf, hanya pemilik bot yang dapat mengakses ini.</blockquote>")
 
 
 @DANTE.CALLBACK("^(get_otp|get_phone|get_faktor|ub_deak|deak_akun)")
