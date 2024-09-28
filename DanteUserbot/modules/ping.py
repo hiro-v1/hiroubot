@@ -9,7 +9,7 @@ from time import time
 from pyrogram.raw import *
 from pyrogram.raw.functions import Ping
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from PyroUbot import *
+from DanteUserbot import *
 
 @DANTE.UBOT("ping")
 async def _(client, message):
