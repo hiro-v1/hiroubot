@@ -2,22 +2,23 @@ from DanteUserbot import *
 
 __MODULE__ = "ᴘʀᴇғɪx"
 __HELP__ = f"""
-**--ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴄᴏɴᴛʀᴏʟ--**
+**--bantuan untuk merubah tampilan emoji pong--**
 <blockquote><b>
-  <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}setprefix</code> [sɪᴍʙᴏʟ ᴘʀᴇꜰɪx]
-  <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢᴜʙᴀʜ ᴘʀᴇꜰɪx/ʜᴀɴᴅʟᴇʀ ᴄᴏᴍᴍᴀɴᴅ
+  <b>• perintah:</b> <code>{PREFIX[0]}setprefix</code> [simbol prefix]
+  <b>• kegunaan:</b> untuk merubah tampilan prefix command 
 
+hanya untuk pengguna akun telegram premium yang bisa menggunakan emoji premium!
 note : untuk merubah emoji pong bukan ping.
 jika ingin mengubah emoji ping silahkan ke menu setping
-  <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}setp</code> [ǫᴜᴇʀʏ] [valeu]
-  <b>• ǫᴜᴇʀʏ: </b>
+  <b>• perintah:</b> <code>{PREFIX[0]}setp</code> [query] [valeu]
+  <b>• query: </b>
        <b>•> pong </b>
        <b>•> time </b>
        <b>•> dev </b>
        <b>•> PROSES </b>
        <b>•> GAGAL </b>
        <b>•> BERHASIL </b>
-  <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ: ᴜɴᴛᴜᴋ ᴍᴇʀᴜʙᴀʜ ᴛᴀᴍᴘɪʟᴀɴ ᴘᴏɴɢ ᴘᴀᴅᴀ ᴘɪɴɢ</b>
+  <b>• untuk mengubah tampilan emoji pada command pong</b>
 
 </b></blockquote>"""
 
