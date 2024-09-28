@@ -9,9 +9,9 @@ __HELP__ = f"""
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}setemoji</code> [ǫᴜᴇʀʏ] [valeu]
   <b>• ǫᴜᴇʀʏ: </b>
-       <b>•> PONG </b>
-       <b>•> UPTIME </b>
-       <b>•> MENTION </b>
+       <b>•> ping </b>
+       <b>•> time </b>
+       <b>•> owner </b>
        <b>•> PROSES </b>
        <b>•> GAGAL </b>
        <b>•> BERHASIL </b>
@@ -62,7 +62,7 @@ async def _(client, message):
         if len(message.command) < 3:
             return await msg.edit(f"{ggl}<b>ᴛᴏʟᴏɴɢ ᴍᴀsᴜᴋᴋᴀɴ ǫᴜᴇʀʏ ᴅᴀɴ ᴠᴀʟᴇᴜ ɴʏᴀ</b>")
 
-        query_mapping = {"pong": "EMOJI_PING", "uptime": "EMOJI_UPTIME", "mention": "EMOJI_MENTION", "proses": "EMOJI_PROSES", "berhasil": "EMOJI_BERHASIL", "gagal": "EMOJI_GAGAL"}
+        query_mapping = {"ping": "EMOJI_PING", "time": "EMOJI_UPTIME", "owner": "EMOJI_MENTION", "proses": "EMOJI_PROSES", "berhasil": "EMOJI_BERHASIL", "gagal": "EMOJI_GAGAL"}
         command, mapping, value = message.command[:3]
 
         if mapping.lower() in query_mapping:
