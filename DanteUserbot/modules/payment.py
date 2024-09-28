@@ -24,7 +24,7 @@ async def _(client, callback_query):
         await callback_query.message.delete()
         pesan = await bot.ask(
             user_id,
-            f"<b>Silahkan kirimkan bukti screenshot pembayaran anda: {full_name}</b>",
+            f"<blockquote><b>Silahkan kirimkan bukti screenshot pembayaran anda: {full_name}</b></blockquote>",
             reply_markup=InlineKeyboardMarkup(button),
             timeout=300,
         )
@@ -32,7 +32,7 @@ async def _(client, callback_query):
     except asyncio.TimeoutError as out:
         if get.id in CONFIRM_PAYMENT:
             CONFIRM_PAYMENT.remove(get.id)
-            await bot.send_message(get.id, "Waktu untuk mengirim bukti pembayaran telah habis. Silakan kirimkan kembali bukti pembayaran.")
+            await bot.send_message(get.id, "<blockquote>Waktu untuk mengirim bukti pembayaran telah habis. Silakan kirimkan kembali bukti pembayaran.</blockquote>")
             return    
     # except asyncio.TimeoutError as out:
         # if get.id in CONFIRM_PAYMENT:
@@ -42,17 +42,17 @@ async def _(client, callback_query):
         if not pesan.photo:
             CONFIRM_PAYMENT.remove(get.id)
             await pesan.request.edit(
-                f"<b>Silahkan kirimkan bukti screenshot pembayaran anda: {full_name}</b>",
+                f"<blockquote><b>Silahkan kirimkan bukti screenshot pembayaran anda: {full_name}</b></blockquote>",
             )
             buttons = [[InlineKeyboardButton("✅ konfirmasi", callback_data="confirm")]]
             return await bot.send_message(
                 user_id,
-                """
+                """<blockquote>
 <b>Tidak dapat di proses</b>
 
 <b>Harap kirimkan screenshot bukti pembayaran anda yang valid</b>
 
-<b>Silahkan konfirmasi ulang pembayaran anda</b>
+<b>Silahkan konfirmasi ulang pembayaran anda</b></blockquote>
 """,
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
@@ -64,17 +64,17 @@ async def _(client, callback_query):
             )
             CONFIRM_PAYMENT.remove(get.id)
             await pesan.request.edit(
-                f"<b>Silahkan kirimkan bukti screenshot pembayaran anda: {full_name}</b>",
+                f"<blockquote><b>Silahkan kirimkan bukti screenshot pembayaran anda: {full_name}</b></blockquote>",
             )
             buttons = [
-                [InlineKeyboardButton("admin", url=f"tg://user?id={OWNER_ID}")]
+                [InlineKeyboardButton("admin", url=f"https://t.me/Usern4meDoesNotExist404")]
             ]
             return await bot.send_message(
                 user_id,
-                f"""
+                f"""<blockquote>
 <b>Baik {full_name} Silahkan ditunggu dan jangan spam ya</b>
 <b>pembayaran anda akan di konfirmasi setelah 1-12 jam kerja</b>
-<b>jika pembayaran anda belum di konfirmasi silahkan hubungi admin</b>
+<b>jika pembayaran anda belum di konfirmasi silahkan hubungi admin</b></blockquote>
 """,
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
@@ -112,14 +112,14 @@ async def _(client, callback_query):
     get_user = await bot.get_users(query[1])
     if query[0] == "success":
         buttons = [
-            [InlineKeyboardButton("⚒️ buat DanteUserbot ⚒️", callback_data="memek")],
+            [InlineKeyboardButton("⚒️ Buat NeverTech UBot", callback_data="memek")],
         ]
         await bot.send_message(
             get_user.id,
-            f"""
+            f"""<blockquote>
 <b>Pembayaran anda berhasil di konfirmasi </b>
 
-<b>Sekarang anda bisa membuat DanteUserbot </b>
+<b>Sekarang anda bisa membuat DanteUserbot </b></blockquote>
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
@@ -150,10 +150,10 @@ async def _(client, callback_query):
         ]
         await bot.send_message(
             get_user.id,
-            """
+            """<blockquote>
 <b>Pembayaran anda tidak bisa di konfirmasi </b>
 
-<b>Silahkan lakukan pembayaran dengan benar </b>
+<b>Silahkan lakukan pembayaran dengan benar </b></blockquote>
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
