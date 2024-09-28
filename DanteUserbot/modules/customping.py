@@ -5,13 +5,18 @@ __HELP__ = """
 **--Bantuan Untuk premium emoji ping--**
 <blockquote>
 
-perintah : <code>{0}emoji</code> query emojiprem
+perintah : <code>.emoji</code> query emoji prem
    untuk merubah emoji pada tampilan tertentu
 
 query:
-    ><code>{0}pong</code>
-    ><code>{0}owner</code>
-    ><code>{0}ubot</code>
+    <code>`ping`</code>
+    <code>`owner`</code>
+    <code>`ubot`</code>
+contoh :
+.emoji ping (gunakan emot prem disini)
+.emoji owner (gunakan emot prem disini)
+.emoji ubot (gunakan emot prem disini)
+</blockquote>
 """
 
 @DANTE.UBOT("emoji")
