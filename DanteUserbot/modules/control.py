@@ -7,7 +7,9 @@ __HELP__ = f"""
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}setprefix</code> [sɪᴍʙᴏʟ ᴘʀᴇꜰɪx]
   <b>• ᴇxᴘʟᴀɴᴀᴛɪᴏɴ:</b> ᴜɴᴛᴜᴋ ᴍᴇɴɢᴜʙᴀʜ ᴘʀᴇꜰɪx/ʜᴀɴᴅʟᴇʀ ᴄᴏᴍᴍᴀɴᴅ
 
-  <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}setemoji</code> [ǫᴜᴇʀʏ] [valeu]
+note : untuk merubah emoji pong bukan ping.
+jika ingin mengubah emoji ping silahkan ke menu setping
+  <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}setp</code> [ǫᴜᴇʀʏ] [valeu]
   <b>• ǫᴜᴇʀʏ: </b>
        <b>•> pong </b>
        <b>•> time </b>
