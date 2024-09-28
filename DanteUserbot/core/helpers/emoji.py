@@ -20,6 +20,15 @@ class EMO:
         emot_xbot = emot_3 if emot_3 else "4943052679573144519"
         _ubt = f"<emoji id={emot_xbot}>👑</emoji>"
         return _ubt
+        
+    async def UPTIME(client):
+        emot_2 = await get_vars(client.me.id, "EMOJI_UPTIME")
+        emot_tion = emot_2 if emot_2 else "5800810214689084012"
+        if client.me.is_premium:
+            _men = f"<emoji id={emot_tion}>🤖</emoji> "
+        else:
+            _men = ""
+        return _men        
     
     async def PROSES(client):
         emot_4 = await get_vars(client.me.id, "EMOJI_PROSES")
