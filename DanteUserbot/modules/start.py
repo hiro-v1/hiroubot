@@ -15,11 +15,6 @@ from DanteUserbot import *
 
 START_TIME = datetime.utcnow()
 
-PONG = """
-<blockquote><b>❏ PING!!🏓
-╰•{pong} ms</b></blockquote>
-"""
-
 TIME_DURATION_UNITS = (
     ("Minggu", 60 * 60 * 24 * 7),
     ("Hari", 60 * 60 * 24),
@@ -115,14 +110,11 @@ async def ping_cmd(client, message):
         end = datetime.now()
         uptime = await get_time((time() - start_time))
         delta_ping = round((end - start).microseconds / 10000, 2)
-        pong = await EMO.PING(client)
-        uptim = await EMO.UPTIME(client)
-        menti = await EMO.MENTION(client)
         _ping = f"""
 <blockquote><b>❏ PONG!!🏓
-├• {pong}Ping: <code>{str(delta_ping).replace('.', ',')} ms</code>
-├• {uptim}Uptime: <code>{uptime}</code>
-╰• {menti}Owners: <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a></b></blockquote>
+├• Ping: <code>{str(delta_ping).replace('.', ',')} ms</code>
+├• Uptime: <code>{uptime}</code>
+╰• Owners: <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a></b></blockquote>
 """
         await message.reply_text(_ping)
     except UserBannedInChannel:
@@ -182,46 +174,6 @@ async def start_cmd(client, message):
 @DANTE.DEVS("uping")
 async def _(client, message):
     await ping_cmd(client, message)
-
-# @DANTE.UBOT("pong")
-# async def _(client, message):
-#     await pong(client, message)
-
-@DANTE.UBOT("dping")
-async def _(client, message: Message):
-    user = message.from_user
-    start = datetime.now()
-    await client.invoke(Ping(ping_id=0))
-    end = datetime.now()
-    uptime = await get_time((time() - start_time))
-    delta_ping = round((end - start).microseconds / 1000, 2)
-    memek = f"<code>{str(delta_ping).replace('.', ',')}</code>"
-    rpk = f"[{user.first_name} {user.last_name or ''}](tg://user?id={user.id})"
-    pm_msg = await get_vars(client.me.id, "KONTOL_PING") or PONG
-    await message.reply(pm_msg.format(pong=memek, mention=rpk))
-
-@DANTE.UBOT("setp")
-async def _(client, message):
-    brhsl = await EMO.BERHASIL(client)
-    ggl = await EMO.GAGAL(client)
-    if len(message.command) < 3:
-        return await message.reply(
-            f"{ggl}<code>{message.text.split()[0]}</code> <b>[query] [value]</b>"
-        )
-    query = {"pong": "KONTOL_PING"}
-    if message.command[1].lower() not in query:
-        return await message.reply(f"<b>{ggl}query yang di masukkan tidak valid</b>")
-    query_str, value_str = (
-        message.text.split(None, 2)[1],
-        message.text.split(None, 2)[2],
-    )
-    value = query[query_str]
-    if value_str.lower() == "none":
-        value_str = False
-    await set_vars(client.me.id, value, value_str)
-    return await message.reply(
-        f"<b>{brhsl}done bro!</b>"
-    )
 
 @DANTE.BOT("start")
 async def _(client, message):
