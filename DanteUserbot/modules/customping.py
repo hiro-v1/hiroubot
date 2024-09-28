@@ -2,16 +2,18 @@ from DanteUserbot import *
 
 __MODULE__ = "sᴇᴛᴘɪɴɢ"
 __HELP__ = """
-**--Bantuan Untuk premium emoji ping--**
+**--Bantuan untuk mengubah tampilan emoji ping--**
 <blockquote>
+note: hanya pengguna akun telegram premium yang bisa menggunakan ini.
 
 perintah : <code>.emoji</code> query emoji prem
    untuk merubah emoji pada tampilan tertentu
 
 query:
-    <code>`ping`</code>
-    <code>`owner`</code>
-    <code>`ubot`</code>
+    <code>ping</code>
+    <code>owner</code>
+    <code>ubot</code>
+    
 contoh :
 .emoji ping (gunakan emot prem disini)
 .emoji owner (gunakan emot prem disini)
