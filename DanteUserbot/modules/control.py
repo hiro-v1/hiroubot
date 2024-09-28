@@ -1,6 +1,6 @@
 from DanteUserbot import *
 
-__MODULE__ = "ᴄᴏɴᴛʀᴏʟ"
+__MODULE__ = "ᴘʀᴇғɪx"
 __HELP__ = f"""
 **--ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ᴄᴏɴᴛʀᴏʟ--**
 <blockquote><b>
@@ -9,9 +9,9 @@ __HELP__ = f"""
 
   <b>• ᴄᴏᴍᴍᴀɴᴅ:</b> <code>{PREFIX[0]}setemoji</code> [ǫᴜᴇʀʏ] [valeu]
   <b>• ǫᴜᴇʀʏ: </b>
-       <b>•> ping </b>
+       <b>•> pong </b>
        <b>•> time </b>
-       <b>•> owner </b>
+       <b>•> dev </b>
        <b>•> PROSES </b>
        <b>•> GAGAL </b>
        <b>•> BERHASIL </b>
@@ -45,7 +45,7 @@ async def _(client, message):
 
 
 
-@DANTE.UBOT("setemoji")
+@DANTE.UBOT("setpong")
 async def _(client, message):
     ggl = await EMO.GAGAL(client)
     sks = await EMO.BERHASIL(client)
@@ -62,7 +62,7 @@ async def _(client, message):
         if len(message.command) < 3:
             return await msg.edit(f"{ggl}<b>ᴛᴏʟᴏɴɢ ᴍᴀsᴜᴋᴋᴀɴ ǫᴜᴇʀʏ ᴅᴀɴ ᴠᴀʟᴇᴜ ɴʏᴀ</b>")
 
-        query_mapping = {"ping": "EMOJI_PING", "time": "EMOJI_UPTIME", "owner": "EMOJI_MENTION", "proses": "EMOJI_PROSES", "berhasil": "EMOJI_BERHASIL", "gagal": "EMOJI_GAGAL"}
+        query_mapping = {"pong": "EMOJI_PING", "time": "EMOJI_UPTIME", "dev": "EMOJI_MENTION", "proses": "EMOJI_PROSES", "berhasil": "EMOJI_BERHASIL", "gagal": "EMOJI_GAGAL"}
         command, mapping, value = message.command[:3]
 
         if mapping.lower() in query_mapping:
