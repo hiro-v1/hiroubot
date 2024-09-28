@@ -119,7 +119,7 @@ async def ping_cmd(client, message):
         uptim = await EMO.UPTIME(client)
         menti = await EMO.MENTION(client)
         _ping = f"""
-<blockquote><b>❏ PING!!🏓
+<blockquote><b>❏ PONG!!🏓
 ├• {pong}Ping: <code>{str(delta_ping).replace('.', ',')} ms</code>
 ├• {uptim}Uptime: <code>{uptime}</code>
 ╰• {menti}Owners: <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a></b></blockquote>
@@ -178,14 +178,14 @@ async def start_cmd(client, message):
                 await send.edit(error)
 
 
-@DANTE.UBOT("ping")
+@DANTE.UBOT("pong")
 @DANTE.DEVS("uping")
 async def _(client, message):
     await ping_cmd(client, message)
 
-@DANTE.UBOT("pong")
-async def _(client, message):
-    await pong(client, message)
+# @DANTE.UBOT("pong")
+# async def _(client, message):
+#     await pong(client, message)
 
 @DANTE.UBOT("dping")
 async def _(client, message: Message):
@@ -200,7 +200,7 @@ async def _(client, message: Message):
     pm_msg = await get_vars(client.me.id, "KONTOL_PING") or PONG
     await message.reply(pm_msg.format(pong=memek, mention=rpk))
 
-@DANTE.UBOT("set")
+@DANTE.UBOT("setp")
 async def _(client, message):
     brhsl = await EMO.BERHASIL(client)
     ggl = await EMO.GAGAL(client)
@@ -208,7 +208,7 @@ async def _(client, message):
         return await message.reply(
             f"{ggl}<code>{message.text.split()[0]}</code> <b>[query] [value]</b>"
         )
-    query = {"ping": "KONTOL_PING"}
+    query = {"pong": "KONTOL_PING"}
     if message.command[1].lower() not in query:
         return await message.reply(f"<b>{ggl}query yang di masukkan tidak valid</b>")
     query_str, value_str = (
