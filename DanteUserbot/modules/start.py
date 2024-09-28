@@ -4,6 +4,7 @@ from datetime import datetime
 import sys
 from gc import get_objects
 from time import time
+from DanteUserbot.core.helper.EMJI import *
 from DanteUserbot import bot, ubot
 from pyrogram.errors.exceptions.bad_request_400 import UserBannedInChannel
 from pyrogram.raw.functions import Ping
