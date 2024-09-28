@@ -15,6 +15,15 @@ class EMO:
         _men = f"<emoji id={emot_tion}>👑</emoji>"
         return _men
 
+    async def JUDUL(client):
+        emot_2 = await get_vars(client.me.id, "EMOJI_JUDUL")
+        emot_tion = emot_2 if emot_2 else "5972055534352733289"
+        if client.me.is_premium:
+            _jdl = f"<emoji id={emot_tion}>🤖</emoji> "
+        else:
+            _jdl = ""
+        return _jdl
+        
     async def UBOT(client):
         emot_3 = await get_vars(client.me.id, "EMOJI_USERBOT")
         emot_xbot = emot_3 if emot_3 else "4943052679573144519"
@@ -128,3 +137,19 @@ class EMO:
         else:
             mmk = ""
         return mmk
+
+    async def PYROGRAM(client):
+        emot_ping = "5460883851226137278"
+        if client.me.is_premium:
+            _pong = f"<emoji id={emot_ping}>🤖</emoji> "
+        else:
+            _pong = ""
+        return _pong
+
+    async def PYTGCALS(client):
+        emot_ping = "5463033478062816768"
+        if client.me.is_premium:
+            _pong = f"<emoji id={emot_ping}>🤖</emoji> "
+        else:
+            _pong = ""
+        return _pong
