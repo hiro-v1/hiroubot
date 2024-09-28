@@ -24,7 +24,7 @@ async def cl_ad(client, callback_query):
                 InlineKeyboardButton("ɪɴғᴏ", callback_data="cl_info")
             ],
             [
-                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="^close_user")
+                InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cl_close")
             ],
         ]
         return await callback_query.edit_message_text(
@@ -85,7 +85,7 @@ async def cl_quraan(client, callback_query):
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
-@DANTE.CALLBACK("^close_user")
+@DANTE.CALLBACK("close_user")
 async def close_usernya(client, callback_query):
     unPacked = unpackInlineMessage(callback_query.inline_message_id)
     for x in ubot._ubot:
