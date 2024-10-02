@@ -258,7 +258,7 @@ async def bikin_ubot(client, callback_query):
     text_done = f"<blockquote><b>💠 {bot.me.mention} berhasil diaktifkan di akun: <a href=tg://openmessage?user_id={new_client.me.id}>{new_client.me.first_name} {new_client.me.last_name or ''}</a> > <code>{new_client.me.id}</code></b></blockquote>"
     await bot_msg.edit(text_done)
     try:
-        await new_client.join_chat("TemanOnline_Id")
+        await new_client.join_chat("NevcTech")
     except UseralreadyParticipant:
         pass
     return await bot.send_message(
