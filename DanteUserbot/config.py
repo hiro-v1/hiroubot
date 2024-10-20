@@ -7,7 +7,7 @@ API_ID = int(os.getenv("API_ID", "26724473"))
 
 API_HASH = os.getenv("API_HASH", "7bc7d1f9b2f3d3f1bfd272db56ac0ba1")
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "7259675983:AAHtisE5r-Dn2SjpCOwOy4BFi6rt2CzrCQc")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
 
 OWNER_ID = int(os.getenv("OWNER_ID", "940232666"))
 
@@ -29,5 +29,5 @@ PREFIX = COMMAND.split()
 
 MONGO_URL = os.getenv(
     "MONGO_URL",
-    "mongodb+srv://sidante:dante4636@cluster0.oy125.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "",
 )
