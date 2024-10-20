@@ -41,7 +41,7 @@ sɪʟᴀᴋᴀɴ ʟᴀᴋᴜᴋᴀɴ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴛᴇʀʟᴇʙ�
 
 💳 ᴍᴇᴛᴏᴅᴇ ᴘᴇᴍʙᴀʏᴀʀᴀɴ:
  ├──• DANA
- ├─• <a href='https://t.me/ProblematicCode'>Owner</a>
+ ├─• <a href='https://t.me/hiro_v1'>Owner</a>
 
 
 🔖 ᴛᴏᴛᴀʟ ʜᴀʀɢᴀ: Rp {total}.000
@@ -71,7 +71,7 @@ termasuk akses ke fitur pembuatan userbot, maka anda tidak lagi memenuhi syarat 
 Dukungan:
 
 Untuk mendapatkan bantuan atau dukungan, 
-anda dapat menghubungi admin di bawah ini atau mengirim pesan ke <a href='https://t.me/ProblematicCode'>Owner</a> Harap diingat, jangan menghubungi Dukungan Telegram atau Dukungan Bot untuk masalah terkait pembayaran yang dilakukan di bot ini.
+anda dapat menghubungi admin di bawah ini atau mengirim pesan ke <a href='https://t.me/hiro_v1'>Owner</a> Harap diingat, jangan menghubungi Dukungan Telegram atau Dukungan Bot untuk masalah terkait pembayaran yang dilakukan di bot ini.
 
 Tombol Lanjutkan:
 
