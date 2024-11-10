@@ -463,7 +463,7 @@ async def ohaja(client, callback_query):
         ]
         return await callback_query.edit_message_text(
             f"""<blockquote>
-anda belum memiliki DanteUserbot silahkan beli DanteUserbot terlebih dahulu
+anda belum memiliki HiroUserbot silahkan beli HiroUserbot terlebih dahulu
 </blockquote>""",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
