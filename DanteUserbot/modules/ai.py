@@ -45,7 +45,7 @@ async def tanya(client, text):
     if response.status_code == 200:
         data = response.json()
         msg = data["result"]
-        return await f"<blockquote>{msg}</blockquote>"
+        return f"<blockquote>{msg}</blockquote>"
     else:
         return "Server error, gatau ah"
 
