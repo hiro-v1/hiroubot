@@ -67,7 +67,7 @@ async def _(client, callback_query):
                 f"<blockquote><b>Silahkan kirimkan bukti screenshot pembayaran anda: {full_name}</b></blockquote>",
             )
             buttons = [
-                [InlineKeyboardButton("admin", url=f"https://t.me/ProblematicCode")]
+                [InlineKeyboardButton("admin", url=f"https://t.me/hiro_v1")]
             ]
             return await bot.send_message(
                 user_id,
@@ -112,14 +112,14 @@ async def _(client, callback_query):
     get_user = await bot.get_users(query[1])
     if query[0] == "success":
         buttons = [
-            [InlineKeyboardButton("⚒️ Buat NeverTech UBot", callback_data="memek")],
+            [InlineKeyboardButton("⚒️ Buat hirov1 UBot", callback_data="memek")],
         ]
         await bot.send_message(
             get_user.id,
             f"""<blockquote>
 <b>Pembayaran anda berhasil di konfirmasi </b>
 
-<b>Sekarang anda bisa membuat DanteUserbot </b></blockquote>
+<b>Sekarang anda bisa membuat HiroUserbot </b></blockquote>
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
