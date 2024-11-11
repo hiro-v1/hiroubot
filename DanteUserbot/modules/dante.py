@@ -7,7 +7,7 @@ import random
 from DanteUserbot.config import OWNER_ID
 
 async def ongjir_cmd(client, message):
-    await message.reply(f"oii om dante <emoji id=5343853422703550770>🤞</emoji>")
+    await message.reply(f"oii om hiro <emoji id=5343853422703550770>🤞</emoji>")
 
 async def devsreact_cmd(client, message):
     emoji = ["🔥", "😭", "😎", "🗿", "😈"]
