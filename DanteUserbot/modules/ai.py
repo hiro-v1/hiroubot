@@ -36,7 +36,7 @@ async def tanya(client, text):
     url = "https://itzpire.com/ai/botika"
     params = {
         "q": f"{text}",
-        "user": f"{c.me.first_name}",
+        "user": f"{client, text.me.first_name}",
         "model": "sindy"
     }
     headers = {'accept': 'application/json'}
@@ -46,7 +46,7 @@ async def tanya(client, text):
         msg = data["result"]
         return f"<blockquote>{msg}</blockquote>"
     else:
-        return "Server error"
+        return "Server error, gatau ah"
 
 @DANTE.UBOT("ask")
 async def gtp(client, message: Message):
