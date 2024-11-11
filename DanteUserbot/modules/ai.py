@@ -55,7 +55,7 @@ async def gpt(client, message: Message):
     if not text:
         return await message.reply("perintah anda salah, gunakan .ask pertanyaan")
     pros = await message.reply("menjawab..")
-    hasil = await tanya(client, message: Message)
+    hasil = await tanya(client, text)
     return await pros.edit(hasil)
   
 async def ambil_ppcp(message: Message):
