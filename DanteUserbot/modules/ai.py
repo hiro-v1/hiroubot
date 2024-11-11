@@ -33,7 +33,7 @@ def get_text(message: Message) -> [None, str]:
         return None
 
 async def tanya(text):
-    url = "https://widipe.com/v2/gpt4"
+    url = "https://itzpire.com/ai/botika"
     params = {'text': text}
     headers = {'accept': 'application/json'}
     response = requests.get(url, headers=headers, params=params)
@@ -93,7 +93,7 @@ async def handle_ppcp(client: Client, message: Message):
     await ambil_ppcp(message)
 
 async def pinterest(message: Message):
-    url = "https://widipe.com/pinterest"
+    url = "https://itzpire.com/search/pinterest"
     headers = {'accept': 'application/json'}
     
     response = requests.get(url, headers=headers)
