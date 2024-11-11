@@ -55,7 +55,7 @@ async def gpt(client, message: Message):
     if not text:
         return await message.reply("perintah anda salah, gunakan .ask pertanyaan")
     pros = await message.reply("menjawab..")
-    hasil = await tanya(client, text)
+    hasil = await tanya(client, message: Message)
     return await pros.edit(hasil)
   
 async def ambil_ppcp(message: Message):
@@ -97,7 +97,7 @@ async def ambil_ppcp(message: Message):
 async def handle_ppcp(client: Client, message: Message):
     await ambil_ppcp(message)
 
-async def pinterest(message: Message):
+async def pinterest(client, message: Message):
     url = "https://itzpire.com/search/pinterest"
     headers = {'accept': 'application/json'}
     
