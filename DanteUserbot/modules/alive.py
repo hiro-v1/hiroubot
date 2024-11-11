@@ -111,7 +111,7 @@ async def _(client, inline_query):
             ping = (datetime.now() - start).microseconds / 1000
             uptime = await get_time((time() - start_time))
             msg = f"""
-<b>ᴅᴀɴᴛᴇ-ᴜsᴇʀʙᴏᴛ Os</b>
+<b>hirov1-ᴜsᴇʀʙᴏᴛ Os</b>
      <b>sᴛᴀᴛᴜs:</b> [{status}]
         <b>ᴅᴇᴠɪᴄᴇ_ᴍᴏᴅᴇʟ:</b> <code>Sᴡᴇᴇᴛ</code>
         <b>ᴍᴀɢɪsᴋ_ʜɪᴅᴇ:</b> <code>{antipm}</code>
