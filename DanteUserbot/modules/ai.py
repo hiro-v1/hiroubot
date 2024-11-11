@@ -33,11 +33,11 @@ def get_text(message: Message) -> [None, str]:
         return None
       
 
-async def tanya(client, message: Message):
+async def tanya(client, text):
     url = "https://itzpire.com/ai/botika"
     params = {
         "q": f"{text}",
-        "user": f"{client, message: Message.me.first_name}",
+        "user": f"{client.me.first_name}",
         "model": "sindy"
     }
     headers = {'accept': 'application/json'}
