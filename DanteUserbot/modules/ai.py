@@ -38,7 +38,7 @@ async def tanya(client, text):
     params = {
         "q": f"{text}",
         "user": f"{client.me.first_name}",
-        "model": "sindy"
+        "model": "alicia"
     }
     headers = {'accept': 'application/json'}
     response = requests.get(url, headers=headers, params=params)
