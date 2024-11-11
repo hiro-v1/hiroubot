@@ -75,15 +75,14 @@ async def gemini(client, message):
     except ChatWriteForbidden:
         return
 
-
-# @DANTE.UBOT("gemini")
-# async def gemini(client, message):
-#    pros = await message.reply("proses")
-#    reply_text = client.get_text(message)
-#    if not reply_text:
-#        return pros.edit("terjadi kesalahan")
-#   await mari_kirim()
-#    return await pros.delete()
+@DANTE.UBOT("gemini")
+ async def gemini(client, message):
+    pros = await message.reply("proses")
+    reply_text = client.get_text(message)
+    if not reply_text:
+        return pros.edit("terjadi kesalahan")
+   await mari_kirim()
+    return await pros.delete()
 
 
 chat_topics = {}
