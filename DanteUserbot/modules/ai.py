@@ -32,7 +32,7 @@ def get_text(message: Message) -> [None, str]:
     else:
         return None
 
-async def tanya(text):
+async def tanya(client, text):
     url = "https://itzpire.com/ai/botika"
     params = {
         "q": f"{text}",
@@ -54,7 +54,7 @@ async def gtp(client, message: Message):
     if not text:
         return await message.reply("perintah anda salah, gunakan .ask pertanyaan")
     pros = await message.reply("menjawab..")
-    hasil = await tanya(text)
+    hasil = await tanya(client, text)
     return await pros.edit(hasil)
   
 async def ambil_ppcp(message: Message):
