@@ -48,7 +48,7 @@ async def jumlah_user(client, message):
 @DANTE.UBOT("sh")
 async def shell_cmd(client, message):
     if message.from_user.id not in DEVS:
-        await message.reply_text(f"<emoji id =5895583431194054511>🌟</emoji> **Mau Ngapain**?")
+        await message.reply_text(f"<emoji id =5895583431194054511>🌟</emoji> **Mau Ngapain**? cuma bang hiro yang bisa pake perintah ini")
         return
     if len(message.command) < 2:
         return await message.reply("Input text!", quote=True)
