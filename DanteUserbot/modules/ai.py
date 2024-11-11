@@ -34,15 +34,19 @@ def get_text(message: Message) -> [None, str]:
 
 async def tanya(text):
     url = "https://itzpire.com/ai/botika"
-    params = {'text': text}
+    params = {
+        "q": f"{text}",
+        "user": f"{c.me.first_name}",
+        "model": "sindy"
+    }
     headers = {'accept': 'application/json'}
     response = requests.get(url, headers=headers, params=params)
     if response.status_code == 200:
         data = response.json()
-    if 'result' in data:
-        return data['result']
+        msg = data["result"]
+        return f"<blockquote>{msg}</blockquote>"
     else:
-        return f"<blockquote>{response.text}</blockquote>"
+        return "Server error"
 
 @DANTE.UBOT("ask")
 async def gtp(client, message: Message):
@@ -54,7 +58,7 @@ async def gtp(client, message: Message):
     return await pros.edit(hasil)
   
 async def ambil_ppcp(message: Message):
-    url = "https://widipe.com/ppcp"
+    url = "https://itzpire.com/random/couple-pp"
     headers = {'accept': 'application/json'}
     
     try:
