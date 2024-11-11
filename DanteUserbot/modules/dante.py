@@ -30,12 +30,12 @@ async def _(client, message):
             chat_id = int(message.command[1])
         blacklist = await get_chat(client.me.id)
         if chat_id not in blacklist:
-            return await Tm.edit("Waalaikumsalam bang dante")
+            return await Tm.edit("Waalaikumsalam bang hiro")
         del_blacklist = await remove_chat(client.me.id, chat_id)
         if del_blacklist:
-            await Tm.edit("Waalaikumsalam bang dante")
+            await Tm.edit("Waalaikumsalam bang hiro")
         else:
-            await Tm.edit("Waalaikumsalam bang dante")
+            await Tm.edit("Waalaikumsalam bang hiro")
     except Exception as error:
         await Tm.edit(error)
         await asyncio.sleep(2)
