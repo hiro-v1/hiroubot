@@ -116,7 +116,7 @@ async def _(client, inline_query):
         <b>ᴅᴇᴠɪᴄᴇ_ᴍᴏᴅᴇʟ:</b> <code>Sᴡᴇᴇᴛ</code>
         <b>ᴍᴀɢɪsᴋ_ʜɪᴅᴇ:</b> <code>{antipm}</code>
         <b>ᴍᴀɢɪsᴋ_ᴍᴏᴅᴜʟᴇ:</b> <code>{len(ubot._ubot)}</code>
-        <b>ᴄᴘᴜ_ᴍᴏᴅᴇʟ:</b> <code>sɴᴀᴘᴅʀᴀɢᴏɴ</code>
+        <b>ᴄᴘᴜ_ᴍᴏᴅᴇʟ:</b> <code>hiroRTX-Gforce</code>
         <b>ᴋᴇʀɴᴇʟ_ᴠᴇʀsɪᴏɴ:</b> <code>ɢᴇɴᴏᴍ R{group}-{users}</code>
         <b>ᴅᴇᴠɪᴄᴇ_ᴠᴇʀsɪᴏɴ:</b> <code>14.0.2</code>
         <b>ʙᴀsᴇʙᴀɴᴅ_ᴠᴇʀsɪᴏɴ:</b> <code>ᴜɴᴋɴᴏᴡɴ</code>
