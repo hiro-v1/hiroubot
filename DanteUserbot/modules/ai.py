@@ -32,7 +32,7 @@ def get_text(message: Message) -> [None, str]:
     else:
         return None
       
-@DANTE.UBOT("askb")
+
 async def tanya(client, message: Message):
     url = "https://itzpire.com/ai/botika"
     params = {
