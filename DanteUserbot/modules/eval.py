@@ -43,7 +43,7 @@ async def update(client, message):
 async def jumlah_user(client, message):
     tt = await message.reply("sebentar proses...")
     xx = len(ubot._ubot)
-    await tt.edit(f"jumlah pengguna DanteUserbot : {xx}")
+    await tt.edit(f"jumlah pengguna HiroUserbot : {xx}")
 
 @DANTE.UBOT("sh")
 async def shell_cmd(client, message):
