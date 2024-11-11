@@ -31,7 +31,8 @@ def get_text(message: Message) -> [None, str]:
             return None
     else:
         return None
-
+      
+@DANTE.UBOT("ask")
 async def tanya(client, text):
     url = "https://itzpire.com/ai/botika"
     params = {
@@ -49,7 +50,7 @@ async def tanya(client, text):
         return "Server error, gatau ah"
 
 @DANTE.UBOT("ask")
-async def gtp(client, message: Message):
+async def tanya(client, message: Message):
     text = get_text(message)
     if not text:
         return await message.reply("perintah anda salah, gunakan .ask pertanyaan")
