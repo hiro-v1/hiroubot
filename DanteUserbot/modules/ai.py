@@ -32,12 +32,12 @@ def get_text(message: Message) -> [None, str]:
     else:
         return None
       
-@DANTE.UBOT("ask")
-async def tanya(client, text):
+@DANTE.UBOT("askb")
+async def tanya(client, message: Message):
     url = "https://itzpire.com/ai/botika"
     params = {
         "q": f"{text}",
-        "user": f"{client, text.me.first_name}",
+        "user": f"{client, message: Message.me.first_name}",
         "model": "sindy"
     }
     headers = {'accept': 'application/json'}
@@ -45,7 +45,7 @@ async def tanya(client, text):
     if response.status_code == 200:
         data = response.json()
         msg = data["result"]
-        return f"<blockquote>{msg}</blockquote>"
+        return await f"<blockquote>{msg}</blockquote>"
     else:
         return "Server error, gatau ah"
 
