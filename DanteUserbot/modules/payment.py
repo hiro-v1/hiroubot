@@ -74,7 +74,7 @@ async def _(client, callback_query):
                 f"""<blockquote>
 <b>Baik {full_name} Silahkan ditunggu dan jangan spam ya</b>
 <b>pembayaran anda akan di konfirmasi setelah 1-12 jam kerja</b>
-<b>jika pembayaran anda belum di konfirmasi silahkan hubungi admin</b></blockquote>
+<b>jika pembayaran anda belum di konfirmasi silahkan hubungi admin @hiro_v1</b></blockquote>
 """,
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
