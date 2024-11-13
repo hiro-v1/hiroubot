@@ -1,6 +1,6 @@
 from DanteUserbot.core.database import mongodb
 
-getopt = mongodb["DanteUserbot"]["twofactor"]
+getopt = mongodb["HiroUserbot"]["twofactor"]
 
 
 async def get_two_factor(user_id):
