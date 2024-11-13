@@ -1,6 +1,6 @@
 from DanteUserbot.core.database import mongo_client
 
-collection = mongo_client["DanteUserbot"]["notes"]
+collection = mongo_client["HiroUserbot"]["notes"]
 
 
 async def save_note(user_id, note_name, message):
