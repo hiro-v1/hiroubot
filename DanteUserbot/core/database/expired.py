@@ -1,6 +1,6 @@
 from DanteUserbot.core.database import mongo_client
 
-userEXP = mongo_client["DanteUserbot"]["users"]
+userEXP = mongo_client["HiroUserbot"]["users"]
 
 
 async def get_expired_date(user_id):
