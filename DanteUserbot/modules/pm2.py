@@ -163,7 +163,7 @@ async def handle_pmpermit(client, message):
             await add_approved_user(chat_id)
             await client.send_message(
                 chat_id,
-                f"<b>Menerima Pesan Dari {biji} !!\nTerdeteksi Founder Dari UBot • NeverTech</b>",
+                f"<b>Menerima Pesan Dari {biji} !!\nTerdeteksi Founder Dari UBot • HiroUBot</b>",
                 parse_mode=enums.ParseMode.HTML,
             )
         except BaseException:
@@ -174,7 +174,7 @@ async def handle_pmpermit(client, message):
             await add_approved_user(chat_id)
             await client.send_message(
                 chat_id,
-                f"<b>Menerima Pesan Dari {biji} !!\nTerdeteksi Admin Dari UBot • NeverTech!.</b>",
+                f"<b>Menerima Pesan Dari {biji} !!\nTerdeteksi Admin Dari UBot • HiroUbot!.</b>",
                 parse_mode=enums.ParseMode.HTML,
             )
         except BaseException:
