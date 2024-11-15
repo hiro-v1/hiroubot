@@ -71,13 +71,21 @@ async def ambil_ppcp(client, text):
         return "Server error, gatau ah"
       
 @DANTE.UBOT("cp")
-async def handle_ppcp(client, message: Message):
-   text = get_text(message)
-    if not text:
-        return await message.reply("perintah anda salah, gunakan .cp gambar")
-    pros = await message.reply("bentar..")
-    hasil = await ambil_ppcp(client, text)
-    return await pros.edit(hasil)
+async def handle_ppcp(client: Client, message: Message):
+      await ambil_ppcp(message)
+async def pinterest(message: Message):
+    url = "https://itzpire.com/search/pinterest"
+    params = {"q": f"{text}"}
+    headers = {'accept': 'application/json'}
+    response = requests.get(url, headers=headers)
+    data = response.json()
+
+    if data.get('status'):
+        if 'url' in data and 'data' in data['url']:
+            gambar_url = data['url']['data']
+            deskripsi = data['url']['desc']
+            return gambar_url, deskripsi
+    return None, None
  
 @DANTE.UBOT("pinter")
 async def pinter(client, message: Message):
