@@ -1,7 +1,7 @@
 from DanteUserbot.core.database import mongodb
 
 
-blockeddb = mongodb["HiroUserbot"]["gbans"]
+blockeddb = mongodb["DanteUserbot"]["gbans"]
 
 
 async def get_banned_users(gua: int) -> list:
