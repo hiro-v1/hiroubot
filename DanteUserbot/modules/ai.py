@@ -58,7 +58,7 @@ async def gpt(client, message: Message):
     hasil = await tanya(client, text)
     return await pros.edit(hasil)
   
-async def ambil_ppcp(client: Client, message: Message):
+async def ambil_ppcp(client, message: Message):
     url = "https://itzpire.com/search/pinterest"
     params = {"q": f"{text}"}
     headers = {'accept': 'application/json'}
@@ -71,8 +71,9 @@ async def ambil_ppcp(client: Client, message: Message):
         return "Server error, gatau ah"
       
 @DANTE.UBOT("cp")
-async def handle_ppcp(client: Client, message: Message):
+async def handle_ppcp(client, message: Message):
       await ambil_ppcp(message)
+  
 async def pinterest(message: Message):
     url = "https://itzpire.com/search/pinterest"
     params = {"q": f"{text}"}
