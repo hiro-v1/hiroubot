@@ -22,13 +22,15 @@ tambahan:
 def get_text(message: Message) -> [None, str]:
     """Extract Text From Commands"""
     text_to_return = message.text
-     if message.text is None:
+    if message.text is None:
         return None
-  
-    parts = message.text.split(None, 1)
-    if len(parts) < 2:
+    if " " in text_to_return:
+        try:
+            return message.text.split(None, 1)[1]
+        except IndexError:
+            return None
+    else:
         return None
-    return parts[1]
       
 
 async def tanya(client, text):
