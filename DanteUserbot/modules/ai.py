@@ -58,8 +58,19 @@ async def gpt(client, message: Message):
     hasil = await tanya(client, text)
     return await pros.edit(hasil)
   
-async def ambil_ppcp(message: Message):
+async def ambil_ppcp(client, message: Message):
     url = "https://itzpire.com/search/pinterest"
+      params = {
+        "q": f"{text}",
+    }
+    headers = {'accept': 'application/json'}
+    response = requests.get(url, headers=headers, params=params)
+    if response.status_code == 200:
+        data = response.json()
+        msg = data["result"]
+        return f"<blockquote>{msg}</blockquote>"
+    else:
+        return "Server error, gatau ah"
     headers = {'accept': 'application/json'}
     
     try:
@@ -94,11 +105,22 @@ async def ambil_ppcp(message: Message):
         await message.reply(f"Kesalahan: {str(e)}")
 
 @DANTE.UBOT("cp")
-async def handle_ppcp(client: Client, message: Message):
+async def handle_ppcp(client,text, message: Message):
     await ambil_ppcp(message)
 
-async def pinterest(client, message: Message):
+async def pinterest(client, text):
     url = "https://itzpire.com/search/pinterest"
+    params = {
+        "q": f"{text}",
+    }
+    headers = {'accept': 'application/json'}
+    response = requests.get(url, headers=headers, params=params)
+    if response.status_code == 200:
+        data = response.json()
+        msg = data["result"]
+        return f"<blockquote>{msg}</blockquote>"
+    else:
+        return "Server error, gatau ah"
     headers = {'accept': 'application/json'}
     
     response = requests.get(url, headers=headers)
