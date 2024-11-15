@@ -71,7 +71,7 @@ async def ambil_ppcp(client, text):
         return "Server error, gatau ah"
       
 @DANTE.UBOT("cp")
-async def handle_ppcp(client: Client, message: Message):
+async def handle_ppcp(client, message: Message):
    text = get_text(message)
     if not text:
         return await message.reply("perintah anda salah, gunakan .cp gambar")
