@@ -59,7 +59,7 @@ async def gpt(client, message: Message):
     return await pros.edit(hasil)
   
 async def ambil_ppcp(message: Message):
-    url = "https://itzpire.com/random/couple-pp"
+    url = "https://itzpire.com/search/pinterest"
     headers = {'accept': 'application/json'}
     
     try:
