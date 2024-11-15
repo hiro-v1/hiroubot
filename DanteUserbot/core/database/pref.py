@@ -1,7 +1,7 @@
 from DanteUserbot.core.database import mongodb
 
 
-prefixes = mongodb["HiroUserbot"]["prefix"]
+prefixes = mongodb["DanteUserbot"]["prefix"]
 
 
 async def get_pref(user_id):
