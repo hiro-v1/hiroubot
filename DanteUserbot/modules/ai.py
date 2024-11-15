@@ -58,11 +58,10 @@ async def gpt(client, message: Message):
     hasil = await tanya(client, text)
     return await pros.edit(hasil)
   
-async def ambil_ppcp(client, text, message: Message):
-    url = "https://itzpire.com/search/pinterest"
-      params = {
-        "q": f"{text}",
-    }
+async def ambil_ppcp(client, text):
+    url = "https://itzpire.com/search/pinterest?query=cewe"
+     params = {"q": f"{text}"}
+
     headers = {'accept': 'application/json'}
     response = requests.get(url, headers=headers, params=params)
     if response.status_code == 200:
@@ -71,68 +70,18 @@ async def ambil_ppcp(client, text, message: Message):
         return f"<blockquote>{msg}</blockquote>"
     else:
         return "Server error, gatau ah"
-    
-    try:
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()  # Menangani kesalahan HTTP
-        data = response.json()
-
-        if data.get('status'):
-            male_url = data.get('male')
-            female_url = data.get('female')
-            
-            def download_image(url):
-                img_response = requests.get(url)
-                img_response.raise_for_status()  # Menangani kesalahan HTTP
-                return io.BytesIO(img_response.content)
-
-            male_image = download_image(male_url)
-            female_image = download_image(female_url)
-            
-            media = [
-                InputMediaPhoto(male_image, caption="Foto Profil Laki-laki\nDone ✔️"),
-                InputMediaPhoto(female_image, caption="Foto Profil Perempuan\nDone ✔️")
-            ]
-            
-            await message.reply_media_group(media)
-        else:
-            await message.reply("Gambar tidak ditemukan.")
-    
-    except requests.exceptions.RequestException as e:
-        await message.reply(f"Terjadi kesalahan saat mengambil gambar: {str(e)}")
-    except Exception as e:
-        await message.reply(f"Kesalahan: {str(e)}")
       
 
 @DANTE.UBOT("cp")
-async def handle_ppcp(client,text, message: Message):
+async def handle_ppcp(client: Client, message: Message):
     await ambil_ppcp(message)
 
-async def pinterest(client, text):
-    url = "https://itzpire.com/search/pinterest"
-    params = {
-        "q": f"{text}",
-    }
-    headers = {'accept': 'application/json'}
-    response = requests.get(url, headers=headers, params=params)
-    if response.status_code == 200:
-        data = response.json()
-        msg = data["result"]
-        return f"<blockquote>{msg}</blockquote>"
-    else:
-        return "Server error, gatau ah"
-    
-    response = requests.get(url, headers=headers)
-    data = response.json()
-
-    if data.get('status'):
-        if 'url' in data and 'data' in data['url']:
-            gambar_url = data['url']['data']
-            deskripsi = data['url']['desc']
-            return gambar_url, deskripsi
-         pros = await message.reply("unduh gambar..")
-         hasil= await ambil_ppcp(client, text, message: Message)
-      return await pros.edit(hasil)
+async def pinterest(client, message: Message):
+   if not text:
+        return await message.reply("perintah anda salah, gunakan .cp gambar")
+    pros = await message.reply("menjawab..")
+    hasil = await ambil_ppcp(client, text)
+    return await pros.edit(hasil)
  
 @DANTE.UBOT("pinter")
 async def pinter(client, message: Message):
@@ -140,7 +89,7 @@ async def pinter(client, message: Message):
   
   if len(text) < 3:
     
-    return await message.reply(".pinter cari gambar di pinterest")
+    return await message.reply(".pinter iya gua pinter lu GOBLOK")
     
     message = text[1]
     
