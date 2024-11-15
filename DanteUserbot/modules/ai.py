@@ -58,7 +58,7 @@ async def gpt(client, message: Message):
     hasil = await tanya(client, text)
     return await pros.edit(hasil)
   
-async def ambil_ppcp(client, message: Message):
+async def ambil_ppcp(client, text, message: Message):
     url = "https://itzpire.com/search/pinterest"
       params = {
         "q": f"{text}",
@@ -71,7 +71,6 @@ async def ambil_ppcp(client, message: Message):
         return f"<blockquote>{msg}</blockquote>"
     else:
         return "Server error, gatau ah"
-    headers = {'accept': 'application/json'}
     
     try:
         response = requests.get(url, headers=headers)
@@ -103,6 +102,7 @@ async def ambil_ppcp(client, message: Message):
         await message.reply(f"Terjadi kesalahan saat mengambil gambar: {str(e)}")
     except Exception as e:
         await message.reply(f"Kesalahan: {str(e)}")
+      
 
 @DANTE.UBOT("cp")
 async def handle_ppcp(client,text, message: Message):
@@ -121,7 +121,6 @@ async def pinterest(client, text):
         return f"<blockquote>{msg}</blockquote>"
     else:
         return "Server error, gatau ah"
-    headers = {'accept': 'application/json'}
     
     response = requests.get(url, headers=headers)
     data = response.json()
@@ -131,9 +130,10 @@ async def pinterest(client, text):
             gambar_url = data['url']['data']
             deskripsi = data['url']['desc']
             return gambar_url, deskripsi
-    return None, None
-
-
+         pros = await message.reply("unduh gambar..")
+         hasil= await ambil_ppcp(client, text, message: Message)
+      return await pros.edit(hasil)
+ 
 @DANTE.UBOT("pinter")
 async def pinter(client, message: Message):
   text = message.text.split(" ")
