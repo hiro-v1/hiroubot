@@ -58,7 +58,7 @@ async def gpt(client, message: Message):
     hasil = await tanya(client, text)
     return await pros.edit(hasil)
   
-async def ambil_ppcp(client, text):
+async def ambil_ppcp(client: Client, message: Message):
     url = "https://itzpire.com/search/pinterest"
     params = {"q": f"{text}"}
     headers = {'accept': 'application/json'}
