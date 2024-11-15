@@ -75,8 +75,7 @@ async def ambil_ppcp(client, text):
 async def handle_ppcp(client: Client, message: Message):
    text = get_text(message)
    if not text:
-      return await message.reply("perintah anda salah, gunakan .cp gambar")
-    
+      return await message.reply("perintah anda salah, gunakan .cp gambar") 
     pros = await message.reply("bentar..")
     hasil = await ambil_ppcp(client, text)
     return await pros.edit(hasil)
