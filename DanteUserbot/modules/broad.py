@@ -68,7 +68,7 @@ ubot : {bot.me.mention}</blockquote>
 
 gcast_progress = []
 
-@DANTE.UBOT("bc|gikes")
+@DANTE.UBOT("bc")
 async def gcast_handler(client, message):
     global gcast_progress
     gcast_progress.append(client.me.id)
