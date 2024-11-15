@@ -58,36 +58,44 @@ async def gpt(client, message: Message):
     hasil = await tanya(client, text)
     return await pros.edit(hasil)
   
-async def ambil_ppcp(client, message: Message):
+async def ambil_ppcp(client, text):
     url = "https://itzpire.com/search/pinterest"
-    params = {"q": f"{text}"}
+    params = {"q": text}
     headers = {'accept': 'application/json'}
     response = requests.get(url, headers=headers, params=params)
+  
     if response.status_code == 200:
         data = response.json()
-        msg = data["result"]
+        msg = data.get("result", "Tidak ada hasil.")
         return f"<blockquote>{msg}</blockquote>"
     else:
         return "Server error, gatau ah"
       
 @DANTE.UBOT("cp")
-async def handle_ppcp(client, message: Message):
-      await ambil_ppcp(message)
+async def handle_ppcp(client: Client, message: Message):
+   text = get_text(message)
+   if not text:
+      return await message.reply("perintah anda salah, gunakan .cp gambar")
+    
+    pros = await message.reply("bentar..")
+    hasil = await ambil_ppcp(client, text)
+    return await pros.edit(hasil)
   
-async def pinterest(message: Message):
-    url = "https://itzpire.com/search/pinterest"
-    params = {"q": f"{text}"}
-    headers = {'accept': 'application/json'}
-    response = requests.get(url, headers=headers)
-    data = response.json()
 
-    if data.get('status'):
-        if 'url' in data and 'data' in data['url']:
+async def pinterest(text: str):
+    url = "https://itzpire.com/search/pinterest"
+    params = {"q": text}
+    headers = {'accept': 'application/json'}
+    response = requests.get(url, headers=headers, params=params)
+    
+    if response.status_code == 200:
+        data = response.json()
+        if data.get('status'):
             gambar_url = data['url']['data']
             deskripsi = data['url']['desc']
             return gambar_url, deskripsi
     return None, None
- 
+  
 @DANTE.UBOT("pinter")
 async def pinter(client, message: Message):
   text = message.text.split(" ")
