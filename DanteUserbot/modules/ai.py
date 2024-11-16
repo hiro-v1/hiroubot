@@ -1,4 +1,4 @@
-mport requests
+import requests
 from pyrogram.types import InputMediaPhoto, Message
 import io
 from pyrogram import Client, filters
